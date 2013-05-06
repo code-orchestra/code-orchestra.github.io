@@ -32,7 +32,7 @@
 /* Contents */
 .verticalslider_contents{float: left;width: 580px;display: inline; margin: 0px; padding: 0px;}
 .verticalslider_contents li{margin: 0px; padding: 0px;width: 580px; padding-top: 10px;display: none;position: absolute;list-style-type: none; }
-.verticalslider_contents li p{ margin: 5px 20px 18px; padding: 0px;color: #5b616c; font-size: 15px; }
+.verticalslider_contents li p{ margin: 5px 20px 18px; padding: 0px;color: #5b616c; font-size: 15px; line-height:150%;}
 .verticalslider_contents .activeContent{display: inline;}
 
 /* Play Pause*/
