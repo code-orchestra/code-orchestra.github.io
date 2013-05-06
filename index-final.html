@@ -25,6 +25,7 @@
     
     <script type="text/javascript" src="js/slides.min.jquery.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="js/download.js"></script>
     
     <script type="text/javascript">
 	$(document).ready(function(){
@@ -37,6 +38,10 @@
 			$("#ide-wrapper .ide-container").css('padding-top','460px');
 			$("#ide-images").css('top','195px');
 			$("#contest").fadeOut('fast')
+		});
+		
+		$("#download-colt-trial").click(function(){
+			download_COLT();
 		});
 	});
 	</script>
@@ -107,10 +112,12 @@
         	<p class="light">CODE ORCHESTRA LIVECODING TOOL</p>
         	<p>Livecoding - A way of writing and monitoring of the program, when the running application is delivered to the updated code and images. Without losing data - the application saves its state. Coding "profiteering".</p>
             <div class="buttons">
-            	<a href="#" class="button-blue">Download Free Trial</a>
+            	<a id="download-colt-trial" href="#" class="button-blue">Download Free Trial</a>
                 <span class="or"> </span>
                 <a href="#" class="button-green">Buy Now for 199$</a>
             </div>
+
+			
         </section>
   </div>
 <!--
