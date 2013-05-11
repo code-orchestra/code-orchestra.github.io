@@ -21,10 +21,10 @@ function download_co2(){
 	var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
 
 	if(isMac){
-		window.location.replace("http://codeorchestra.com/files/CO2-mac.zip");
+		window.location.replace("https://codeorchestra.s3.amazonaws.com/CO2-mac.zip");
 	}else if(isWindows){
-		window.location.replace("http://codeorchestra.com/files/CO2-win.exe");
+		window.location.replace("https://codeorchestra.s3.amazonaws.com/CO2-win.exe");
 	}else if(isLinux){
-		window.location.replace("http://codeorchestra.com/files/CO2-linux.tar.gz");
+		window.location.replace("https://codeorchestra.s3.amazonaws.com/CO2-linux.tar.gz");
 	}
 }
