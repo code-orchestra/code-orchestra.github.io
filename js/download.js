@@ -6,9 +6,9 @@ function download_COLT(){
 	var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
 
 	if(isMac){
-		window.location.replace("http://codeorchestra.com/files/COLT.dmg");
+		window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT.dmg");
 	}else if(isWindows){
-		window.location.replace("http://codeorchestra.com/files/COLT-install.exe");
+		window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT-install.exe");
 	}else if(isLinux){
 		//window.location.replace("http://codeorchestra.com/files/colt_linux.tg");
 		alert("Linux not support yet. Coming soon")
