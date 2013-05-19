@@ -24,8 +24,6 @@
     <script type="text/javascript" src="js/jquery.sliderkit.1.9.2.pack.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     
-    <script src="js/jquery.inview.js"></script>
-    
     <script type="text/javascript" src="js/slides.min.jquery.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
 	<script type="text/javascript" src="js/download.js"></script>
@@ -41,6 +39,15 @@
 			$("#ide-wrapper .ide-container").css('padding-top','460px');
 			$("#ide-images").css('top','195px');
 			$("#contest").fadeOut('fast')
+		});
+		
+		$("#action-open").click(function(){
+			$("#action-gifs").slideDown('slow');
+			$("#action-open").fadeOut('fast');
+		});
+		$("#action-gifs .action-close").click(function(){
+			$("#action-gifs").slideUp('fast');
+			$("#action-open").fadeIn('fast');
 		});
 		
 		$("#download-colt-trial-button").click(function(){
@@ -84,57 +91,21 @@
 				location = "#download-colt-trial-button";
 			}
 		});
-		$('#show-table').click(function(){
+	/*	$('#show-table').click(function(){
 			$('#show-table').hide();
 			$('#hide-table').show();
-			$('#gifs-desc').show();
-			$('#gifs-table').show();
+			$('#gifs-desc').fadeIn('slow');
+			$('#gifs-table').fadeIn('slow');
 		});
 		$('#hide-table').click(function(){
 			$('#hide-table').hide();
 			$('#show-table').show();
-			$('#gifs-desc').hide();
-			$('#gifs-table').hide();
-		});
+			$('#gifs-desc').fadeOut('fast');
+			$('#gifs-table').fadeOut('fast');
+		}); */
 	});
 	</script>
-    <style>
-
-	/* styles for gifs table */
-
-	.box {
-		margin:0;
-		padding:0;
-	
-		border: 3px solid #CCCCCC;
-	}
-
-	.box img {
-	  display: block;
-	}
-
-	.box img {
-		transition:opacity 0.4s, visibility 0.4s;
-		opacity:0;
-		visibility:hidden;
-	}
-
-	.box:hover img {
-		transition:opacity 0.4s, visibility 0s;
-		opacity:1;
-		visibility:visible;
-	
-	}
-	
-	#show-table, #hide-table {
-		cursor: hand; cursor: pointer;
-	}
-	
-	#hide-table, #gifs-desc, #gifs-table {
-		display:none;
-	}
-	
-	</style>
+    
 </head>
 
 <body>
@@ -320,11 +291,10 @@
 
          <div id="ide-images" class="image-animation animate-consecutive co2-anim"><img src="images/co2icon.png" class="animated co2-icon" width="314" height="314"></div>
         <div id="winbook">
-         <a id="contest-open"></a>
        	  <h1>Win a new<br>MacBook Pro Retina <br/>or iPad 4!</h1>
           <h2>Make a video showing the benefit of using technology COLT and win one of the prizes! The main prize is the new MacBook Pro with retina display!</h2>
          <img src="images/ipadobook.png" class="book" width="456" height="478"><img src="images/winctrl.png" class="ctrl" width="46" height="158">
-
+         <a id="contest-open"></a>
         </div>
        <div id="contest">
            <h1>Win a new<br>MacBook Pro Retina <br/>or iPad 4!</h1>
@@ -416,158 +386,160 @@ Even now CO2 project can be compiled for two target platforms, Flash and HTML5.<
         </div>
     </div>
 	
-	<div style="width:100%; background-color:#FFFFFF; padding-bottom:40px;">
-	<table align="center" width="810">
-		<tr><td style="font-family:'Roberto',sans-serif;font-size:20px;font-weight:500;color:#252E32;padding-bottom:20px;">
-			See Code Orchestra in action <span id="show-table">&#9660;</span><span id="hide-table">&#9650;</span>
-		</td></tr>
-		<tr id="gifs-desc"><td style="font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:400;color:#58616C;padding-bottom:50px;">
-			Roll over each thumbnail to see corresponding Code Orchestra feature in action.
-		</td></tr>
-	</table>
-	<table align="center" style="border-collapse:collapse; border: 3px solid #CCCCCC;" id="gifs-table">
-		<colgroup>
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-			<col width="90" />
-		</colgroup>
-		<tr>
-			<td class="box" colspan="5" rowspan="2" style="background:url('images/tiles/add_event_annotation.png') no-repeat;">
-				<a>
-					<img src="images/tiles/add_event_annotation.gif" tilte="add event annotation" />
-				</a>
-			</td>
-			<td class="box" colspan="4" style="background:url('images/tiles/tuples.png') no-repeat;">
-				<a>
-					<img src="images/tiles/tuples.gif" title="tuples" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" style="background:url('images/tiles/fast_events_dispatching.png') no-repeat;">
-				<a>
-					<img src="images/tiles/fast_events_dispatching.gif" title="fast events dispatching" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" style="background:url('images/tiles/check_array_by_condition.png') no-repeat;">
-				<a>
-					<img src="images/tiles/check_array_by_condition.gif" title="check array by condition" />
-				</a>
-			</td>
-			<td class="box" colspan="2" style="background:url('images/tiles/split_join_behavior.png') no-repeat;">
-				<a>
-					<img src="images/tiles/split_join_behavior.gif" title="split join behavior" />
-				</a>
-			</td>
-			<td class="box" colspan="3" style="background:url('images/tiles/introduce_inline_variable.png') no-repeat;">
-				<a>
-					<img src="images/tiles/introduce_inline_variable.gif" title="introduce inline variable" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" rowspan="2" style="background:url('images/tiles/insert_cast_variable_declaration.png') no-repeat;">
-				<a>
-					<img src="images/tiles/insert_cast_variable_declaration.gif" title="insert cast variable declaration" />
-				</a>
-			</td>
-			<td class="box" colspan="3" style="background:url('images/tiles/editor_automatic_rename.png') no-repeat;">
-				<a>
-					<img src="images/tiles/editor_automatic_rename.gif" title="editor automatic rename" />
-				</a>
-			</td>
-			<td class="box" colspan="2" style="background:url('images/tiles/variable_initialization.png') no-repeat;">
-				<a>
-					<img src="images/tiles/variable_initialization.gif" title="variable initialization" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="5" style="background:url('images/tiles/setter_field_creation.png') no-repeat;">
-				<a>
-					<img src="images/tiles/setter_field_creation.gif" title="setter field creation" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="5" style="background:url('images/tiles/get_elements_of_array_by.png') no-repeat;">
-				<a>
-					<img src="images/tiles/get_elements_of_array_by.gif" title="get elements of array by" />
-				</a>
-			</td>
-			<td class="box" colspan="4" style="background:url('images/tiles/introduce_method_parameter.png') no-repeat;">
-				<a>
-					<img src="images/tiles/introduce_method_parameter.gif" title="introduce method parameter" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" style="background:url('images/tiles/surrounding-with-block.png') no-repeat;">
-				<a>
-					<img src="images/tiles/surrounding-with-block.gif" title="surrounding with block" />
-				</a>
-			</td>
-			<td class="box" colspan="5" style="background:url('images/tiles/object_builder.png') no-repeat;">
-				<a>
-					<img src="images/tiles/object_builder.gif" title="object builder" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="6" style="background:url('images/tiles/fast_events_listener.png') no-repeat;">
-				<a>
-					<img src="images/tiles/fast_events_listener.gif" title="fast events listener" />
-				</a>
-			</td>
-			<td class="box" colspan="3" style="background:url('images/tiles/null_safe_operator.png') no-repeat;">
-				<a>
-					<img src="images/tiles/null_safe_operator.gif" title="null safe operator" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" style="background:url('images/tiles/use_expressions_in_annotation.png') no-repeat;">
-				<a>
-					<img src="images/tiles/use_expressions_in_annotation.gif" title="use expressions in annotation" />
-				</a>
-			</td>
-			<td class="box" colspan="5" style="background:url('images/tiles/convert_sprites_to_points.png') no-repeat;">
-				<a>
-					<img src="images/tiles/convert_sprites_to_points.gif" title="convert sprites to points" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="6" style="background:url('images/tiles/quick_method_overrive.png') no-repeat;">
-				<a>
-					<img src="images/tiles/quick_method_overrive.gif" title="quick method overrive" />
-				</a>
-			</td>
-			<td class="box" colspan="3" style="background:url('images/tiles/embed.png') no-repeat;">
-				<a>
-					<img src="images/tiles/embed.gif" title="embed" />
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="box" colspan="4" style="background:url('images/tiles/bitmap_asset.png') no-repeat;">
-				<a>
-					<img src="images/tiles/bitmap_asset.gif" title="bitmap asset" />
-				</a>
-			</td>
-			<td>
-			
-			</td>
-		</tr>
-	</table>
+	<div class="inaction-wrapper">
+      <div class="inaction-container">
+        <div id="action-gifs">
+        	<h2>See Code Orchestra in action</h2>
+            <p>Roll over each thumbnail to see corresponding Code Orchestra feature in action.</p>
+        
+        <table align="center" style="border-collapse:collapse; border: 3px solid #CCCCCC;" id="gifs-table">
+            <colgroup>
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+                <col width="90" />
+            </colgroup>
+            <tr>
+                <td class="box" colspan="5" rowspan="2" style="background:url('images/tiles/add_event_annotation.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/add_event_annotation.gif" tilte="add event annotation" />
+                    </a>
+                </td>
+                <td class="box" colspan="4" style="background:url('images/tiles/tuples.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/tuples.gif" title="tuples" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" style="background:url('images/tiles/fast_events_dispatching.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/fast_events_dispatching.gif" title="fast events dispatching" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" style="background:url('images/tiles/check_array_by_condition.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/check_array_by_condition.gif" title="check array by condition" />
+                    </a>
+                </td>
+                <td class="box" colspan="2" style="background:url('images/tiles/split_join_behavior.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/split_join_behavior.gif" title="split join behavior" />
+                    </a>
+                </td>
+                <td class="box" colspan="3" style="background:url('images/tiles/introduce_inline_variable.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/introduce_inline_variable.gif" title="introduce inline variable" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" rowspan="2" style="background:url('images/tiles/insert_cast_variable_declaration.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/insert_cast_variable_declaration.gif" title="insert cast variable declaration" />
+                    </a>
+                </td>
+                <td class="box" colspan="3" style="background:url('images/tiles/editor_automatic_rename.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/editor_automatic_rename.gif" title="editor automatic rename" />
+                    </a>
+                </td>
+                <td class="box" colspan="2" style="background:url('images/tiles/variable_initialization.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/variable_initialization.gif" title="variable initialization" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="5" style="background:url('images/tiles/setter_field_creation.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/setter_field_creation.gif" title="setter field creation" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="5" style="background:url('images/tiles/get_elements_of_array_by.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/get_elements_of_array_by.gif" title="get elements of array by" />
+                    </a>
+                </td>
+                <td class="box" colspan="4" style="background:url('images/tiles/introduce_method_parameter.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/introduce_method_parameter.gif" title="introduce method parameter" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" style="background:url('images/tiles/surrounding-with-block.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/surrounding-with-block.gif" title="surrounding with block" />
+                    </a>
+                </td>
+                <td class="box" colspan="5" style="background:url('images/tiles/object_builder.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/object_builder.gif" title="object builder" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="6" style="background:url('images/tiles/fast_events_listener.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/fast_events_listener.gif" title="fast events listener" />
+                    </a>
+                </td>
+                <td class="box" colspan="3" style="background:url('images/tiles/null_safe_operator.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/null_safe_operator.gif" title="null safe operator" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" style="background:url('images/tiles/use_expressions_in_annotation.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/use_expressions_in_annotation.gif" title="use expressions in annotation" />
+                    </a>
+                </td>
+                <td class="box" colspan="5" style="background:url('images/tiles/convert_sprites_to_points.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/convert_sprites_to_points.gif" title="convert sprites to points" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="6" style="background:url('images/tiles/quick_method_overrive.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/quick_method_overrive.gif" title="quick method overrive" />
+                    </a>
+                </td>
+                <td class="box" colspan="3" style="background:url('images/tiles/embed.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/embed.gif" title="embed" />
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="box" colspan="4" style="background:url('images/tiles/bitmap_asset.png') no-repeat;">
+                    <a>
+                        <img src="images/tiles/bitmap_asset.gif" title="bitmap asset" />
+                    </a>
+                </td>
+                <td class="box" colspan="5">&nbsp;
+                    
+                </td>
+            </tr>
+        </table>
+        <a class="action-close">Close</a>
+        <a class="action-close bottom">Close</a>
+        </div>
+        <a id="action-open"><span>See Code Orchestra in action</span></a>
+      </div>
 	</div>
   
 	<footer id="footer">

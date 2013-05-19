@@ -274,4 +274,51 @@ ul#socials {float:right;}
 
 /* Slidemenu
 ----------------------------------------------------------------------*/
-#slidepanel {position:fixed; top:-61px; left:0; width:100%; height:56px; opacity:0.9; background:#fff; z-index:1500;  -moz-box-shadow:0 2px 5px #aaa; -webkit-box-shadow:0px -2px 5px #aaa; box-shadow:0px 2px 5px #aaa;
+#slidepanel {position:fixed; top:-61px; left:0; width:100%; height:56px; opacity:0.9; background:#fff; z-index:1500;  -moz-box-shadow:0 2px 5px #aaa; -webkit-box-shadow:0px -2px 5px #aaa; box-shadow:0px 2px 5px #aaa;}
+
+/* styles for gifs table */
+
+.inaction-wrapper {background:#fff; padding:3px 0 50px;}
+.inaction-container {width:973px; margin:0 auto; position:relative; height:auto; min-height:114px;}
+#action-gifs {border-radius:10px; box-shadow:rgba(0,0,0,0.4) 0 1px 6px; padding-bottom:60px; position:relative; display:none;}
+#action-gifs h2 {font-size:20px; font-weight:500; color: #252e32; padding-top:31px; padding-left:75px; margin-bottom:24px;}
+#action-gifs p {font-family:Arial, Helvetica, sans-serif; font-size: 14px; color: #5b616c; padding-left:75px; padding-bottom:22px;}
+#action-open {text-decoration:none; font-size:20px; font-weight:500; color: #252e32; display:block; position:absolute; cursor:pointer; width:973px; height:92px; padding:7px 8px 15px 11px; left:-11px; top:-7px; background: url(../images/inactionplace.png) 0 0 no-repeat;}
+#action-open:after {content:""; display:block; position:absolute; width:46px; height:44px; background:url(../images/inactionctrl.png) 0 0 no-repeat; top:31px; right:60px;}
+#action-open span { display:inline-block; padding-top:31px; padding-left:75px;}
+
+#action-gifs a.action-close  {position:absolute; top:20px; right:20px; display:block; cursor:pointer; height:24px; color:#566b71; text-decoration:none; padding-right:28px; line-height:22px; background-image:url(../images/closeinaction.png); background-repeat:no-repeat; background-position: right 0;}
+#action-gifs a.action-close:hover {color:#6f878e; background-position:right -25px;}
+#action-gifs a.action-close.bottom {top:100%; margin-top:-44px;}
+
+	.box {
+		margin:0;
+		padding:0;
+		border: 3px solid #CCCCCC;
+	}
+
+	.box img {
+	  display: block;
+	}
+
+	.box img {
+		transition:opacity 0.4s, visibility 0.4s;
+		opacity:0;
+		visibility:hidden;
+	}
+
+	.box:hover img {
+		transition:opacity 0.4s, visibility 0s;
+		opacity:1;
+		visibility:visible;
+	
+	}
+	
+/*	#show-table, #hide-table {
+		cursor: hand; cursor: pointer;
+	}
+	
+	#hide-table, #gifs-desc, #gifs-table {
+		display:none;
+	}
+*/
