@@ -92,18 +92,9 @@
 				location = "#download-colt-trial-button";
 			}
 		});
-	/*	$('#show-table').click(function(){
-			$('#show-table').hide();
-			$('#hide-table').show();
-			$('#gifs-desc').fadeIn('slow');
-			$('#gifs-table').fadeIn('slow');
-		});
-		$('#hide-table').click(function(){
-			$('#hide-table').hide();
-			$('#show-table').show();
-			$('#gifs-desc').fadeOut('fast');
-			$('#gifs-table').fadeOut('fast');
-		}); */
+		if(location.hash == '#contest-open'){
+			$('#contest-open').trigger('click');
+		};
 	});
 	</script>
     
