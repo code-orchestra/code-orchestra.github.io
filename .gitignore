@@ -1,2 +1,29 @@
+# Auxiliary Folders
+_tmp/
+_notes/
 
+# Auxiliary Files
+*.sublime-*
+*.zip
+code-orchestra.sublime-project
+code-orchestra.sublime-workspace
+_tmp.htm
+
+# Source Files
+css/*
+!css/styles.css
+js/*
+!js/jquery-*.min.js
+!js/plugins.js
+!js/scripts.js
+!js/respond.min.js
+
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+

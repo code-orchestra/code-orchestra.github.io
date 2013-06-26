@@ -1,0 +1,69 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/*==================================================
+Print
+==================================================*/
+
+@media print {
+
+* {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+@page { margin: 0.5cm; }
+
+BODY {
+    font: 12pt "Times New Roman", Times, serif;
+    line-height: 1.3; }
+
+.doc-header, .doc-footer, .doc-sidebar, NAV,
+AUDIO, EMBED, OBJECT, VIDEO  { display: none; }
+
+A, A:visited {
+    color: #444 !important;
+    text-decoration: underline;
+    word-wrap: break-word; }
+
+A[href^="http://"]:after { content: ' (' attr(href) ')'; }
+
+ABBR:after { content: ' (' attr(title) ')'; }
+
+BLOCKQUOTE, PRE {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+BLOCKQUOTE, DL, OL, P, UL { margin-bottom: 1.3em; }
+
+H1, H2 { font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+H1 {
+    font-size: 31pt;
+    font-weight: bold;
+    line-height: 1.02em;
+    padding: 0 0 .11em; }
+
+H2 {
+    font-size: 19pt;
+    font-weight: normal;
+    line-height: 1.1em;
+    padding: .55em 0 0; }
+
+H2, H3 { page-break-after: avoid; }
+
+H2, H3, P {
+    orphans: 3;
+    widows: 3; }
+
+THEAD { display: table-header-group; }
+
+TR, IMG { page-break-inside: avoid; }
+
+UL {
+    list-style-image: none;
+    list-style-type: disc; }
+}

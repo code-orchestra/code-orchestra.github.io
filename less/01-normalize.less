@@ -1,0 +1,82 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/* Based on normalize.css v1.0.1 - a version with legacy browsers support */
+
+/* Display in IE6-9 and FF3 */
+ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, NAV, SECTION, SUMMARY { display: block; }
+
+/* Display block in IE6-9 and FF3 */
+AUDIO, CANVAS, VIDEO {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1; }
+
+/* Prevents modern browsers from displaying 'audio' without controls */
+AUDIO:not([controls]) {
+    display: none;
+    height: 0; }
+
+[hidden] { display: none; }
+
+/*
+|---------------------------------------
+| Base settings
+|---------------------------------------
+*/
+
+HTML {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; }
+
+HTML, BODY {
+    /*
+    WARNING. Don't use height: 100% for modern browsers.
+    It causes bugs with fixed position in mobile versions
+    and with absolute position in desktop versions.
+    Although lack of this property is a problem with blank pages.
+    But it is nothing compared to the problems with 100 percent height.
+    */
+    min-height: 100%;
+    *height: 100%; }
+
+/*
+|---------------------------------------
+| Typography
+|---------------------------------------
+| Webfont suggestions:
+| http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
+| http://www.google.com/fonts
+|
+*/
+
+/* Focus states */
+A:focus { .tab-focus; }
+
+/* Hover & active */
+A:hover, A:active { outline: 0; }
+
+A[href^="#"], A[href^="javascript:"] { -webkit-touch-callout: none; }
+
+SUB, SUP {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline; }
+
+    SUP { top: -0.25em; }
+
+    SUB { bottom: -0.25em; }
+
+
+/*
+|---------------------------------------
+| Media
+|---------------------------------------
+|
+| […302…]
+|
+*/
+
+

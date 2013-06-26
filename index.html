@@ -1,628 +1,490 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon"
-	      type="image/png"
-	      href="/favicon.png" />
-<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-	<title>Try Livecoding Tool (COLT) for flash/mobile development and win MacBook Pro Retina!</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<meta property="twitter:account_id" content="1422365727" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="css/slides.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="css/tabs.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="css/carousel.css" type="text/css" media="screen, projection" />
-    <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
-	<!--[if lte IE 6]><link rel="stylesheet" href="css/style_ie.css" type="text/css" media="screen, projection" /><![endif]-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
-    <script type="text/javascript" src="js/verticaltabs.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.sliderkit.1.9.2.pack.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    
-    <script type="text/javascript" src="js/slides.min.jquery.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
-	<script type="text/javascript" src="js/download.js"></script>
-    
-    <script type="text/javascript">
-	$(document).ready(function(){
-		$("#contest-open").click(function(){
-			$("#ide-wrapper .ide-container").css('padding-top','1940px');
-			$("#ide-images").css('top','1675px');
-			$("#contest").fadeIn('slow')
-		});
-		$("#contest .contest-close").click(function(){
-			$("#ide-wrapper .ide-container").css('padding-top','460px');
-			$("#ide-images").css('top','195px');
-			$("#contest").fadeOut('fast')
-		});
-		
-		$("#action-open").click(function(){
-			$("#action-gifs").slideDown('slow');
-			$("#action-open").fadeOut('fast');
-		});
-		$("#action-gifs .action-close").click(function(){
-			$("#action-gifs").slideUp('fast');
-			$("#action-open").fadeIn('fast');
-		});
-		
-		$("#download-colt-trial-button").click(function(){
-			download_COLT();
-		});
-		
-		$("#download-co2-trial-button").click(function(){
-			download_co2();
-		});
-		
-		
-		$("#rocket-div").click(function(e){
-			// ok, so people want to click stuff in that div
-			// we don't want to mess with its layout, so here goes the hack
-			if(e.target.id != "rocket-div") {
-				// ignore logo images in the div
-				return;
-			}
-			var offset = $(e.target).offset();
-			var x = e.pageX - offset.left;
-			if((x < 285)||(x > 690)) {
-				// find closest "appears to be a link" area in the div
-				var tabs = {
-					ts:{x:175,y:115},
-					md:{x:815,y:125},
-					nr:{x:125,y:215},
-					tw:{x:810,y:210},
-					st:{x:145,y:310},
-					dp:{x:845,y:300}
-				}
-				var y = e.pageY - offset.top, d = 1e23, t;
-				for (var tab in tabs) {
-					var ptab = tabs[tab];
-					var dtab = (x-ptab.x)*(x-ptab.x)+(y-ptab.y)*(y-ptab.y);
-					if (dtab < d) { d = dtab; t = tab; }
-				}
-				// trigger click handler in corresponding tab
-				$(".tabs-"+t+" a").trigger("click");
-				// scroll down to the tabs
-				// (thanks to that top menu we need to go to something above the tabs)
-				location = "#download-colt-trial-button";
-			}
-		});
-		if(location.hash == '#contest-open'){
-			$('#contest-open').trigger('click');
-		};
-	});
-	</script>
-    
+<!doctype html>
+<html lang="en" class="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta charset="UTF-8">
+
+    <title>Code Orchestra: Programming at Full Speed. Try Our Powerful ActionScript Flash Game / Mobile Development Tools</title>
+    <meta name="description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro. Featured products are COLT and CO2 IDE. COLT is a live compiler for speeding up the flow of ActionScript development. CO2 is an IDE for development of Adobe Flash / ActionScript games and applications for mobile devices and desktops.">
+
+    <!-- OG Protocol -->
+    <meta property="og:title" content="Code Orchestra — Powerful ActionScript Flash Game / Mobile Development Tools">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://codeorchestra.com/images/colticon.png">
+    <meta property="og:url" content="http://codeorchestra.com/">
+    <meta property="og:site_name" content="Website of software development company Code Orchestra">
+    <meta property="og:description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro.">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://codeorchestra.com/">
+    <meta name="twitter:title" content="Code Orchestra — Powerful ActionScript Flash Development Tools">
+    <meta name="twitter:description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro.">
+    <meta name="twitter:image" content="http://codeorchestra.com/images/colticon.png">
+    <meta name="twitter:site" content="@code_orchestra">
+    <meta name="twitter:creator" content="@potapenko">
+
+    <link rel="canonical" href="http://codeorchestra.com/">
+    <link rel="stylesheet" href="/css/styles.css?130626a">
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-
 <div id="wrapper">
 
-	<header id="header">
-		<section class="section">
-        	<a id="logo" href="#">Code Orchestra</a>
+<!-- HEADER ================================================================ -->
+    <header id="header">
+        <section class="section"> <a id="logo" href="#">Code Orchestra</a>
             <ul id="topmenu">
-            	<li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
-                <li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
+            <li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
+            <li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
             </ul>
+
             <ul id="utils">
-            	<li><a href="http://blog.codeorchestra.com">Blog</a></li>
-                <li><a href="https://codeorchestra.zendesk.com/forums">Forums</a></li>
+            <li><a href="http://blog.codeorchestra.com">Blog</a></li>
+            <li><a href="https://codeorchestra.zendesk.com/forums">Forums</a></li>
             </ul>
+
             <ul id="socials">
-            	<li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
-                <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
+            <li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
+            <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
             </ul>
         </section>
-	</header><!-- #header-->
-    
-    <div id="slides-wrapper">
-    	<section id="titul-slides">
-        	<div class="slides_container">
-                <div class="slide">
-                    <a href="#download-colt-trial" title=""><img src="images/slide1.jpg" width="849" height="461" alt=""></a>
-                    <div class="caption slide1">
-                        <p><img src="images/animationclock.gif" width="144" height="144"></p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <a href="#download-colt-trial" title=""><img src="images/slide2.jpg" width="849" height="461" alt=""></a>
-                    <div class="caption slide2">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <a href="#download-colt-trial" title=""><img src="images/slide3.jpg" width="849" height="461" alt=""></a>
-                    <div class="caption slide3">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <a href="#download-colt-trial" title=""><img src="images/slide4.jpg" width="849" height="461" alt="Slide 4"></a>
-                    <div class="caption slide4">
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-            <div id="slides-header">We know how to help you</div>
-      </section>
-    </div>
-	
-	<div id="rocket-wrapper">
-	
-		<section class="rocket-container">
-        	<a name="download-colt-trial"></a>	
-        	<div class="rocket-images image-animation animate-consecutive colt-anim" id="rocket-div">
-   	      		<img src="images/colticon.png" class="animated icon-racket" width="314" height="314">
-          		<img src="images/colt.png" class="animated icon-colt" width="213" height="43">
-          	</div>
-			<p class="light">CODE ORCHESTRA LIVECODING TOOL</p>
-        	<p>Livecoding - A way of writing and monitoring the program, when updated code and images are delivered to the running application, and no data is lost - the application preserves its state.</p>
+    </header>
+    <!-- / header-->
+
+<!-- COLT ================================================================== -->
+    <div id="rocket-wrapper">
+        <section class="rocket-container" id="download-colt-trial">
+            <div class="rocket-images image-animation animate-consecutive colt-anim" id="rocket-div"> <img src="images/colticon.png" alt="ActionScript Flash Development Tool" width="314" height="314" class="animated icon-racket"> <img src="images/colt.png" alt="ActionScript Flash Development Tool" width="213" height="43" class="animated icon-colt"> </div>
+            <p class="light">CODE ORCHESTRA LIVECODING TOOL</p>
+            <p>Livecoding - A way of writing and monitoring the program, when updated code and images are delivered to the running application, and no data is lost - the application preserves its state.</p>
+            <!-- Buttons -->
             <div class="buttons">
-            	<a id="download-colt-trial-button" href="#" class="button-blue">Download Free Trial</a>
-                <span class="or"> </span>
-                <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3184852" class="button-green">Buy Now for 199$</a>
-            </div>
-
-			
-        </section>
-  </div>
-
-  	<div id="carousel-wrapper">
-    	<section class="section">
-        	<div class="carousel-container">
-            	<div id="carousel-ytube" class="sliderkit">
-					<div class="sliderkit-nav">
-						<div class="sliderkit-nav-clip">
-							<ul>
-								<li>
-									<a href="http://www.youtube.com/watch?feature=player_embedded&v=hsjBjwy07ow&hd=1" target="_blank" rel="video" title="Kinect + COLT"><img src="images/video/kinect_magic.png" alt="IOS Livecoding Demo" /></a>
-									<p>Kinect + COLT</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=ELGiZg46h8M&hd=1" target="_blank" rel="video" title="Sergey Gonchar COLT Screencast"><img src="images/video/gonchar_tizer.png" alt="COLT introduction" /></a>
-									<p>COLT introduction</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=JxA1u4uY9TQ&hd=1" target="_blank" rel="video" title="Work with COLT Screencast"><img src="images/video/theIlluzor_screencast.png" alt="Livecoding particles interactions with COLT" /></a>
-									<p>Livecoding particles interactions with COLT</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=GsK_syADzQ8&hd=1" target="_blank" rel="video" title="Work with COLT Screencast"><img src="images/video/winxalex_screencast.png" alt="Starling platformer with COLT" /></a>
-									<p>Starling platformer with COLT</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=_7Xs0wUlF3g&hd=1" target="_blank" rel="video" title="Livecoding AIR apps"><img src="images/video/air_screencast.png" alt="Livecoding AIR apps" /></a>
-									<p>Livecoding AIR apps</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=V4yoe1K080I&hd=1" target="_blank" rel="video" title="Work with 3d "><img src="images/video/gonchar_3d_modeling.png" alt="COLT working along with 3D modeling tool" /></a>
-									<p>COLT working along with 3D modeling tool</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=iPBloI4xH8Y&hd=1" target="_blank" rel="video" title="Game Development with COLT"><img src="images/video/gamedev_barvinco.png" alt="Game development with Flash Professional, FD and COLT" /></a>
-									<p>Game development with Flash Professional, FD and COLT</p>
-								</li>
-								<li>
-									<a href="http://www.youtube.com/watch?v=7IX2ljgA-yw&hd=1" target="_blank" rel="video" title="IOS Livecoding Demo"><img src="images/video/makc3d_air_test.png" alt="IOS Livecoding Demo" /></a>
-									<p>IOS Livecoding Demo</p>
-								</li>								
-								
-
-								
-							</ul>
-						</div>
-						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
-						<div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
-					</div>
-				</div>
+            <a id="download-colt-trial-button" href="#" class="button-blue">Download free demo</a>
+            <span class="or"></span>
+            <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" class="button-green">Subscribe for 20$/month</a>
             </div>
         </section>
     </div>
 
+    <!-- Video -->
+    <div id="carousel-wrapper">
+        <section class="section">
+        <div class="carousel-container">
+        <div id="carousel-ytube" class="sliderkit">
+        <div class="sliderkit-nav">
+        <div class="sliderkit-nav-clip">
+
+            <ul>
+
+            <li> <a href="http://www.youtube.com/watch?v=ELGiZg46h8M&amp;hd=1" target="_blank" title="Sergey Gonchar COLT Screencast"><img src="images/video/gonchar_tizer.png" alt="Sergey Gonchar COLT Screencast"></a>
+            <p>COLT introduction</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=IZkhMqOKC6U&amp;hd=1" target="_blank" title="Toy monsters — COLT live coding"><img src="images/video/toy-monsters.png" alt="Toy monsters — COLT live coding"></a>
+            <p>Toy monsters — COLT live coding</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=iPBloI4xH8Y&amp;hd=1" target="_blank" title="Game Development with COLT"><img src="images/video/gamedev_barvinco.png" alt="Game Development with COLT"></a>
+            <p>Game development with Flash, FD and COLT</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=7IX2ljgA-yw&amp;hd=1" target="_blank" title="IOS Livecoding Demo"><img src="images/video/makc3d_air_test.png" alt="IOS Livecoding Demo"></a>
+            <p>IOS Livecoding Demo</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=_7Xs0wUlF3g&amp;hd=1" target="_blank" title="Livecoding AIR apps"><img src="images/video/air_screencast.png" alt="Livecoding AIR apps"></a>
+            <p>Livecoding AIR apps</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=V4yoe1K080I&amp;hd=1" target="_blank" title="Work with 3d "><img src="images/video/gonchar_3d_modeling.png" alt="COLT working along with 3D modeling tool"></a>
+            <p>COLT working along with 3D modeling tool</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=hsjBjwy07ow&amp;hd=1" target="_blank" title="Kinect + COLT"><img src="images/video/kinect_magic.png" alt="Kinect + COLT"></a>
+            <p>Kinect + COLT</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=JxA1u4uY9TQ&amp;hd=1" target="_blank" title="Work with COLT Screencast"><img src="images/video/theIlluzor_screencast.png" alt="Work with COLT Screencast"></a>
+            <p>Livecoding particles interactions with COLT</p>
+            </li>
+
+            <li> <a href="http://www.youtube.com/watch?v=GsK_syADzQ8&amp;hd=1" target="_blank" title="Starling platformer with COLT"><img src="images/video/winxalex_screencast.png" alt="Starling platformer with COLT"></a>
+            <p>Starling platformer with COLT</p>
+            </li>
+
+            </ul>
+
+        </div>
+        <div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-prev"><a href="#" title="Scroll to the left"><span>Previous</span></a></div>
+        <div class="sliderkit-btn sliderkit-nav-btn sliderkit-nav-next"><a href="#" title="Scroll to the right"><span>Next</span></a></div>
+        </div>
+        </div>
+        </div>
+        </section>
+    </div>
+    <!-- / video -->
+
+    <!-- Features -->
     <div id="tabs-wrapper">
-    	<section class="section">
-        	<section class="tabs">
-	            <div class="verticalslider" id="tabsCo2">
-        <ul class="verticalslider_tabs">
+        <section class="section">
+        <section class="tabs">
+        <div class="verticalslider" id="tabsCo2">
+            <ul class="verticalslider_tabs">
             <li class="tabs-ts"><a href="#">Timesaver</a></li>
             <li class="tabs-md"><a href="#">Mobile Development</a></li>
             <li class="tabs-nr"><a href="#">No restrictions</a></li>
             <li class="tabs-tw"><a href="#">Teamwork</a></li>
             <li class="tabs-dp"><a href="#">Designers and programmers working together</a></li>
-            <li class="tabs-st"><a href="#">Simultaneous testing on various platforms</a></li>                        
-        </ul>
-        <ul class="verticalslider_contents">
+            <li class="tabs-st"><a href="#">Simultaneous testing on various platforms</a></li>
+            </ul>
+
+            <ul class="verticalslider_contents">
+
             <li>
             <p>Super fast incremental compilation - (~200 ms)</p>
+            <p>No loss during application recovery after compilation — it works just like before. Connection with the server remains active, a loaded level of a game doesn't go anywhere, and the interface a developer is working on doesn't remove the text entered beforehand. Apps that are already on devices don't need to be reinstalled after compilation. The app is installed automatically just as a livecoding session starts.</p>
+            <p>No need of additional frameworks for optimizing the speed of application assembly. Your code will be cleaner and the app architecture is much simpler. Less time is wasted on additional optimization during development.</p>
+            </li>
 
-<p>No loss during application recovery after compilation — it works just like before. Connection with the server remains active, a loaded level of a game doesn't go anywhere, and the interface a developer is working on doesn't remove the text entered beforehand. Apps that are already on devices don't need to be reinstalled after compilation. The app is installed automatically just as a livecoding session starts.</p> 
-
-<p>No need of additional frameworks for optimizing the speed of application assembly. Your code will be cleaner and the app architecture is much simpler. Less time is wasted on additional optimization during development.</p>
-	     </li>
             <li>
             <p>COLT supports software development for iOS and Android.</p>
-	
-			<p>In order to put an application together you only need to set up assembly of a mobile app and click the "Run" button. </p></li>
+            <p>In order to put an application together you only need to set up assembly of a mobile app and click the &quot;Run&quot; button. </p>
+            </li>
+
             <li>
-            <p>COLT is a separate tool.</p> 
-			<p>No particular IDE is required. You just save a code in your editor and then it's delivered into a working app.</p>
-			<p>A time-proven standard Adobe MXMLC compiler is used. We just spiced it up with additional functionality for livecoding. Your projects will work in it just like before.</p>
-			<p>Support of all win/mac/linux platforms.</p></li>
+            <p>COLT is a separate tool.</p>
+            <p>No particular IDE is required. You just save a code in your editor and then it's delivered into a working app.</p>
+            <p>A time-proven standard Adobe MXMLC compiler is used. We just spiced it up with additional functionality for livecoding. Your projects will work in it just like before.</p>
+            <p>Support of all win/mac/linux platforms.</p>
+            </li>
+
             <li>
             <p>An app in a live session mode is network-available.</p>
-			<p>COLT starts a web server able to deliver updates even if the app has been launched on another computer somewhere in the office.</p>
-			<p>Several computers and devices at a time! As many people as you wish can be involved in testing, and all together you can correct mistakes as soon as they occur.</p>
-			<p>No need to duplicate those - they will be seen right on the device. As soon as the developer alters the implementation, it immediately gets updated on all computers and devices. </p></li>               
+            <p>COLT starts a web server able to deliver updates even if the app has been launched on another computer somewhere in the office.</p>
+            <p>Several computers and devices at a time! As many people as you wish can be involved in testing, and all together you can correct mistakes as soon as they occur.</p>
+            <p>No need to duplicate those - they will be seen right on the device. As soon as the developer alters the implementation, it immediately gets updated on all computers and devices. </p>
+            </li>
+
             <li>
             <p>Delivering images to a working device lets you make cooperation of the designer and programmer more efficient than ever.</p>
-			<p>As soon as a new file is saved to replace the old one, it is sent to all active devices.</p>
-			<p>The designer immediately sees what their work moves and looks like in a working app.</p></li>
+            <p>As soon as a new file is saved to replace the old one, it is sent to all active devices.</p>
+            <p>The designer immediately sees what their work moves and looks like in a working app.</p>
+            </li>
+
             <li>
             <p>While developing, you can use a special stand with different versions of smartphones, tablets and computer OS'.</p>
-			<p>This approach speeds up multiplatform apps development.</p></li>         
-        </ul>
-    </div>
-			</section>
+            <p>This approach speeds up multiplatform apps development.</p>
+            </li>
+
+            </ul>
+
+        </div>
+        </section>
         </section>
     </div>
-    
+    <!-- / features -->
+
+<!-- CO-2 ================================================================== -->
     <div id="ide-wrapper">
-      <section class="ide-container">
-       <div class="ider-inner">
-       	 <p class="ide-header">Code Orchestra <span>IDE<span> 2.0 Beta</p>
-		 <p class="light">The Smarter and Faster Way to Code</p>
-       	 <p>Develop flash, mobile and web applications quickly and easily <br/>with Flash, AIR and HTML5.</p>
- 
-        <div class="buttons">
-            	<a id="download-co2-trial-button" href="#" class="button-blue">Download Free Trial</a>
-                <span class="or"> </span>
-                <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3185730" class="button-green">Buy Now for 299$</a>
+        <section class="ide-container">
+
+        <!-- Hero -->
+        <div class="ider-inner">
+            <p class="ide-header">Code Orchestra <span>IDE</span> 2.0 Beta</p>
+            <p class="light">The Smarter and Faster Way to Code</p>
+            <p>Develop flash, mobile and web applications quickly and easily <br>
+            with Flash, AIR and HTML5.</p>
+            <!-- Buttons -->
+            <div class="buttons">
+            <a id="download-co2-trial-button" href="#" class="button-blue">Download 2.0 beta</a>
+            <span class="or"></span>
+            <a href="javascript:alert('Coming soon.')" class="button-green">Pre-order for $30/month</a>
+            </div>
         </div>
 
-	     </div>
+        <!-- Icon -->
+        <div id="ide-images" class="image-animation animate-consecutive co2-anim"><img src="images/co2icon.png" alt="ActionScript Flash Development Tool" width="314" height="314" class="animated co2-icon"></div>
 
-         <div id="ide-images" class="image-animation animate-consecutive co2-anim"><img src="images/co2icon.png" class="animated co2-icon" width="314" height="314"></div>
+        <!-- Ad -->
         <div id="winbook">
-       	  <h1>Win a new<br>MacBook Pro Retina <br/>or iPad 4!</h1>
-          <h2>Make a video showing the benefit of using technology COLT and win one of the prizes! The main prize is the new MacBook Pro with retina display!</h2>
-         <img src="images/ipadobook.png" class="book" width="456" height="478"><img src="images/winctrl.png" class="ctrl" width="46" height="158">
-         <a id="contest-open"></a>
-        </div>
-       <div id="contest">
-           <h1>Win a new<br>MacBook Pro Retina <br/>or iPad 4!</h1>
+            <h1>Win a new<br>
+            MacBook Pro Retina <br>
+            or iPad 4!</h1>
             <h2>Make a video showing the benefit of using technology COLT and win one of the prizes! The main prize is the new MacBook Pro with retina display!</h2>
-           <img src="images/ipadobook.png" class="book" width="456" height="478">
-           <a class="contest-close" title="Close">Close</a>
-           <a class="contest-close bottom" title="Close">Close</a>
-    <section class="contest-container">
-    			<h3>How about some fun?</h3>
-                <p>Like experimenting with COLT and recording the process as a screencast. The most amusing and impressive experiences will be awarded!</p>
-                <p>  All works will end up posted here, at CodeOrchestra.com on the contest page. The best of the best are to appear on the main page.</p>
-           		<h3>How to apply</h3>
-                <p>  Submit a screencast exposing capabilities that livecoding provides by the 25th of June. </p>
-                <p>  The screencast should contain a text description (in English) of the process being shown, along with a brief explanation of what COLT is, and a link to codeorchestra.com.</p>
-                <p><strong>The winners will receive their prizes on the 1st of July.</strong></p>
-                <h3>Screencast requirements</h3>
-                <p>Subtitles or voiceover in English. </p>
-                <p>A code being edited and a Flash app in livecoding mode (on a computer or mobile device) should be displayed on the screen.   Splicing and fast motion are acceptable, but you should show the process of creating (or editing) a single application. </p>
-                <h3>Screencast concepts</h3>
-                <p>Of course it's better if you think out something uncommon, but, just in case, we'll provide examples of what we expect to see.</p>
-                <p>1.   Gamedev - setting up a game level, character etc.<br />
-                  2. Creating an interface - controls, skins etc. <br />
-                  3. Sound visualization.<br />
-                4. &quot;Drawing&quot; with code.</p>
-				<h3 class="prizes">Prizes</h3>
-                
-                <div class="prizes-container clearfix">
-           	  <div class="column second">
-                    	<h4 class="">People's Choice</h4>
-                  <p><img src="images/iPad.png" width="112" height="146"></p>
-              <p><span>iPad4</span><br><strong>for the maximum numbers<br>of view on YouTube</strong></p>
-                    </div>
-              <div class="column first">
-                    	<h4 class=""><em>The</em><br>Most Interesting<br>Example</h4>
-                  <p><img src="images/macbook.png" width="235" height="144"></p>
-                  <p>Macbook with retina display<br><em>(15", 16Gb, i7x4, 2013)</em></p>
-                    </div>
-              <div class="column third">
-                    	<h4 class=""><em>Free</em><br>COLT License</h4>
-                  <p><img src="images/50free.png" width="174" height="153"></p>
-              <p><strong>All 50 finalists (according to<br>the number of views on YouTube)<br>get a free license.</strong></p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-           </section>
-           <div id="contest-mail">
-           	<span>Post your screencast on YouTube<br>and email us at <a href="mailto:contest@codeorchestra.com">contest@codeorchestra.com</a> to enter the contest.</span>
-           </div>
-         </div>
-      </section>
-    </div>
-    
-    <div id="columns-wrapper">
-    	<div class="columns-container">
-        	<section class="section">
-            	<div class="columns clearfix">
-                	<div class="column">
-                    	<h2 class="f-to-ht">Build HTML5 apps with ActionScript</h2>
-                        <p>Code Orchestra can translate ActionScript3 into JavaScript and make your app work out of the box. Debug, JS Preview, jQuery and D3 in AS3 Projects!</p>
-                    </div>
-                    <div class="column">
-                    	<h2 class="one-lan">One language development</h2>
-                        <p>Does your team face a need to involve a new group of experts to a project to develop on ObjectiveC and JavaScript?
-Your higher authorities emphatically recommend you to "Learn HTML5"?
-Even now CO2 project can be compiled for two target platforms, Flash and HTML5.</p>
-                    </div>
-                    <div class="column">
-                    	<h2 class="train">Trainings</h2>
-                        <p>How to start with Code Orchestra? It`s easy. We prepeared a lot of training stuff to make you a developer. Video trainings, documentation and MakeMeDeveloper.com portal (coming soon).</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-                <div class="columns clearfix">
-                	<div class="column">
-                    	<h2 class="live-cod">Live coding</h2>
-                        <p>Have you ever dream to code without recompiling or restarting application? Code Orchestra makes this true.</p>
-                    </div>
-                    <div class="column">
-                    	<h2 class="rev">Revolutionary IDE</h2>
-                        <p>Code Orchestra is full of innovations that make life easier. Look to documentation in order to be sure...</p>
-                    </div>
-                    <div class="column">
-                    	<h2 class="lex">Language Extensions</h2>
-                        <p>Upgrade yourself with our language tools. How about to write a "Texas Holdem Poker" or an RPG (both client and server) within a single project, single language and single IDE? No problem. This is now possible with our powerful and mighty DSLs.</p>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
+            <img src="images/ipadobook.png" alt="ActionScript Flash Development Tool" width="456" height="478" class="book"><img src="images/winctrl.png" alt="ActionScript Flash Development Tool" width="46" height="158" class="ctrl"> <a id="contest-open"></a>
+        </div>
+
+        <!-- T-n-C -->
+        <div id="contest">
+            <h1>Win a new<br>
+            MacBook Pro Retina <br>
+            or iPad 4!</h1>
+            <h2>Make a video showing the benefit of using technology COLT and win one of the prizes! The main prize is the new MacBook Pro with retina display!</h2>
+            <img src="images/ipadobook.png" alt="ActionScript Flash Development Tool" width="456" height="478" class="book"> <a class="contest-close" title="Close">Close</a> <a class="contest-close bottom" title="Close">Close</a>
+            <section class="contest-container">
+            <h3>How about some fun?</h3>
+            <p>Like experimenting with COLT and recording the process as a screencast. The most amusing and impressive experiences will be awarded!</p>
+            <p> All works will end up posted here, at CodeOrchestra.com on the contest page. The best of the best are to appear on the main page.</p>
+            <h3>How to apply</h3>
+            <p> Submit a screencast exposing capabilities that livecoding provides by the 25th of June. </p>
+            <p> The screencast should contain a text description (in English) of the process being shown, along with a brief explanation of what COLT is, and a link to codeorchestra.com.</p>
+            <p><strong>The winners will receive their prizes on the 1st of July.</strong></p>
+            <h3>Screencast requirements</h3>
+            <p>Subtitles or voiceover in English. </p>
+            <p>A code being edited and a Flash app in livecoding mode (on a computer or mobile device) should be displayed on the screen.   Splicing and fast motion are acceptable, but you should show the process of creating (or editing) a single application. </p>
+            <h3>Screencast concepts</h3>
+            <p>Of course it's better if you think out something uncommon, but, just in case, we'll provide examples of what we expect to see.</p>
+            <p>1.   Gamedev - setting up a game level, character etc.<br>
+            2. Creating an interface - controls, skins etc. <br>
+            3. Sound visualization.<br>
+            4. &quot;Drawing&quot; with code.</p>
+            <h3 class="prizes">Prizes</h3>
+            <div class="prizes-container clearfix">
+            <div class="column second">
+            <h4 class="">People's Choice</h4>
+            <p><img src="images/iPad.png" alt="ActionScript Flash Development Tool" width="112" height="146"></p>
+            <p><span>iPad4</span><br>
+            <strong>for the maximum numbers<br>
+            of view on YouTube</strong></p>
+            </div>
+            <div class="column first">
+            <h4 class=""><em>The</em><br>
+            Most Interesting<br>
+            Example</h4>
+            <p><img src="images/macbook.png" alt="ActionScript Flash Development Tool" width="235" height="144"></p>
+            <p>Macbook with retina display<br>
+            <em>(15&quot;, 16Gb, i7x4, 2013)</em></p>
+            </div>
+            <div class="column third">
+            <h4 class=""><em>Free</em><br>
+            COLT License</h4>
+            <p><img src="images/50free.png" alt="ActionScript Flash Development Tool" width="174" height="153"></p>
+            <p><strong>All 50 finalists (according to<br>
+            the number of views on YouTube)<br>
+            get a free license.</strong></p>
+            </div>
+            </div>
+            <div class="clearfix"></div>
             </section>
+            <div id="contest-mail"> <span>Post your screencast on YouTube<br>
+            and email us at <a href="mailto:contest@codeorchestra.com">contest@codeorchestra.com</a> to enter the contest.</span> </div>
+        </div>
+
+        </section>
+    </div>
+
+    <!-- CO-2 features -->
+    <div id="columns-wrapper">
+        <div class="columns-container">
+        <section class="section">
+
+        <div class="columns clearfix">
+
+        <div class="column">
+        <h2 class="f-to-ht">Build HTML5 apps with ActionScript</h2>
+        <p>Code Orchestra can translate ActionScript3 into JavaScript and make your app work out of the box. Debug, JS Preview, jQuery and D3 in AS3 Projects!</p>
+        </div>
+
+        <div class="column">
+        <h2 class="one-lan">One language development</h2>
+        <p>Does your team face a need to involve a new group of experts to a project to develop on ObjectiveC and JavaScript?
+        Your higher authorities emphatically recommend you to &quot;Learn HTML5&quot;?
+        Even now CO2 project can be compiled for two target platforms, Flash and HTML5.</p>
+        </div>
+
+        <div class="column">
+        <h2 class="train">Trainings</h2>
+        <p>How to start with Code Orchestra? It`s easy. We prepeared a lot of training stuff to make you a developer. Video trainings, documentation and MakeMeDeveloper.com portal (coming soon).</p>
+        </div>
+
+        </div><!-- columns -->
+
+        <div class="clearfix"></div>
+
+        <div class="columns clearfix">
+
+        <div class="column">
+        <h2 class="live-cod">Live coding</h2>
+        <p>Have you ever dream to code without recompiling or restarting application? Code Orchestra makes this true.</p>
+        </div>
+
+        <div class="column">
+        <h2 class="rev">Revolutionary IDE</h2>
+        <p>Code Orchestra is full of innovations that make life easier. Look to documentation in order to be sure...</p>
+        </div>
+
+        <div class="column">
+        <h2 class="lex">Language Extensions</h2>
+        <p>Upgrade yourself with our language tools. How about to write a &quot;Texas Holdem Poker&quot; or an RPG (both client and server) within a single project, single language and single IDE? No problem. This is now possible with our powerful and mighty DSLs.</p>
+        </div>
+
+        </div><!-- columns -->
+
+        <div class="clearfix"></div>
+        </section>
         </div>
     </div>
-	
-	<div class="inaction-wrapper">
-      <div class="inaction-container">
+    <!-- / CO-2 features -->
+
+    <!-- Expanding gallery -->
+    <div class="inaction-wrapper">
+        <div class="inaction-container">
         <div id="action-gifs">
-        	<h2>See Code Orchestra in action</h2>
-            <p>Roll over each thumbnail to see corresponding Code Orchestra feature in action.</p>
-        
-        <table align="center" style="border-collapse:collapse; border: 3px solid #CCCCCC;" id="gifs-table">
-            <colgroup>
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-                <col width="90" />
-            </colgroup>
-            <tr>
-                <td class="box" colspan="5" rowspan="2" style="background:url('images/tiles/add_event_annotation.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/add_event_annotation.gif" tilte="add event annotation" />
-                    </a>
-                </td>
-                <td class="box" colspan="4" style="background:url('images/tiles/tuples.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/tuples.gif" title="tuples" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" style="background:url('images/tiles/fast_events_dispatching.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/fast_events_dispatching.gif" title="fast events dispatching" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" style="background:url('images/tiles/check_array_by_condition.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/check_array_by_condition.gif" title="check array by condition" />
-                    </a>
-                </td>
-                <td class="box" colspan="2" style="background:url('images/tiles/split_join_behavior.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/split_join_behavior.gif" title="split join behavior" />
-                    </a>
-                </td>
-                <td class="box" colspan="3" style="background:url('images/tiles/introduce_inline_variable.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/introduce_inline_variable.gif" title="introduce inline variable" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" rowspan="2" style="background:url('images/tiles/insert_cast_variable_declaration.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/insert_cast_variable_declaration.gif" title="insert cast variable declaration" />
-                    </a>
-                </td>
-                <td class="box" colspan="3" style="background:url('images/tiles/editor_automatic_rename.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/editor_automatic_rename.gif" title="editor automatic rename" />
-                    </a>
-                </td>
-                <td class="box" colspan="2" style="background:url('images/tiles/variable_initialization.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/variable_initialization.gif" title="variable initialization" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="5" style="background:url('images/tiles/setter_field_creation.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/setter_field_creation.gif" title="setter field creation" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="5" style="background:url('images/tiles/get_elements_of_array_by.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/get_elements_of_array_by.gif" title="get elements of array by" />
-                    </a>
-                </td>
-                <td class="box" colspan="4" style="background:url('images/tiles/introduce_method_parameter.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/introduce_method_parameter.gif" title="introduce method parameter" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" style="background:url('images/tiles/surrounding-with-block.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/surrounding-with-block.gif" title="surrounding with block" />
-                    </a>
-                </td>
-                <td class="box" colspan="5" style="background:url('images/tiles/object_builder.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/object_builder.gif" title="object builder" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="6" style="background:url('images/tiles/fast_events_listener.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/fast_events_listener.gif" title="fast events listener" />
-                    </a>
-                </td>
-                <td class="box" colspan="3" style="background:url('images/tiles/null_safe_operator.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/null_safe_operator.gif" title="null safe operator" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" style="background:url('images/tiles/use_expressions_in_annotation.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/use_expressions_in_annotation.gif" title="use expressions in annotation" />
-                    </a>
-                </td>
-                <td class="box" colspan="5" style="background:url('images/tiles/convert_sprites_to_points.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/convert_sprites_to_points.gif" title="convert sprites to points" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="6" style="background:url('images/tiles/quick_method_overrive.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/quick_method_overrive.gif" title="quick method overrive" />
-                    </a>
-                </td>
-                <td class="box" colspan="3" style="background:url('images/tiles/embed.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/embed.gif" title="embed" />
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td class="box" colspan="4" style="background:url('images/tiles/bitmap_asset.png') no-repeat;">
-                    <a>
-                        <img src="images/tiles/bitmap_asset.gif" title="bitmap asset" />
-                    </a>
-                </td>
-                <td class="box" colspan="5">&nbsp;
-                    
-                </td>
-            </tr>
+        <h2>See Code Orchestra in action</h2>
+        <p>Roll over each thumbnail to see corresponding Code Orchestra feature in action.</p>
+
+        <table id="gifs-table">
+        <colgroup><col><col><col><col><col><col><col><col><col></colgroup>
+
+        <tr>
+        <td class="box" colspan="5" rowspan="2" style="background:url('images/tiles/add_event_annotation.png') no-repeat;"><a> <img src="images/tiles/add_event_annotation.gif" alt="add event annotation" title="add event annotation"> </a></td>
+        <td class="box" colspan="4" style="background:url('images/tiles/tuples.png') no-repeat;"><a> <img src="images/tiles/tuples.gif" title="tuples" alt="tuples"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" style="background:url('images/tiles/fast_events_dispatching.png') no-repeat;"><a> <img src="images/tiles/fast_events_dispatching.gif" title="fast events dispatching" alt="fast events dispatching"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" style="background:url('images/tiles/check_array_by_condition.png') no-repeat;"><a> <img src="images/tiles/check_array_by_condition.gif" title="check array by condition" alt="check array by condition"> </a></td>
+        <td class="box" colspan="2" style="background:url('images/tiles/split_join_behavior.png') no-repeat;"><a> <img src="images/tiles/split_join_behavior.gif" title="split join behavior" alt="split join behavior"> </a></td>
+        <td class="box" colspan="3" style="background:url('images/tiles/introduce_inline_variable.png') no-repeat;"><a> <img src="images/tiles/introduce_inline_variable.gif" title="introduce inline variable" alt="introduce inline variable"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" rowspan="2" style="background:url('images/tiles/insert_cast_variable_declaration.png') no-repeat;"><a> <img src="images/tiles/insert_cast_variable_declaration.gif" title="insert cast variable declaration" alt="insert cast variable declaration"> </a></td>
+        <td class="box" colspan="3" style="background:url('images/tiles/editor_automatic_rename.png') no-repeat;"><a> <img src="images/tiles/editor_automatic_rename.gif" title="editor automatic rename" alt="editor automatic rename"> </a></td>
+        <td class="box" colspan="2" style="background:url('images/tiles/variable_initialization.png') no-repeat;"><a> <img src="images/tiles/variable_initialization.gif" title="variable initialization" alt="variable initialization"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="5" style="background:url('images/tiles/setter_field_creation.png') no-repeat;"><a> <img src="images/tiles/setter_field_creation.gif" title="setter field creation" alt="setter field creation"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="5" style="background:url('images/tiles/get_elements_of_array_by.png') no-repeat;"><a> <img src="images/tiles/get_elements_of_array_by.gif" title="get elements of array by" alt="get elements of array by"> </a></td>
+        <td class="box" colspan="4" style="background:url('images/tiles/introduce_method_parameter.png') no-repeat;"><a> <img src="images/tiles/introduce_method_parameter.gif" title="introduce method parameter" alt="introduce method parameter"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" style="background:url('images/tiles/surrounding-with-block.png') no-repeat;"><a> <img src="images/tiles/surrounding-with-block.gif" title="surrounding with block" alt="surrounding with block"> </a></td>
+        <td class="box" colspan="5" style="background:url('images/tiles/object_builder.png') no-repeat;"><a> <img src="images/tiles/object_builder.gif" title="object builder" alt="object builder"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="6" style="background:url('images/tiles/fast_events_listener.png') no-repeat;"><a> <img src="images/tiles/fast_events_listener.gif" title="fast events listener" alt="fast events listener"> </a></td>
+        <td class="box" colspan="3" style="background:url('images/tiles/null_safe_operator.png') no-repeat;"><a> <img src="images/tiles/null_safe_operator.gif" title="null safe operator" alt="null safe operator"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" style="background:url('images/tiles/use_expressions_in_annotation.png') no-repeat;"><a> <img src="images/tiles/use_expressions_in_annotation.gif" title="use expressions in annotation" alt="use expressions in annotation"> </a></td>
+        <td class="box" colspan="5" style="background:url('images/tiles/convert_sprites_to_points.png') no-repeat;"><a> <img src="images/tiles/convert_sprites_to_points.gif" title="convert sprites to points" alt="convert sprites to points"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="6" style="background:url('images/tiles/quick_method_overrive.png') no-repeat;"><a> <img src="images/tiles/quick_method_overrive.gif" title="quick method overrive" alt="quick method overrive"> </a></td>
+        <td class="box" colspan="3" style="background:url('images/tiles/embed.png') no-repeat;"><a> <img src="images/tiles/embed.gif" title="embed" alt="embed"> </a></td>
+        </tr>
+
+        <tr>
+        <td class="box" colspan="4" style="background:url('images/tiles/bitmap_asset.png') no-repeat;"><a> <img src="images/tiles/bitmap_asset.gif" title="bitmap asset" alt="bitmap asset"> </a></td>
+        <td class="box" colspan="5">&nbsp;</td>
+        </tr>
         </table>
-        <a class="action-close">Close</a>
-        <a class="action-close bottom">Close</a>
-        </div>
-        <a id="action-open"><span>See Code Orchestra in action</span></a>
-      </div>
-	</div>
-  
-	<footer id="footer">
-    	<section class="footer-container">
-          <section class="section">
-          		<div class="footer-logo">
-                	<a href="#">Code Orchestra</a>
-                    <span>&copy; 2012-2013. All rights reserved</span>
-                </div>
-              <ul id="footermenu">
-            	<li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
-				<li><a href="https://github.com/code-orchestra/documentation/wiki/FAQ">FAQ</a></li>
-				<li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
-            </ul>
-            <ul id="socials">
-				<li>
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://codeorchestra.com">Tweet</a>
-				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-				</li>
-				<li>&nbsp;&nbsp;</li>
-				<li><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fcodeorchestra&send=false&layout=button_count&width=120&show_faces=false&colorscheme=light&action=like&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe></li>
-				<li>&nbsp;&nbsp;</li>
-				<li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
-                <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
-            </ul>
-            <div id="paracvet"><a href="http://paracvet.com">Made by Paracvet</a></div>
-          </section>
+
+        <a class="action-close">Close</a> <a class="action-close bottom">Close</a> </div>
+        <a id="action-open"><span>See Code Orchestra in action</span></a> </div>
+    </div>
+    <!-- / expanding gallery -->
+
+<!-- FOOTER ================================================================ -->
+    <footer id="footer">
+        <section class="footer-container">
+        <section class="section">
+
+        <div class="footer-logo"> <a href="#">Code Orchestra</a> <span>&copy; 2012-2013. All rights reserved</span> </div>
+
+        <ul id="footermenu">
+        <li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
+        <li><a href="https://github.com/code-orchestra/documentation/wiki/FAQ">FAQ</a></li>
+        <li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
+        </ul>
+
+        <ul class="m-socials">
+        <li> <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://codeorchestra.com">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </li>
+        <li>&nbsp;&nbsp;</li>
+        <li>
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fcodeorchestra&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=21" style="border:none; overflow:hidden; width:120px; height:21px;"></iframe>
+        </li>
+        <li>&nbsp;&nbsp;</li>
+        <li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
+        <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
+        </ul>
+
+        <div id="paracvet"><a href="http://paracvet.com">Made by Paracvet</a></div>
+
         </section>
-	</footer><!-- #footer -->
-    
+        </section>
+    </footer>
+<!-- / footer -->
+
+<!-- STICKY MENU =========================================================== -->
     <div id="slidepanel">
-    	<section class="section">
-        	<a id="logo" href="#">Code Orchestra</a>
-            <ul id="topmenu">
-            	<li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
-                <li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
-            </ul>
-            <ul id="utils">
-            	<li><a href="http://blog.codeorchestra.com">Blog</a></li>
-                <li><a href="https://codeorchestra.zendesk.com/forums">Forums</a></li>
-            </ul>
-            <ul id="socials">
-            	<li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
-                <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
-            </ul>
+        <section class="section">
+
+        <a class="m-logo" href="#">Code Orchestra</a>
+
+        <ul class="m-core">
+        <li><a href="https://github.com/code-orchestra/documentation/wiki">Documentation</a></li>
+        <li><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
+        </ul>
+
+        <ul class="m-utils">
+        <li><a href="http://blog.codeorchestra.com">Blog</a></li>
+        <li><a href="https://codeorchestra.zendesk.com/forums">Forums</a></li>
+        </ul>
+
+        <ul class="m-socials">
+        <li><a href="https://twitter.com/code_orchestra" class="twitter">Twitter</a></li>
+        <li><a href="https://www.facebook.com/codeorchestra" class="fb">Facebook</a></li>
+        </ul>
+
         </section>
     </div>
-</div><!-- #wrapper -->
+<!-- / sticky menu -->
 
-	<script type="text/javascript">
-	$(function() {
-		$(window).scroll(function(){
-			/* when reaching the element with id "last" we want to show the slidebox. Let's get the distance from the top to the element */
-			var distanceTop = $(window).height();
-			
-			if  ($(window).scrollTop() > distanceTop)
-				$('#slidepanel').animate({'top':'0px'},400);
-			else 
-				$('#slidepanel').stop(true).animate({'top':'-61px'},200);	
-		});
-		
-		
-		
-		/* remove the slidebox when clicking the cross */
-		/*$('#slidepanel').bind('click',function(){
-			$(this).parent().remove();
-		});*/
-	});
-	</script>
+</div>
+<!-- / wrapper -->
 
+<!-- SCRIPTS =============================================================== -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery-1.9.1.min.js"><\/script><script src="/js/jqueryui-1.10.2.min.js"><\/script>')</script>
 
-	<script src="js/jquery.inview.js"></script>
-    <script src="js/scripts-anim.js"></script>
+<script src="js/jquery.easing.1.3.min.js"></script>
+<script src="js/verticaltabs.pack.js"></script>
+<script src="js/jquery.sliderkit.1.9.2.pack.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/slides.min.jquery.js"></script>
+<script src="js/download.js"></script>
+<script src="js/jquery.inview.js"></script>
+<script src="js/scripts-anim.js"></script>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<script src="js/scripts.js"></script>
 
-	  ga('create', 'UA-40699654-1', 'codeorchestra.com');
-	  ga('send', 'pageview');
-
-	</script>
-
+<!-- Google Analytics -->
+<script>
+    var _gaq=[['_setAccount','UA-40699654-1'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 </body>
 </html>
