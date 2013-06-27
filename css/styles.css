@@ -36,16 +36,25 @@ input{vertical-align:middle;}
 #header a,#slidepanel a{color:#434f61;text-decoration:none;display:inline-block;}
 #header ul,#header li,#slidepanel ul,#slidepanel li{float:left;}
 #logo,.m-logo{float:left;font-size:22px;text-shadow:#fff 0 1px 0;margin:15px 80px 0 0;line-height:22px;}
+.p-front #logo,.p-front .m-logo,.p-front .footer-logo A{cursor:default;}
 #topmenu a,.m-core a,#utils a,.m-utils a{padding:4px 12px 5px;margin-right:8px;border-radius:4px;font-weight:500;text-shadow:#fff 0 1px 0;}
 #utils,.m-utils{margin-left:217px;}
-#topmenu a:hover,.m-core a:hover,#topmenu li.active a,.m-core li.active a,#utils a:hover,#utils li.active a,.m-utils a:hover,.m-utils li.active a{color:#fff;text-shadow:none;background:#434f61;}
+#topmenu a:hover,.m-core a:hover,#topmenu li.active a,.m-core li.active a,#utils a:hover,#utils li.active a,.m-utils a:hover,.m-utils li.active a{color:#fff !important;text-shadow:none;background:#434f61;}
 #topmenu,.m-core,#utils,.m-utils,#socials,.m-socials{margin-top:14px;}
 ul#socials,ul.m-socials{float:right;}
 #socials a,.m-socials a{width:28px;height:28px;background-position:0 0;background-repeat:no-repeat;text-indent:-9999px;}
 #socials a:hover,.m-socials a:hover{opacity:0.7;}
 #socials a.twitter,.m-socials a.twitter{background-image:url(../images/tweet.png);}
 #socials a.fb,.m-socials a.fb{background-image:url(../images/fb.png);margin-left:11px;}
-#rocket-wrapper{background:url(../images/byconur.png) 50% bottom repeat-x;border-top:3px solid #a76d2c;padding-top:82px;}
+#rocket-wrapper{background:url(../images/byconur.png) 50% bottom repeat-x;border-top:3px solid #a76d2c;}
+.rocket-container{background:url(../images/svet.png) 50% 0 no-repeat;margin:0 auto;padding:506px 8px 228px 8px;position:relative;width:960px;}
+.rocket-container p{text-align:center;font-size:22px;line-height:1.5em;text-shadow:#fff 0 1px 0;padding:0 75px;}
+.rocket-container p.light{color:#655641;}
+.rocket-container .buttons,.ide-container .buttons{padding-top:31px;}
+.rocket-images{position:absolute;left:0;top:35px;width:976px;height:431px;background:url(../images/futcom.png) 0 0 no-repeat;}
+.rocket-container .colt-anim .animated,.ide-container .co2-anim .animated{position:absolute;visibility:hidden;}
+.rocket-container .colt-anim .icon-racket{left:50%;margin-left:-157px;top:47px;}
+.rocket-container .colt-anim .icon-colt{left:50%;margin-left:-106px;top:397px;}
 #footer{height:165px;background:#cfe0e7;}
 .footer-container{background:#cfe0e7;height:164px;border-top:#a4b5bc 1px solid;}
 .footer-container .section{position:relative;height:164px;}
@@ -59,14 +68,6 @@ ul#socials,ul.m-socials{float:right;}
 #paracvet a{display:inline-block;font-size:12px;line-height:27px;text-decoration:none;color:#555;text-shadow:#fff 0 1px;}
 #footer ul#socials,#footer ul.m-socials{float:right;margin-top:56px;}
 #footer #socials li a,#footer .m-socials li a{width:28px;height:28px;background-position:0 0;background-repeat:no-repeat;text-indent:-9999px;display:inline-block;}
-.rocket-container{width:960px;padding:674px 8px 228px 8px;margin:0 auto;background:url(../images/svet.png) 50% 0 no-repeat;position:relative;margin-top:-250px;}
-.rocket-container p{text-align:center;font-size:22px;line-height:1.5em;text-shadow:#fff 0 1px 0;padding:0 75px;}
-.rocket-container p.light{color:#655641;}
-.rocket-container .buttons,.ide-container .buttons{padding-top:31px;}
-.rocket-images{position:absolute;left:0;top:203px;width:976px;height:431px;background:url(../images/futcom.png) 0 0 no-repeat;}
-.rocket-container .colt-anim .animated,.ide-container .co2-anim .animated{position:absolute;visibility:hidden;}
-.rocket-container .colt-anim .icon-racket{left:50%;margin-left:-157px;top:47px;}
-.rocket-container .colt-anim .icon-colt{left:50%;margin-left:-106px;top:397px;}
 [class^="button-"],[class*="button-"]{display:inline-block;width:238px;height:66px;background-image:url(../images/buttons.png);background-repeat:no-repeat;color:#fff;text-decoration:none;text-shadow:#000000 0 -1px 0;text-align:center;font-size:18px;line-height:58px;}
 .button-blue{background-position:-1px 0;}
 .button-blue:hover{background-position:-1px -66px;}
