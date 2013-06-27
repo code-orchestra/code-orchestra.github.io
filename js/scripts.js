@@ -75,70 +75,70 @@ $(window).load(function () { //$(window).load() must be used instead of $(docume
 |
 */
 $(document).ready(function(){
-	$("#contest-open").click(function(){
-		$("#ide-wrapper .ide-container").css('padding-top','1940px');
-		$("#ide-images").css('top','1675px');
-		$("#contest").fadeIn('slow')
-	});
-	$("#contest .contest-close").click(function(){
-		$("#ide-wrapper .ide-container").css('padding-top','460px');
-		$("#ide-images").css('top','195px');
-		$("#contest").fadeOut('fast')
-	});
-	
-	$("#action-open").click(function(){
-		$("#action-gifs").slideDown('slow');
-		$("#action-open").fadeOut('fast');
-	});
-	$("#action-gifs .action-close").click(function(){
-		$("#action-gifs").slideUp('fast');
-		$("#action-open").fadeIn('fast');
-	});
-	
-	$("#download-colt-trial-button").click(function(){
-		download_COLT();
-	});
-	
-	$("#download-co2-trial-button").click(function(){
-		download_co2();
-	});
-	
-	
-	$("#rocket-div").click(function(e){
-		// ok, so people want to click stuff in that div
-		// we don't want to mess with its layout, so here goes the hack
-		if(e.target.id != "rocket-div") {
-			// ignore logo images in the div
-			return;
-		}
-		var offset = $(e.target).offset();
-		var x = e.pageX - offset.left;
-		if((x < 285)||(x > 690)) {
-			// find closest "appears to be a link" area in the div
-			var tabs = {
-				ts:{x:175,y:115},
-				md:{x:815,y:125},
-				nr:{x:125,y:215},
-				tw:{x:810,y:210},
-				st:{x:145,y:310},
-				dp:{x:845,y:300}
-			}
-			var y = e.pageY - offset.top, d = 1e23, t;
-			for (var tab in tabs) {
-				var ptab = tabs[tab];
-				var dtab = (x-ptab.x)*(x-ptab.x)+(y-ptab.y)*(y-ptab.y);
-				if (dtab < d) { d = dtab; t = tab; }
-			}
-			// trigger click handler in corresponding tab
-			$(".tabs-"+t+" a").trigger("click");
-			// scroll down to the tabs
-			// (thanks to that top menu we need to go to something above the tabs)
-			location = "#download-colt-trial-button";
-		}
-	});
-	if(location.hash == '#contest-open'){
-		$('#contest-open').trigger('click');
-	};
+    $("#contest-open").click(function(){
+        $("#ide-wrapper .ide-container").css('padding-top','1940px');
+        $("#ide-images").css('top','1675px');
+        $("#contest").fadeIn('slow')
+    });
+    $("#contest .contest-close").click(function(){
+        $("#ide-wrapper .ide-container").css('padding-top','460px');
+        $("#ide-images").css('top','195px');
+        $("#contest").fadeOut('fast')
+    });
+
+    $("#action-open").click(function(){
+        $("#action-gifs").slideDown('slow');
+        $("#action-open").fadeOut('fast');
+    });
+    $("#action-gifs .action-close").click(function(){
+        $("#action-gifs").slideUp('fast');
+        $("#action-open").fadeIn('fast');
+    });
+
+    $("#download-colt-trial-button").click(function(){
+        download_COLT();
+    });
+
+    $("#download-co2-trial-button").click(function(){
+        download_co2();
+    });
+
+
+    $("#rocket-div").click(function(e){
+        // ok, so people want to click stuff in that div
+        // we don't want to mess with its layout, so here goes the hack
+        if(e.target.id != "rocket-div") {
+            // ignore logo images in the div
+            return;
+        }
+        var offset = $(e.target).offset();
+        var x = e.pageX - offset.left;
+        if((x < 285)||(x > 690)) {
+            // find closest "appears to be a link" area in the div
+            var tabs = {
+                ts:{x:175,y:115},
+                md:{x:815,y:125},
+                nr:{x:125,y:215},
+                tw:{x:810,y:210},
+                st:{x:145,y:310},
+                dp:{x:845,y:300}
+            }
+            var y = e.pageY - offset.top, d = 1e23, t;
+            for (var tab in tabs) {
+                var ptab = tabs[tab];
+                var dtab = (x-ptab.x)*(x-ptab.x)+(y-ptab.y)*(y-ptab.y);
+                if (dtab < d) { d = dtab; t = tab; }
+            }
+            // trigger click handler in corresponding tab
+            $(".tabs-"+t+" a").trigger("click");
+            // scroll down to the tabs
+            // (thanks to that top menu we need to go to something above the tabs)
+            location = "#download-colt-trial-button";
+        }
+    });
+    if(location.hash == '#contest-open'){
+        $('#contest-open').trigger('click');
+    };
 });
 
 /*
@@ -148,21 +148,21 @@ $(document).ready(function(){
 |
 */
 $(function() {
-	$(window).scroll(function(){
-		/* when reaching the element with id "last" we want to show the slidebox. Let's get the distance from the top to the element */
-		var distanceTop = $(window).height();
-		
-		if  ($(window).scrollTop() > distanceTop)
-			$('#slidepanel').animate({'top':'0px'},400);
-		else 
-			$('#slidepanel').stop(true).animate({'top':'-61px'},200);	
-	});
-	
-	
-	
-	/* remove the slidebox when clicking the cross */
-	/*$('#slidepanel').bind('click',function(){
-		$(this).parent().remove();
-	});*/
+    $(window).scroll(function(){
+        /* when reaching the element with id "last" we want to show the slidebox. Let's get the distance from the top to the element */
+        var distanceTop = $(window).height();
+
+        if  ($(window).scrollTop() > distanceTop)
+            $('#slidepanel').animate({'top':'0px'},400);
+        else
+            $('#slidepanel').stop(true).animate({'top':'-61px'},200);
+    });
+
+
+
+    /* remove the slidebox when clicking the cross */
+    /*$('#slidepanel').bind('click',function(){
+        $(this).parent().remove();
+    });*/
 });
 
