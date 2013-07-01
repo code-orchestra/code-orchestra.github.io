@@ -65,9 +65,9 @@
             <p>Livecoding - A way of writing and monitoring the program, when updated code and images are delivered to the running application, and no data is lost - the application preserves its state.</p>
             <!-- Buttons -->
             <div class="buttons">
-            <a id="download-colt-trial-button" href="#" class="button-blue">Download free demo</a>
+            <a id="download-colt-trial-button" href="#" class="button-blue" onClick="_gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);">Download free demo</a>
             <span class="or"></span>
-            <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" class="button-green">Subscribe for 20$/month</a>
+            <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" class="button-green" onClick="_gaq.push(['_trackEvent', 'Buy', 'COLT']);">Subscribe for 20$/month</a>
             </div>
         </div>
     </div>
@@ -202,9 +202,9 @@
             with Flash, AIR and HTML5.</p>
             <!-- Buttons -->
             <div class="buttons">
-            <a id="download-co2-trial-button" href="#" class="button-blue">Download 2.0 beta</a>
+            <a id="download-co2-trial-button" href="#" class="button-blue" onClick="_gaq.push(['_trackEvent', 'Download 2.0 beta', 'CO2']);">Download 2.0 beta</a>
             <span class="or"></span>
-            <a href="javascript:alert('Coming soon.')" class="button-green">Pre-order for $30/month</a>
+            <a href="javascript:alert('Coming soon.')" class="button-green" onClick="_gaq.push(['_trackEvent', 'Pre-order', 'CO2']);">Pre-order for $30/month</a>
             </div>
         </div>
 
@@ -501,10 +501,13 @@
 
 <!-- Google Analytics -->
 <script>
-    var _gaq=[["_setAccount","UA-40699654-1"],['_setDomainName', 'codeorchestra.com'],["_trackPageview"]];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-    s.parentNode.insertBefore(g,s)}(document,"script"));
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create', 'UA-40699654-1', 'codeorchestra.com');
+    ga('send', 'pageview');
 </script>
 </body>
 </html>
