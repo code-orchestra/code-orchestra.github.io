@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+    <loc>http://codeorchestra.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+</url>
+
+<!-- Blog -->
+<url>
+    <loc>http://blog.codeorchestra.com/</loc>
+    <priority>1.00</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/53876787290/colt-has-moved-to-subscription-based-pricing-model</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/53216025909/how-to-use-flashdevelop-plugin-with-colt-1-1-beta</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/53189146290/colt-1-1-beta-featuring-3x-faster-mxmlc-compiler-is</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/52628844501/announcing-colt-1-0-5-with-a-3x-faster-mxml-compiler</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/51327742640/colt-1-0-4-featuring-android-air-support-is-out</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/2</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/ask</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/51218561260/announcing-colt-js</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/51090175824/a-new-build-of-colt-is-available-for-download</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/51073443505/check-out-the-new-screencast-from-sergey-gonchar</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50996095910/a-fresh-view-on-colt</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50921733154/colt-1-0-3-featuring-adding-new-classes-at-runtime-is</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/3</loc>
+    <priority>0.64</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50921599022/our-issue-tracker-has-moved</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50752141595/a-new-build-of-colt-with-major-assets-handling-update</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50497828338/a-fresh-colt-build-with-an-expiration-period-reset-is</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50437991938/colt-1-0-2-has-been-released</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50356652519/an-updated-build-of-colt-is-available-for-download</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/4</loc>
+    <priority>0.51</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50331742668/an-awesome-example-of-colt-in-action-sergey</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50287225255/a-fresh-build-of-colt-is-available-for-download</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/50195225134/colt-1-0-1-has-been-released</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/49802851643/colt-code-orchestra-livecoding-tool-released</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/21435204932/intentions-part-b</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/5</loc>
+    <priority>0.41</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/video</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/tutorial</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/language-extensions</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/intentions</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/21434437209/intentions-part-a</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/20359201021/prototypes-in-as3</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/19956669055/events-flow-video-part-1</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/19074774686/unreal-engine-wow-effect-anatomy</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/19072307382/operators-overloading-video</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/6</loc>
+    <priority>0.33</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/video/page/2</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/tutorial/page/2</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/extendsmethods</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/events-flow</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/unreal-engine</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/3D</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/articles</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/gonchar</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/operators-overloading</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/image/18558402701</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/18558402701/makc3d</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/18005210800/changelog</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/17370610880/multiple-inheritance-in-as3-video</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/17262492063/enums-video</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/16869381255/understanding-metacode-part-2</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/7</loc>
+    <priority>0.26</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/16640733633/understanding-metacode-part-1</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/16130619593/realaxy-editor-interface-screencast</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/tutorial/page/3</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11100255232/querying-and-conquering-big-collections-in</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/10563128374/logging-language-realaxy</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/10032259175/realaxy-cheat-sheet</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9956858796/code-navigation-in-realaxy</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/articles/page/2</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9373109388/operators-overloading-in-as3-with-realaxy-editor</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/people</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/changelog</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/rase</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Enums</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/metaprogramming</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/getting-started</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/ActionSctipt3</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/16594361233/css-properties-autocomplete-realaxy</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/14980820909/special-astojs-features-of-realaxy-actionscript</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/14980562819/advanced-features-of-realaxy-actionscript-editor</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/8</loc>
+    <priority>0.21</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/interface</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9123814704/realaxy-hello-world</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9123174618/realaxy-actionscript-editor-rase-the-first-glance</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/collections</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/PDF</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/code-navigation</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/shortcuts</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Realaxy</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/essentials</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9835143096/working-with-collections-in-as3-using-realaxy</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/9332915442/realaxy-when-code-is-not-a-text</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/articles/page/3</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/howto</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/link</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/OOP</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/14980028526/basic-features-of-realaxy-actionscript-editor</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/13496333422/new-rase-development-roadmap-announced</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11707260499/realaxy-actionscript-editor-rc1-is-out</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/rase/page/2</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/getting+started/page/2</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/14777221054/rase-flashout-beta-public-preview</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/ActionSctipt3/page/2</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/new-features</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/screenshots</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/astojs</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/14261577633/beyond-flash</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/12554238000/realaxy-release-conference-2011</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/9</loc>
+    <priority>0.17</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/RASE</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/beginners-guide</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/first-step</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/hello-world</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Getting-Started</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Collections</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Arrays</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Vectors</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Lists</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Maps</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/8527791372/rase-faq</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/announce</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/development-roadmap</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/release</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11653108696/realaxy-lease-conference-timesheet</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/rase/page/3</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/getting+started</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/JS</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/JavaScript</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/beta</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/debugger</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/jQuery</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Slideshow</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Flashgamm</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Kiev</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Potapenko</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Flash</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/AS3</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/photo</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/montenegro</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/conference</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/12030624071/realaxy-actionscript-editor-1-0-is-released</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11432918517/realaxy-editor-productivity-guide-part-2</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11179945856/realaxy-editor-productivity-guide-on</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/10</loc>
+    <priority>0.13</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/RASE/page/2</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Getting+Started/page/2</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/FAQ</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Articles</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/announce/page/2</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/release/page/2</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Conference</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/8527326434/rase-beta-10-is-out</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/8526920316/rase-public-beta-10-announce</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/rase/page/4</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/8512732126/rase-public-beta-is-out</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/post/11118218738/realaxy-actionscript-editor-release-conference</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/report</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/11</loc>
+    <priority>0.11</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/RASE/page/3</loc>
+    <priority>0.09</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Getting+Started</loc>
+    <priority>0.09</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Articles/page/2</loc>
+    <priority>0.09</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Beta</loc>
+    <priority>0.09</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/page/12</loc>
+    <priority>0.09</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/RASE/page/4</loc>
+    <priority>0.07</priority>
+</url>
+<url>
+    <loc>http://blog.codeorchestra.com/tagged/Articles/page/3</loc>
+    <priority>0.07</priority>
+</url>
+</urlset>
