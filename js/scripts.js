@@ -70,26 +70,16 @@ $(window).load(function () { //$(window).load() must be used instead of $(docume
 
 /*
 |-------------------------------------------------------------------------------
-| CONTEST
+| MISC
 |-------------------------------------------------------------------------------
 |
 */
 $(document).ready(function(){
-    $("#contest-open").click(function(){
-        $("#ide-wrapper .ide-container").css('padding-top','1940px');
-        $("#ide-images").css('top','1675px');
-        $("#contest").fadeIn('slow')
-    });
-    $("#contest .contest-close").click(function(){
-        $("#ide-wrapper .ide-container").css('padding-top','460px');
-        $("#ide-images").css('top','195px');
-        $("#contest").fadeOut('fast')
-    });
-
     $("#action-open").click(function(){
         $("#action-gifs").slideDown('slow');
         $("#action-open").fadeOut('fast');
     });
+
     $("#action-gifs .action-close").click(function(){
         $("#action-gifs").slideUp('fast');
         $("#action-open").fadeIn('fast');
@@ -102,7 +92,6 @@ $(document).ready(function(){
     $("#download-co2-trial-button").click(function(){
         download_co2();
     });
-
 
     $("#rocket-div").click(function(e){
         // ok, so people want to click stuff in that div
