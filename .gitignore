@@ -11,6 +11,11 @@ _tmp.htm
 
 # Source Files
 css/*
+css/slides.css
+css/slides.css
+css/tabs.css
+css/tabs.css
+
 !css/styles.css
 js/*
 !js/jquery-*.min.js
@@ -27,3 +32,6 @@ js/*
 ehthumbs.db
 Thumbs.db
 
+
+
+_tmp.html

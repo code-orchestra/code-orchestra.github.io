@@ -58,7 +58,7 @@ a{color:blue;outline:0;text-decoration:underline}a:hover{text-decoration:none}p{
 #action-gifs a.action-close:hover{color:#6f878e;background-position:right -25px}#action-gifs a.action-close.bottom{top:100%;margin-top:-44px}.box{margin:0;padding:0;border:3px solid #ccc}
 .box img{display:block}.box img{transition:opacity .4s,visibility .4s;opacity:0;visibility:hidden}.box:hover img{transition:opacity .4s,visibility 0s;opacity:1;visibility:visible}
 #gifs-table{border-collapse:collapse;border:3px solid #ccc;margin:0 auto}#gifs-table COL{width:90px}IFRAME{border:0 none;margin-bottom:18px;overflow:auto;overflow-x:hidden;overflow-y:auto;max-width:100%}
-* HTML #wrapper,* HTML #footer{width:expression((documentElement.clientWidth||document.body.clientWidth)<1000? 1000px ':' ')'}
+* HTML #wrapper,* HTML #footer{width:expression((documentElement.clientWidth||document.body.clientWidth)<1000?"1000px":"")}
 #slides-wrapper{width:1005px;height:760px;background:url(../images/paper.png) 0 50px no-repeat;position:relative;margin:0 auto}#titul-slides{width:1005px;left:0;top:0;position:absolute;z-index:999}
 .slides_container{width:849px;margin-left:116px;margin-right:40px;height:553px;overflow:hidden;float:left;position:relative;display:none}.slides_container:after{content:'.';display:block;clear:both;visibility:hidden;height:0}
 .slides_container div.slide{width:849px;height:461px;padding-top:92px;display:block}.slides_container div.slide a{width:849px;height:461px;display:block}
