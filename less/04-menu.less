@@ -1,0 +1,90 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.main-menu {
+    padding-top: 8px;
+    height: 55px; }
+
+.main-menu, .sticky-menu {
+    A {
+        color: #434f61;
+        display: inline-block;
+        text-decoration: none; }
+}
+
+.m-logo {
+    background: url(/images/logo-icons.png) no-repeat;
+    .ir;
+    float: left;
+    margin: 12px 80px 0 0;
+    height: 22px;
+    width: 216px; }
+
+.p-front .m-logo, .p-front .footer-logo A { cursor: default; }
+
+
+.m-core, .m-utils {
+    float: left;
+    margin-top: 14px;
+
+    LI  { float: left; }
+    A {
+        padding: 4px 12px 5px;
+        margin-right: 8px;
+        .border-radius(4px);
+        font-weight: 500;
+        text-shadow: #fff 0 1px 0;
+
+        &:hover {
+            color: #fff !important;
+            text-shadow: none;
+            background: #434f61; }
+    }
+}
+
+.m-utils { margin-left: 53px; }
+
+.m-socials {
+    float: right;
+    text-align: right;
+    margin-top: 12px;
+    width: 66px;
+
+    LI { .inline-block; }
+
+    .fb, .twitter { float: right; }
+
+    .fb A, .twitter A {
+        background: url(/images/logo-icons.png) no-repeat;
+        .ir;
+        margin-left: 10px;
+        height: 28px;
+        width: 28px;
+
+        &:hover { opacity: 0.7; }
+    }
+}
+
+.m-socials .fb A {
+    background-position: -220px 0;
+    margin-left: 0; }
+
+.m-socials .twitter A { background-position: -250px 0; }
+
+/*
+|-------------------------------------------------------------------------------
+| Slidemenu
+|-------------------------------------------------------------------------------
+*/
+.sticky-menu, #slidepanel {
+    background: #fff;
+    .box-shadow(0 2px 5px #aaa);
+    padding-top: 8px;
+    opacity: 0.9;
+    position: fixed;
+    top: -69px;
+    left: 0;
+    height: 56px;
+    width: 100%;
+    z-index: 1444;
+}

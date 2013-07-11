@@ -6,6 +6,15 @@
 /* Display in IE6-9 and FF3 */
 ARTICLE, ASIDE, DETAILS, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, NAV, SECTION, SUMMARY { display: block; }
 
+HTML, BODY,
+BLOCKQUOTE, DIV, IFRAME,
+DL, DD, DT, OL, UL, LI,
+H1, H2, H3, H4,
+OBJECT, SPAN, P, PRE {
+    margin: 0;
+    padding: 0;
+    border: 0; }
+
 /* Display block in IE6-9 and FF3 */
 AUDIO, CANVAS, VIDEO {
     display: inline-block;
@@ -45,13 +54,12 @@ HTML, BODY {
 |---------------------------------------
 | Typography
 |---------------------------------------
-| Webfont suggestions:
-| http://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
-| http://www.google.com/fonts
 |
 */
 
 /* Focus states */
+:focus { outline: none; }
+
 A:focus { .tab-focus; }
 
 /* Hover & active */
@@ -74,9 +82,58 @@ SUB, SUP {
 |---------------------------------------
 | Media
 |---------------------------------------
-|
-| […302…]
-|
 */
 
+/* Responsive images require to remove the media's height and width attributes from the HTML */
+IMG {
+    border: 0;
+    display: block;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+    height: auto; /* Part 2: Scale the height according to the width, otherwise you get stretching */
+    max-width: 100%;
+    width: auto\9; /* IE7-8 need help adjusting responsive images */ }
 
+/* Prevent max-width from affecting Google Maps */
+#map_canvas IMG { max-width: none; }
+
+
+/*
+|---------------------------------------
+| Buttons and forms
+|---------------------------------------
+*/
+
+BUTTON, INPUT, SELECT, TEXTAREA {
+    font-size: 100%;
+    line-height: inherit; /* FF3/4 have !important on line-height in UA stylesheet */ }
+
+BUTTON, INPUT, SELECT { text-transform: none; }
+
+BUTTON, .btn, INPUT { *overflow: visible; } /* Inner spacing ie IE6/7 */
+
+    TABLE INPUT { *overflow: auto; }
+
+BUTTON::-moz-focus-inner, INPUT::-moz-focus-inner { /* Inner padding and border oddities in FF3/4 */
+  border: 0;
+  padding: 0; }
+
+/* Cursors on all buttons applied consistently.
+    I don't use Normalize
+    -webkit-appearance: button
+    to prevent webkit buttons styling */
+BUTTON, .btn { cursor: pointer; }
+
+INPUT[type="checkbox"], INPUT[type="radio"] { padding: 0; /* Remove excess padding in IE 8/9 */}
+
+/* INPUT[type="search"], .i-search  - I don't reset webkit-appearance and box-sizing */
+
+INPUT[type="search"]::-webkit-search-decoration, INPUT[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; } /* Inner-padding issues in Chrome OSX, Safari 5 */
+
+TEXTAREA {
+  overflow: auto; /* Remove vertical scrollbar in IE6-9 */
+  resize: vertical;
+  vertical-align: top; } /* Readability and alignment cross-browser */
+
+TEXTAREA[contenteditable] { -webkit-appearance: none; }

@@ -144,7 +144,7 @@ $(function() {
         if  ($(window).scrollTop() > distanceTop)
             $('#slidepanel').animate({'top':'0px'},400);
         else
-            $('#slidepanel').stop(true).animate({'top':'-61px'},200);
+            $('#slidepanel').stop(true).animate({'top':'-69px'},200);
     });
 
 

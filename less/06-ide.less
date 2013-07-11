@@ -1,0 +1,177 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+#ide-wrapper { background: #cfe0e7 url(../images/topcosmos.png) 50% 0 repeat-x; }
+
+.ide-container {
+    background: transparent url(../images/cosmos.png) 50% bottom repeat-x;
+    padding: 0 0 250px;
+    position: relative;
+    padding-top: 460px; }
+
+.ider-inner {
+    width: 960px;
+    padding: 0;
+    margin: 0 auto;
+    position: relative; }
+
+.ide-container p {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1.5em;
+    text-shadow: #fff 0 1px 0;
+    padding: 0 75px; }
+
+.ide-container p.ide-header {
+    font-size: 32px;
+    font-weight: 700;
+    color: #b00404;
+    margin-bottom: 1px; }
+
+.ide-container p.ide-header span { color: #000; }
+
+.ide-container p.light {
+    color: #545a5d;
+    font-size: 18px;
+    text-shadow: none;
+    margin-bottom: 24px; }
+
+#ide-images {
+    position: absolute;
+    width: 955px;
+    height: 291px;
+    left: 50%;
+    top: 195px;
+    background: url(../images/futsuperman.png) 0 0 no-repeat;
+    margin-left: -478px; }
+
+.ide-container .co2-anim .co2-icon {
+    top: -35px;
+    left: 50%;
+    margin-left: -154px; }
+
+
+/*
+|-------------------------------------------------------------------------------
+| Actions table
+|-------------------------------------------------------------------------------
+*/
+.inaction-wrapper {
+    background: #fff;
+    padding: 3px 0 50px; }
+
+.inaction-container {
+    width: 973px;
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    min-height: 114px; }
+
+#action-gifs {
+    border-radius: 10px;
+    box-shadow: rgba(0,0,0,0.4) 0 1px 6px;
+    padding-bottom: 60px;
+    position: relative;
+    display: none; }
+
+#action-gifs h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #252e32;
+    padding-top: 31px;
+    padding-left: 75px;
+    margin-bottom: 24px; }
+
+#action-gifs p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #5b616c;
+    padding-left: 75px;
+    padding-bottom: 22px; }
+
+#action-open {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #252e32;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 973px;
+    height: 92px;
+    padding: 7px 8px 15px 11px;
+    left: -11px;
+    top: -7px;
+    background: url(../images/inactionplace.png) 0 0 no-repeat; }
+
+#action-open:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 46px;
+    height: 44px;
+    background: url(../images/inactionctrl.png) 0 0 no-repeat;
+    top: 31px;
+    right: 60px; }
+
+#action-open span {
+    display: inline-block;
+    padding-top: 31px;
+    padding-left: 75px; }
+
+#action-gifs a.action-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+    height: 24px;
+    color: #566b71;
+    text-decoration: none;
+    padding-right: 28px;
+    line-height: 22px;
+    background-image: url(../images/closeinaction.png);
+    background-repeat: no-repeat;
+    background-position: right 0; }
+
+#action-gifs a.action-close:hover {
+    color: #6f878e;
+    background-position: right -25px; }
+
+#action-gifs a.action-close.bottom {
+    top: 100%;
+    margin-top: -44px; }
+
+.box {
+    margin: 0;
+    padding: 0;
+    border: 3px solid #CCCCCC; }
+
+.box img { display: block; }
+
+.box img {
+    transition: opacity 0.4s, visibility 0.4s;
+    opacity: 0;
+    visibility: hidden; }
+
+.box:hover img {
+    transition: opacity 0.4s, visibility 0s;
+    opacity: 1;
+    visibility: visible; }
+
+/*  #show-table, #hide-table {
+        cursor: hand; cursor: pointer;
+    }
+
+    #hide-table, #gifs-desc, #gifs-table {
+        display:none;
+    }
+*/
+
+
+#gifs-table {
+    border-collapse: collapse;
+    border: 3px solid #CCCCCC;
+    margin: 0 auto; }
+
+#gifs-table COL { width: 90px; }

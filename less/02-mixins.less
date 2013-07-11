@@ -2,6 +2,7 @@
 |-------------------------------------------------------------------------------
 | SELECTED
 |-------------------------------------------------------------------------------
+| 0) Add *display: inline; и *zoom: 1; в случае inline-block
 | 1) I don't use "font: 0/0" and ".ir:before" solutions to implement absolute
 | positioning with ems and prevent erros in old Firefoxes and IEs
 | 2) .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
@@ -13,7 +14,7 @@
 |
 */
 
-.ir(@border: 0, @display: block) {
+.ir(@border: 0, @display: block) { // 0
     background-color: transparent;
     border-width: @border;
     display: @display;
