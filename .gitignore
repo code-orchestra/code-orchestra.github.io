@@ -2,6 +2,7 @@
 _labs/
 _tmp/
 _notes/
+_backup/
 
 # Auxiliary Files
 *.sublime-*
