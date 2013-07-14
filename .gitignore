@@ -17,11 +17,6 @@ css/*
 !css/styles.css
 
 !css/styles.css
-js/*
-!js/jquery-*.min.js
-!js/plugins.js
-!js/scripts.js
-!js/respond.min.js
 
 # OS generated files
 .DS_Store
