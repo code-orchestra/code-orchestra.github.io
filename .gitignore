@@ -13,10 +13,9 @@ _tmp.htm
 
 # Source Files
 css/*
+!css/styles.css
 !css/landing-page-jul2013.css
-!css/styles.css
-
-!css/styles.css
+!css/blog.css
 
 # OS generated files
 .DS_Store
