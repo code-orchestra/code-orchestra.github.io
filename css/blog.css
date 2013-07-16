@@ -42,7 +42,7 @@ TABLE>TR:last-child TH:last-child,TABLE>TR:last-child TD:last-child,TBODY TR:las
 .doc-footer .m-socials{margin-top:61px;width:320px}.doc-footer .m-socials .fb,.doc-footer .m-socials .twitter{margin-top:-3px}.doc-footer .m-socials .twitter{margin-left:10px}
 #paracvet{background:url(/images/paracvet.png) 0 0 no-repeat;text-align:center;position:absolute;left:0;bottom:0;height:29px;width:119px}#paracvet A{display:inline-block;font-size:12px;line-height:27px;text-decoration:none;color:#555;text-shadow:#fff 0 1px}
 IFRAME[name="google_conversion_frame"]{position:absolute;top:0;left:0;height:0;width:0}.doc-footer .m-socials{width:auto}#paracvet{left:24px}
-.p-blog .m-core .m-blog A,.p-blog .m-utils .m-blog A{background:#434f61;color:#fff!important;text-shadow:none}.p-blog-index A{cursor:default}@media only screen and (max-width:767px){.m-logo-a{width:60px}
+.p-blog .m-core .m-blog A,.p-blog .m-utils .m-blog A{background:#434f61;color:#fff!important;text-shadow:none}.p-blog-index .m-blog A{cursor:default}@media only screen and (max-width:767px){.m-logo-a{width:60px}
 .m-forums,.m-about,.doc-footer .m-docs,.doc-footer .m-socials,#paracvet{display:none}}@media only screen and (max-width:479px){.m-docs,.m-support{display:none}
 }BODY{color:#5b616c;background:#fff url(/images/bgtop.png) 50% 0 repeat-x}A{color:#099;text-decoration:none}A:hover{text-decoration:underline}H1,H2,.h1,.h2{font-family:'Roboto','Roboto Medium','Roboto Bold',Roboto,'Arial Bold',Arial,sans-serif;font-weight:500;line-height:1.25;margin-top:.5em;margin-bottom:.8em;color:#252e32}
 H1,.h1{font-size:42px}H2,.h2{font-size:26px}H1+H2{margin-top:0}H3,.h3{font-size:100%}H1 A,H2 A,H3 A,H4 A{color:#252e32}P,.p,UL,OL{font-size:16px;margin-top:1em}
