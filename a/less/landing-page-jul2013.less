@@ -1,0 +1,353 @@
+/* CSS Reset */
+@import '01-normalize.less';
+
+/* Variables, mixins, sprites */
+@import '02-variables.less';
+@import '02-mixins.less';
+@import '02-sprites.less';
+
+HTML { background: #fff; }
+
+BODY {
+    background: #efd684;
+    font: 16px/22px 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0; }
+
+A {
+    color: blue;
+    outline: none;
+    text-decoration: underline; }
+
+A:hover { text-decoration: none; }
+
+P {  margin: 0 0 22px;}
+
+NAV UL, NAV OL, FOOTER UL {
+    list-style: none;
+    list-style-image: none; }
+
+.clear {
+    clear: both;
+    height: 0; }
+
+.cfx {
+  *zoom: 1;
+
+  &:before, &:after {
+    content: '';
+    display: table;
+    line-height: 0; }
+
+  &:after { clear: both; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Header
+|-------------------------------------------------------------------------------
+*/
+.main-menu {
+    height: 140px;
+    text-align: center;
+
+    .m-socials { padding-top: 40px; }
+}
+
+.main-menu NAV {
+    margin: 0 auto;
+    width: 980px; }
+
+.main-menu .nameplate {
+    float: left;
+    padding-top: 43px;
+    width: 500px;
+
+    LI { float: left; }
+}
+
+.m-logo {
+    border-right: 1px solid #999272;
+    padding: 0 23px 4px 0;
+    margin-right: 23px;
+
+    A {
+        background-position: 0 -50px;
+        .ir;
+        float: left;
+        margin: 0;
+        height: 22px;
+        width: 216px; }
+}
+
+.m-more {
+    padding-top: 5px;
+
+    A {
+        color: #434f61;
+        text-decoration: none; }
+ }
+
+.m-socials {
+    float: right;
+    text-align: right;
+    width: 66px;
+
+    LI { .inline-block; }
+
+    .fb, .twitter { float: right; }
+
+    .fb A, .twitter A {
+        .ir;
+        margin-left: 10px;
+        height: 28px;
+        width: 28px;
+
+        &:hover { opacity: 0.7; }
+    }
+}
+
+.m-socials .fb A { background-position: -220px 0; }
+
+.m-socials .twitter A {
+    background-position: -250px 0;
+    margin-left: 0; }
+
+/*
+|-------------------------------------------------------------------------------
+| Billboard
+|-------------------------------------------------------------------------------
+*/
+
+.doc-body { background: url(/a/img/svet.png) 50% 0 no-repeat; }
+
+.billboard {
+    text-align: left;
+    margin: 0 auto;
+    width: 980px;
+
+    FIGURE {
+        background: url(/a/img/background-shadow.png) 0 0 no-repeat;
+        float: left;
+        margin: 0 0 0 -11px;
+        width: 492px;
+        height: 312px;
+
+        IFRAME {
+            border: 10px solid #fff;
+            border-bottom-width: 9px;
+            margin: 10px 0 0 11px; }
+    }
+
+    HEADER {
+        float: right;
+        margin-top: 38px;
+        width: 470px; }
+
+    H2 {
+        color: rgba(0, 0, 0, 0.60);
+        font-size: 23px;
+        font-weight: normal;
+        line-height: 22px;
+        margin: 0; }
+
+    H1 {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 44px;
+        margin: 6px 0 18px; }
+
+    P { margin-bottom: 0; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Buttons
+|-------------------------------------------------------------------------------
+*/
+[class^="btn-"], [class*="btn-"] {
+    background-image: url(/a/img/buttons.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    .inline-block;
+    font-size: 18px;
+    height: 66px;
+    line-height: 66px;
+    text-decoration: none;
+    text-shadow: #000000 0 -1px 0;
+    text-align: center;
+    width: 238px; }
+
+.doc-body .buttons {
+    margin: 35px 0 0 0;
+    text-align: center;
+
+    .btn-blue { background-position: -1px 0; }
+    .btn-blue:hover { background-position:-1px -66px; }
+    .btn-blue:active { background-position:-1px -132px; }
+    .btn-green { background-position: -239px 0; }
+    .btn-green:hover { background-position:-239px -66px; }
+    .btn-green:active { background-position:-239px -132px; }
+}
+
+.or {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 15px;
+    margin: 0 4px 0; }
+
+/*
+|-------------------------------------------------------------------------------
+| Testimonials
+|-------------------------------------------------------------------------------
+*/
+.comments {
+    background: url(/a/img/byconur.png) 50% 100% no-repeat;
+    padding-bottom: 230px; }
+
+
+.bubble {
+    margin: 75px auto 0;
+    background: url(/a/img/bubble.png) 0 0 no-repeat;
+    padding: 80px 40px 0 80px;
+    height: 132px;
+    width: 542px;
+
+    .avatar {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 48px;
+        width: 46px;
+
+        IMG {
+            margin: 0;
+            height: 48px;
+            width: 46px; }
+
+        &:after {
+            background: url('/a/img/flash-speed-programming.png') -134px 0 no-repeat;
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 48px;
+            width: 46px;
+            z-index: 8; }
+    }
+
+    .comment {
+        display: none;
+        text-align: left;
+        padding-left: 60px;
+        position: relative;
+        *zoom: 1;
+
+        P {
+            color: #665541;
+            margin: 0; }
+    }
+
+    .comment.show { display: block; }
+
+    FOOTER {
+        color: #a46b2b;
+
+        A { color: #a46b2b; }
+    }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Features
+|-------------------------------------------------------------------------------
+*/
+
+.features {
+    background: #FFF;
+    padding: 77px 0 100px;
+    width: 100%;
+
+    .col {
+        float: left;
+        margin-left: 40px;
+        padding-left: 40px;
+        position: relative;
+        width: 260px;
+        *zoom: 1; }
+
+    .first { margin-left: 0;}
+
+    H3 { font-size: 19px; }
+
+    P {
+        color: rgba(0, 0, 0, 0.60);
+        font-size: 14px;
+        line-height: 22px;
+        margin: 10px 0 0 0; }
+}
+
+.features-container {
+    text-align: left;
+    margin: 0 auto;
+    width: 980px; }
+
+.icon-timesaver, .icon-phones, .icon-restriction {
+    background: url(/a/img/flash-speed-programming.png) no-repeat;
+    position: absolute;
+    left: 0; }
+
+.icon-timesaver {
+    background-position: -49px 0;
+    top: -7px;
+    height: 34px;
+    width: 30px; }
+
+.icon-phones {
+    background-position: -79px 0;
+    top: -5px;
+    height: 36px;
+    width: 25px; }
+
+.icon-restriction {
+    background-position: -104px 0;
+    top: -3px;
+    height: 30px;
+    width: 30px; }
+
+/*
+|-------------------------------------------------------------------------------
+| Footer
+|-------------------------------------------------------------------------------
+*/
+.doc-footer {
+    background: #cfe0e7;
+    padding-top: 43px;
+    height: 82px; }
+
+.footer-container {
+    color: #798387;
+    font-size: 12px;
+    text-align: left;
+    margin: 0 auto;
+    width: 980px; }
+
+.footer-logo {
+    float: left;
+    color: #798387;
+    font-size: 12px;
+
+    A {
+        background-position: 0 -30px;
+        .ir;
+        margin-bottom: 6px;
+        height: 15px;
+        width: 153px; }
+}
+
+IFRAME[name="google_conversion_frame"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0; }

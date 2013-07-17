@@ -7,15 +7,19 @@ _backup/
 # Auxiliary Files
 *.sublime-*
 *.zip
+*.rar
 code-orchestra.sublime-project
 code-orchestra.sublime-workspace
 _tmp.htm
+_tmp.html
 
 # Source Files
-css/*
-!css/styles.css
-!css/landing-page-jul2013.css
-!css/blog.css
+a/video/*
+a/css/*
+!a/css/styles.css
+!a/css/landing-page-jul2013.css
+!a/css/blog.css
+!a/css/inner.css
 
 # OS generated files
 .DS_Store
@@ -25,9 +29,3 @@ css/*
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-
-
-_tmp.html
-
-*.rar

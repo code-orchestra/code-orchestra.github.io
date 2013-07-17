@@ -1,0 +1,27 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/* Logo and icons */
+
+.footer-logo A, .m-logo-a, .m-socials .fb A, .m-socials .twitter A,
+.our-team .col:after, .our-team .socials A {
+    background-color: transparent;
+    background-image: url(/a/img/logo-icons.png) !important; /* Prevent buttons styles assigning */
+    background-repeat: no-repeat; }
+
+/*
+|---------------------------------------
+| High resolution devices
+|---------------------------------------
+*/
+
+ @media print,
+        (-o-min-device-pixel-ratio: 5/4),
+        (-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+
+    .footer-logo A, .m-logo-a, .m-socials .fb A, .m-socials .twitter A,
+    .our-team .col:after, .our-team .socials A {
+        background-image: url(/a/img/logo-icons-x2.png) !important;
+        .background-size(280px 190px); /* Half of physical retina sprite image */ }
+}

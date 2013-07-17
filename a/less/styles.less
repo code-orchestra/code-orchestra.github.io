@@ -1,0 +1,136 @@
+/*
+|
+|-------------------------------------------------------------------------------
+| CHEATSHEET
+|-------------------------------------------------------------------------------
+| Javascript in LESS
+|
+| Use string interpolation and then escape from the string using ~:
+| @winheight:`$(window).height()`  // Keep backticks not single quotes
+| height: ~'@{winheight}px';
+|
+| CSS Expressions
+| property: ~'expression(…)';
+|
+|-------------------------------------------------------------------------------
+| CSS SELECTORS
+|-------------------------------------------------------------------------------
+|
+| E + F                         Selects all F elements that are placed immediately after E elements
+| E ~ F                         F element that is preceded by an E element
+|
+| E[att^="val"]                 Att attribute value begins with "val"
+| E[att$="val"]                 Att attribute value ends with "val"
+| E[att*="val"]                 Att attribute value contains the substring "val"
+|
+| E:first-child                 The first child of its parent
+| E:last-child                  The last child of its parent
+|
+| E:first-of-type               First sibling of its type
+| E:last-of-type                Last sibling of its type
+|
+| E:nth-child(n)                N-th child of its parent
+| E:nth-last-child(n)           LI:nth-child(3)
+|                               LI:nth-last-child(3)
+|                               TR:nth-child(odd)
+|                               LI:nth-child(3n) - Elements at regular intervals
+|                               LI:nth-child(4n+1) — ((4 × 0) + 1) - first, ((4 × 1) + 1) — 5th, ((4 × 2) + 1) - 9th etc
+|                               UL LI:nth-child(-n+4) — consecutive elements: first 4 im this case
+|
+| E:nth-of-type(n)              N-th sibling of its type
+| E:nth-last-of-type(n)         N-th sibling of its type, counting from the last sibling
+|
+| E:only-child                  The only child of its parent
+| E:only-of-type                The only sibling of its type
+|
+| E:empty                       Element that has no children (including text nodes)
+|
+| E:enabled
+| E:disabled
+| E:checked
+| E::selection
+|
+| E:not(s)                      Matches any E that does not match the simple selector s
+|                               div:not(.home) {…} | div *:not(p) em {…}
+|                               input:not([type="file"]) {…} | h2:not(.foo, .bar) {…}
+|
+| E:before
+| E:after
+|
+| E:target                      The target of the referring URL
+| E:focus
+|
+| E:first-letter
+| E:first-line
+|
+| E:lang(language)              p:lang(ru)
+|
+|-------------------------------------------------------------------------------
+| clip: rect(<top>, <right>, <bottom>, <left>);
+| clip: rect(40px, auto, auto, 40px);
+| http://goo.gl/HzPbA
+|
+|-------------------------------------------------------------------------------
+|
+| Naming convention: prefixes in selectorsors
+|
+| a — link
+| art - article
+| box — box
+| bnr — banner
+| btn — button
+| cbx — checkbox
+| doc — document
+| f — form
+| ftr — feature
+| gl - global
+| i — input
+| ico — icon
+| l - list
+| ln - line
+| m — menu
+| mob — mobile, i.e. smartphones
+| p — page
+| pc - desktop computer
+| plc - placeholder
+| rb — radio button
+| s — select
+| sec — page section, block
+| sl - slider
+| sm — submenu
+| ta — textarea
+| tbl — tablet
+| tbn — thumbnail
+| tsr — teaser
+| txt - text
+|
+*/
+
+/* CSS Reset */
+@import '01-normalize.less';
+
+/* Variables, mixins, sprites */
+@import '02-variables.less';
+@import '02-mixins.less';
+@import '02-sprites.less';
+
+/* Main Regions and Data */
+@import '03-common.less';
+@import '04-menu.less';
+
+@import '05-colt.less';
+@import '06-ide.less';
+
+@import '07-contest-banner.less';
+@import '08-tables.less';
+
+@import '09-footer.less';
+
+/* Plugins */
+@import '10-slides.less';
+@import '11-tabs.less';
+@import '12-carousel.less';
+@import '13-pretty-photo.less';
+
+/* Print */
+@import '18-print.less';

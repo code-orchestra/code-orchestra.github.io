@@ -1,0 +1,185 @@
+/* CSS Reset */
+@import '01-normalize.less';
+
+/* Variables, mixins, sprites */
+@import '02-variables.less';
+@import '02-mixins.less';
+@import '02-sprites.less';
+@import '03-common.less';
+@import '04-menu.less';
+@import '09-footer.less';
+
+
+/*
+|-------------------------------------------------------------------------------
+| Customization
+|-------------------------------------------------------------------------------
+*/
+HTML { background: #fff; }
+
+BODY {
+    background: #f5d87e url(/a/img/byconur.png) 50% 595px no-repeat; }
+
+/* Header */
+.main-menu {
+    background: #fff;
+    border-bottom: 3px solid #a76d2c; }
+
+.p-about .main-menu .m-about A {
+    background: #434f61 !important;
+    color: #fff;
+    text-shadow: none; }
+
+.doc-main {
+    line-height: 22px;
+    text-align: center;
+    position: relative;
+    *zoom: 1; }
+
+/*
+|-------------------------------------------------------------------------------
+| About
+|-------------------------------------------------------------------------------
+*/
+
+.p-about .doc-main {
+
+    &:after {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 103px;
+        width: 100%; }
+
+    .art-hdr {
+        margin: 61px auto 0;
+        max-width: 980px; }
+
+    .bcol {
+        text-align: left;
+        padding: 0 100px;}
+
+    P { margin: 0 0 22px; }
+
+    .lead {
+        font-family: @h-bold;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 33px;
+        margin: 26px 0 19px; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Our team
+|-------------------------------------------------------------------------------
+*/
+
+.our-team {
+    background-color: #fff;
+    .border-radius(5px);
+    .box-shadow(0 4px 24px rgba(0,0,0,.24));
+    .box-sizing(border-box);
+    margin: 54px auto 68px;
+    padding: 31px 25px 22px;
+    max-width: 980px;
+
+    H2 {
+        margin-bottom: 22px;
+        text-align: center; }
+
+    .col {
+        .box-sizing(border-box);
+        text-align: left;
+        margin: 0 15px 22px;
+        padding-left: 120px;
+        position: relative;
+        overflow: visible;
+        height: 110px;
+        width: 280 / @content-box * 100%;
+        *width: 279 / @content-box * 100%;
+        *zoom: 1;
+
+        &:after {
+            background-position: -130px -80px;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 110px;
+            width: 110px;
+            z-index: 4; }
+
+        &:hover .popup { display: block; }
+    }
+
+    H3 { padding: 33px 0 1px;}
+
+    .title {
+        font-size: 12px;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        margin: 0; }
+
+    IMG {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 0; }
+
+    .popup {
+        background: #fff;
+        .border-radius(5px);
+        .box-shadow(0 2px 8px rgba(0,0,0,.2));
+        display: none;
+        padding: 20px;
+        position: absolute;
+        top: -17px;
+        left: 80px;
+        width: 200px;
+        z-index: 12;
+
+        &:before { /* Caret */
+            border-top:   8px solid transparent;
+            border-right:  8px solid #fff;
+            border-bottom: 8px solid transparent;
+            content: '';
+            .inline-block;
+            line-height: 0;
+            position: absolute;
+            top: 80px;
+            left: -8px; }
+
+        P { font-size: 12px;}
+
+    }
+
+    .socials {
+        list-style-image: none;
+        list-style-type: none;
+        margin: 0 0 0 -10px;
+        *zoom: 1;
+
+        &:before, &:after, .row {
+            content: '';
+            display: table;
+            line-height: 0; }
+
+        &:after { clear: both; }
+
+        LI {
+            float: left;
+            margin-left: 10px;}
+
+        A {
+            .ir;
+            height: 18px;
+            width: 20px;
+        }
+    }
+
+    .fb A { background-position: 0 -80px;}
+    .tw A { background-position: -30px -80px;}
+    .gp A { background-position: -60px -80px;}
+    .in A { background-position: -90px -80px;}
+}
