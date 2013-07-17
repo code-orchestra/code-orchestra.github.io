@@ -32,10 +32,12 @@ BODY {
 
 .doc-main {
     background: url(/a/img/byconur.png) center bottom no-repeat;
-    line-height: 22px;
     text-align: center;
     position: relative;
-    *zoom: 1; }
+    *zoom: 1;
+
+    DL, OL, P, PRE, UL { line-height: 22px; }
+}
 
 .doc-footer:before {
         background: #fff;
@@ -62,12 +64,10 @@ BODY {
 
     P { margin: 0 0 22px; }
 
-    .lead {
-        font-family: @h-bold;
+    H1 {
         font-size: 24px;
-        font-weight: 500;
         line-height: 33px;
-        margin: 26px 0 19px; }
+        margin: 26px 0 8px; }
 }
 
 /*
