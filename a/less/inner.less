@@ -30,14 +30,20 @@ BODY {
     color: #fff;
     text-shadow: none; }
 
-.doc-main {
+.doc-body {
     background: url(/a/img/byconur.png) center bottom no-repeat;
     text-align: center;
     position: relative;
-    *zoom: 1;
+    *zoom: 1; }
 
-    DL, OL, P, PRE, UL { line-height: 22px; }
-}
+    .doc-main {
+        margin: 0 auto;
+        max-width: 980px;
+
+        DL, OL, P, PRE, UL { line-height: 22px; }
+
+        P { margin: 0 0 22px; }
+    }
 
 .doc-footer:before {
         background: #fff;
@@ -53,16 +59,11 @@ BODY {
 */
 
 .p-about .doc-main {
-
-    .art-hdr {
-        margin: 61px auto 0;
-        max-width: 980px; }
+    .art-hdr { margin-top: 61px; }
 
     .bcol {
         text-align: left;
         padding: 0 100px;}
-
-    P { margin: 0 0 22px; }
 
     H1 {
         font-size: 24px;
@@ -81,9 +82,8 @@ BODY {
     .border-radius(5px);
     .box-shadow(0 4px 24px rgba(0,0,0,.24));
     .box-sizing(border-box);
-    margin: 54px auto 0;
+    margin-top: 54px;
     padding: 31px 25px 22px;
-    max-width: 980px;
 
     H2 {
         margin-bottom: 22px;

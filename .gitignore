@@ -20,6 +20,7 @@ a/css/*
 !a/css/landing-page-jul2013.css
 !a/css/blog.css
 !a/css/inner.css
+a/img/_arj/
 
 # OS generated files
 .DS_Store
