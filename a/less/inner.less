@@ -18,7 +18,7 @@
 HTML { background: #fff; }
 
 BODY {
-    background: #f5d87e url(/a/img/byconur.png) 50% 595px no-repeat; }
+    background: #f5d87e }
 
 /* Header */
 .main-menu {
@@ -31,10 +31,18 @@ BODY {
     text-shadow: none; }
 
 .doc-main {
+    background: url(/a/img/byconur.png) center bottom no-repeat;
     line-height: 22px;
     text-align: center;
     position: relative;
     *zoom: 1; }
+
+.doc-footer:before {
+        background: #fff;
+        content: '';
+        display: block;
+        height: 105px;
+        width: 100%; }
 
 /*
 |-------------------------------------------------------------------------------
@@ -43,13 +51,6 @@ BODY {
 */
 
 .p-about .doc-main {
-
-    &:after {
-        background: #fff;
-        content: '';
-        display: block;
-        height: 103px;
-        width: 100%; }
 
     .art-hdr {
         margin: 61px auto 0;
@@ -80,7 +81,7 @@ BODY {
     .border-radius(5px);
     .box-shadow(0 4px 24px rgba(0,0,0,.24));
     .box-sizing(border-box);
-    margin: 54px auto 68px;
+    margin: 54px auto 0;
     padding: 31px 25px 22px;
     max-width: 980px;
 
