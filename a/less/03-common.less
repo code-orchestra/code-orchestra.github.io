@@ -1,12 +1,7 @@
 @import '02-variables.less';
 @import '02-mixins.less';
 
-HTML { background: #efd684; }
-
-BODY {
-    font: 12px/18px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400; }
+BODY { font: 16px/22px 'Roboto', sans-serif; }
 
 A {
     color: blue;
@@ -15,7 +10,7 @@ A {
 
 A:hover { text-decoration: none; }
 
-P { margin: 0 0 18px }
+P { margin: 0 0 @baseline; }
 
 IFRAME {
     border: 0 none;
@@ -96,23 +91,48 @@ NAV UL, NAV OL, FOOTER UL {
 |-------------------------------------------------------------------------------
 */
 
-#wrapper {
-    background: url(/a/img/bgtop.png) 0 -392px repeat-x;
+.page {
+    .box-sizing(border-box);
+    padding-bottom: 264px;
     position: relative;
-    min-height: 100% !important;
-    height: 100%;
-    min-width: 980px;
-    width: 100%; }
+    min-height: 100%;
+    height: auto;
+    *height: 100%;
+    width: auto;
+    *zoom: 1; }
 
-.section {
-    clear: both;
-    margin: 0 auto;
-    width: 960px; }
+.doc-body {
+    text-align: center;
+    position: relative;
+    *zoom: 1; }
 
-.cfx, .clearfix {
+.doc-body-top { background: #f5d87e url(/a/img/byconur.png) center bottom no-repeat; }
+
+.doc-body-bottom {
+    *padding-bottom: 2*@baseline !important;
+
+    &:after {
+        content: '';
+        display: block;
+        padding-bottom: 264px;
+        width: 100%; }
+}
+
+
+
+    .doc-main {
+        margin: 0 auto;
+        max-width: 980px;
+
+        DL, OL, P, PRE, UL { line-height: 22px; }
+
+        P { margin: 0 0 22px; }
+    }
+
+.doc-header, .doc-body, .doc-footer, .cfx, .row, .clearfix {
   *zoom: 1;
 
-  &:before, &:after, .row {
+  &:before, &:after {
     content: '';
     display: table;
     line-height: 0; }
@@ -154,73 +174,10 @@ NAV UL, NAV OL, FOOTER UL {
     margin-left: @gutter / @content-box * 100%;
     *margin-left: (@gutter - 1) / @content-box * 100%; }
 
-/*
-|-------------------------------------------------------------------------------
-| Columns — Old Stuff
-|-------------------------------------------------------------------------------
-*/
-
-#columns-wrapper { background: #fff; }
-
-.columns-container {
-    width: 960px;
-    padding: 10px 8px 70px;
-    margin: 0 auto; }
-
-.columns {
-    margin: 0 auto;
-    width: 920px;
-    height: 220px;
-    padding-left: 40px; }
-
 .bcol {
     .content-columns(2, 30px);
     orphans: 2;
     widows: 2; }
-
-.columns .column {
-    float: left;
-    width: 306px; }
-
-.columns .column h2 {
-    font-size: 20px;
-    font-weight: 500;
-    color: #252e32;
-    margin: 32px 0 8px;
-    position: relative;
-    padding: 0; }
-
-.columns .column p {
-    width: 250px;
-    margin: 0 0 32px 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #5b616c;
-    line-height: 1.5em; }
-
-.columns .column h2:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    background-image: url(/a/img/column-icons.png);
-    background-repeat: no-repeat;
-    top: 0;
-    left: -41px; }
-
-.columns .column h2.f-to-ht:before { background-position: 0 0; }
-
-.columns .column h2.one-lan:before { background-position: -32px 0; }
-
-.columns .column h2.train:before { background-position: -64px 0; }
-
-.columns .column h2.live-cod:before { background-position: 0 -32px; }
-
-.columns .column h2.rev:before { background-position: -32px -32px; }
-
-.columns .column h2.lex:before { background-position: -64px -32px; }
 
 /*
 |-------------------------------------------------------------------------------

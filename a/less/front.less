@@ -116,6 +116,101 @@
 
 /* Main Regions and Data */
 @import '03-common.less';
+
+/*
+|-------------------------------------------------------------------------------
+| Customization
+|-------------------------------------------------------------------------------
+*/
+HTML { background: #efd684; }
+
+BODY { font: 12px/18px; }
+
+DL, P, OL, UL { margin-bottom: 18px }
+
+#wrapper {
+    background: url(/a/img/bgtop.png) 0 -392px repeat-x;
+    position: relative;
+    min-height: 100% !important;
+    height: 100%;
+    min-width: 980px;
+    width: 100%; }
+
+.section {
+    clear: both;
+    margin: 0 auto;
+    width: 960px; }
+
+.doc-footer .m-socials { width: 320px; }
+
+/*
+|-------------------------------------------------------------------------------
+| Columns — Old Stuff
+|-------------------------------------------------------------------------------
+*/
+
+#columns-wrapper { background: #fff; }
+
+.columns-container {
+    width: 960px;
+    padding: 10px 8px 70px;
+    margin: 0 auto; }
+
+.columns {
+    margin: 0 auto;
+    width: 920px;
+    height: 220px;
+    padding-left: 40px; }
+
+.columns .column {
+    float: left;
+    width: 306px; }
+
+.columns .column h2 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #252e32;
+    margin: 32px 0 8px;
+    position: relative;
+    padding: 0; }
+
+.columns .column p {
+    width: 250px;
+    margin: 0 0 32px 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #5b616c;
+    line-height: 1.5em; }
+
+.columns .column h2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-image: url(/a/img/column-icons.png);
+    background-repeat: no-repeat;
+    top: 0;
+    left: -41px; }
+
+.columns .column h2.f-to-ht:before { background-position: 0 0; }
+
+.columns .column h2.one-lan:before { background-position: -32px 0; }
+
+.columns .column h2.train:before { background-position: -64px 0; }
+
+.columns .column h2.live-cod:before { background-position: 0 -32px; }
+
+.columns .column h2.rev:before { background-position: -32px -32px; }
+
+.columns .column h2.lex:before { background-position: -64px -32px; }
+
+/*
+|-------------------------------------------------------------------------------
+| Rest of Common Stuff
+|-------------------------------------------------------------------------------
+*/
 @import '04-menu.less';
 
 @import '05-colt.less';

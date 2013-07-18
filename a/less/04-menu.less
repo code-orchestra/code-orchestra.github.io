@@ -6,6 +6,14 @@
     height: 55px; }
 
 .main-menu, .sticky-menu {
+
+    NAV {
+        .box-sizing(border-box);
+        clear: both;
+        margin: 0 auto;
+        padding: 0 24px;
+        max-width: 1008px; }
+
     A {
         color: #434f61;
         display: inline-block;
@@ -21,14 +29,13 @@
 
 .p-front .m-logo-a, .p-front .footer-logo A { cursor: default; }
 
-
 .m-core, .m-utils {
     float: left;
-    margin-top: 14px;
+    padding-top: 13px;
 
     LI  { float: left; }
     A {
-        padding: 4px 12px 5px;
+        padding: 4px 12px 0;
         margin-right: 8px;
         .border-radius(4px);
         font-weight: 500;
