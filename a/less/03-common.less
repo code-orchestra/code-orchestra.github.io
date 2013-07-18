@@ -1,7 +1,11 @@
 @import '02-variables.less';
 @import '02-mixins.less';
 
-BODY { font: 16px/22px 'Roboto', sans-serif; }
+HTML { background: #cfe0e7; }
+
+BODY {
+    background: #fff;
+    font: 16px/22px 'Roboto', sans-serif; }
 
 A {
     color: blue;
@@ -38,7 +42,7 @@ H1, H2, H3, H4 {
 H1, H2 {
     font-family: @h-bold;
     font-weight: @h-bold-weight;
-    letter-spacing: -.03em; }
+    letter-spacing: -.04em; }
 
 H1 {
     font-size: 32px;
@@ -91,15 +95,7 @@ NAV UL, NAV OL, FOOTER UL {
 |-------------------------------------------------------------------------------
 */
 
-.page {
-    .box-sizing(border-box);
-    padding-bottom: 264px;
-    position: relative;
-    min-height: 100%;
-    height: auto;
-    *height: 100%;
-    width: auto;
-    *zoom: 1; }
+.wrapper { background: #fff;}
 
 .doc-body {
     text-align: center;
@@ -108,17 +104,7 @@ NAV UL, NAV OL, FOOTER UL {
 
 .doc-body-top { background: #f5d87e url(/a/img/byconur.png) center bottom no-repeat; }
 
-.doc-body-bottom {
-    *padding-bottom: 2*@baseline !important;
-
-    &:after {
-        content: '';
-        display: block;
-        padding-bottom: 264px;
-        width: 100%; }
-}
-
-
+.doc-body-bottom { margin-bottom: 149px; }
 
     .doc-main {
         margin: 0 auto;

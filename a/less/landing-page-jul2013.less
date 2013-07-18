@@ -6,10 +6,10 @@
 @import '02-mixins.less';
 @import '02-sprites.less';
 
-HTML { background: #fff; }
+HTML { background: #efd684; }
 
 BODY {
-    background: #efd684;
+    background: #fff;
     font: 16px/22px 'Roboto', sans-serif;
     text-align: center;
     margin: 0; }
@@ -21,7 +21,14 @@ A {
 
 A:hover { text-decoration: none; }
 
-P {  margin: 0 0 22px;}
+H1, H2, H3, H4 {
+    margin: 0;
+    text-rendering: optimizelegibility; }
+
+H1, H2 {
+    font-family: @h-bold;
+    font-weight: @h-bold-weight;
+    letter-spacing: -.04em; }
 
 NAV UL, NAV OL, FOOTER UL {
     list-style: none;
@@ -48,19 +55,28 @@ NAV UL, NAV OL, FOOTER UL {
 |-------------------------------------------------------------------------------
 */
 .main-menu {
-    height: 140px;
-    text-align: center;
+    background: #efd684;
+    padding-top: 43px;
+    height: 55px; }
 
-    .m-socials { padding-top: 40px; }
+.main-menu, .sticky-menu {
+
+    NAV {
+        .box-sizing(border-box);
+        clear: both;
+        margin: 0 auto;
+        padding: 0 24px;
+        max-width: 1008px; }
+
+    A {
+        color: #434f61;
+        display: inline-block;
+        text-decoration: none !important; }
 }
-
-.main-menu NAV {
-    margin: 0 auto;
-    width: 980px; }
 
 .main-menu .nameplate {
     float: left;
-    padding-top: 43px;
+    padding-top: 0;
     width: 500px;
 
     LI { float: left; }
@@ -119,7 +135,9 @@ NAV UL, NAV OL, FOOTER UL {
 |-------------------------------------------------------------------------------
 */
 
-.doc-body { background: url(/a/img/svet.png) 50% 0 no-repeat; }
+.doc-body {
+    background: #efd684 url(/a/img/svet.png) 50% 0 no-repeat;
+    padding-top: 42px; }
 
 .billboard {
     text-align: left;
