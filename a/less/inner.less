@@ -9,7 +9,6 @@
 @import '04-menu.less';
 @import '09-footer.less';
 
-
 /*
 |-------------------------------------------------------------------------------
 | Customization
@@ -27,13 +26,76 @@ BODY { background: #fff }
     color: #fff;
     text-shadow: none; }
 
+
+/*
+|-------------------------------------------------------------------------------
+| Common blocks
+|-------------------------------------------------------------------------------
+*/
+.billboard {
+    text-align: left;
+    padding-top: 108px;
+
+    FIGURE {
+        .box-sizing(border-box);
+        background: #fff;
+        border: 1px solid #bfa666;
+        float: left;
+        padding: 10px;
+        position: relative;
+        width: 470px;
+        height: 274px;
+        *zoom: 1;
+
+        &:after {
+            background: url(/a/img/background-shadow.png) 50% 100% no-repeat;
+            content: '';
+            display: block;
+            margin-left: -470 / 2 + 0px;
+            position: absolute;
+            bottom: -29px;
+            left: 50%;
+            height: 29px;
+            width: 470px; }
+        }
+
+    HEADER {
+        float: right;
+        padding-top: 9px;
+        width: 470/980 * 100%; }
+
+    P, UL { margin-bottom: 0; }
+}
+
+.socials-cta {
+    font-size: 12px;
+    text-align: center;
+    list-style-image: none;
+    list-style-type: none;
+    margin-bottom: 2 * @baseline;
+
+    LI {
+        .inline-block;
+        margin: 0 4px;}
+
+    A {
+        .ir;
+        margin-top: 2px;
+        height: 33px;
+        width: 90px; }
+
+    .fb A { background-position: 0 -110px;}
+    .tw A { background-position: 0 -150px;}
+    .rss A { background-position: 0 -190px;}
+}
+
 /*
 |-------------------------------------------------------------------------------
 | About
 |-------------------------------------------------------------------------------
 */
 
-.p-about .doc-main {
+.p-about .doc-body {
     .art-hdr { padding-top: 61px; }
 
     .bcol {

@@ -14,6 +14,8 @@ A {
 
 A:hover { text-decoration: none; }
 
+FIGURE { margin: 0 0 @baseline; }
+
 P { margin: 0 0 @baseline; }
 
 IFRAME {
@@ -39,18 +41,21 @@ H1, H2, H3, H4 {
     margin: 0;
     text-rendering: optimizelegibility; }
 
-H1, H2 {
-    font-family: @h-bold;
-    font-weight: @h-bold-weight;
-    letter-spacing: -.04em; }
+H1, H2 { letter-spacing: -.04em; }
 
 H1 {
-    font-size: 32px;
-    line-height: 44px; }
+    font: @h-bold-weight 36px/44px @h-bold;
+    letter-spacing: -.04em; }
 
 H2 {
-    font-size: 24px;
-    line-height: 33px; }
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 33px;
+    letter-spacing: -.06em; }
+
+    H1 + H2 {
+        margin-top: -1px;
+        padding-bottom: 8px; }
 
 H3, .h3, H4, .h4 { font-size: 100%; }
 
@@ -95,25 +100,36 @@ NAV UL, NAV OL, FOOTER UL {
 |-------------------------------------------------------------------------------
 */
 
-.wrapper { background: #fff;}
-
-.doc-body {
+.doc-body-wrapper {
     text-align: center;
     position: relative;
     *zoom: 1; }
 
-.doc-body-top { background: #f5d87e url(/a/img/byconur.png) center bottom no-repeat; }
+.doc-body-wrapper-t {
+    background: #efd684 url(/a/img/byconur.png) center bottom no-repeat;
+    padding-bottom: 120px;
 
-.doc-body-bottom { margin-bottom: 149px; }
+    A {
+        color: #265999;
+        text-decoration: none;
 
-    .doc-main {
+        &:hover { text-decoration: underline;}
+     }
+
+    H1 + H2 { color: rgba(0, 0, 0, 0.60); }
+}
+
+.doc-body-wrapper-b { margin-bottom: 149px; }
+
+    .doc-body {
         margin: 0 auto;
-        max-width: 980px;
+        max-width: 980px; }
 
-        DL, OL, P, PRE, UL { line-height: 22px; }
+        .doc-main {
+            DL, OL, P, PRE, UL { line-height: 22px; }
 
-        P { margin: 0 0 22px; }
-    }
+            P { margin: 0 0 22px; }
+        }
 
 .doc-header, .doc-body, .doc-footer, .cfx, .row, .clearfix {
   *zoom: 1;
@@ -130,6 +146,24 @@ NAV UL, NAV OL, FOOTER UL {
     margin-bottom: @baseline;
     *margin-left: -@gutter/@content-box * 100%;
     width: 100%; }
+
+.feature {
+    padding: 4 * @baseline 60px;
+
+    DL, H3, OL, P, UL { text-align: left;}
+
+    .socials-cta { text-align: center;}
+
+    H2 { padding-bottom: 19px;}
+
+    UL {
+        margin-left: -1em;
+
+        LI { margin-left: 1em; }
+    }
+}
+
+.highlighted { background: url(/a/img/svet.png) 50% -200px no-repeat; }
 
 /*
 |-------------------------------------------------------------------------------
@@ -209,5 +243,7 @@ NAV UL, NAV OL, FOOTER UL {
 @media only screen and (max-width: 479px) {
 
     .bcol { .content-columns(1, 0);}
+
+    .feature { padding: 2 * @baseline 24px; }
 
 }
