@@ -11,6 +11,9 @@ Disallow: /.git/
 Disallow: /_tmp/
 
 # Files
+Disallow: /thank-you-colt.html
+Disallow: /about.html
+
 Disallow: /_tmp.html
 Disallow: /.gitignore
 Disallow: /BingSiteAuth.xml
