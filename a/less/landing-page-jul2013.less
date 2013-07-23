@@ -5,6 +5,7 @@
 @import '02-variables.less';
 @import '02-mixins.less';
 @import '02-sprites.less';
+@import '09-footer.less';
 
 HTML { background: #efd684; }
 
@@ -21,6 +22,8 @@ A {
 
 A:hover { text-decoration: none; }
 
+DFN { font-style: normal; }
+
 H1, H2, H3, H4 {
     margin: 0;
     text-rendering: optimizelegibility; }
@@ -30,9 +33,71 @@ H1, H2 {
     font-weight: @h-bold-weight;
     letter-spacing: -.04em; }
 
+H3, .h3, H4, .h4 { font-size: 100%; }
+
+P { margin: 0 0 @baseline; }
+
+OL {
+    list-style: decimal;
+    list-style-position: inside;
+    margin: 0 0 @baseline;
+    padding: 0; }
+
+UL {
+    list-style-image: url(/a/img/b.gif);
+    list-style-position: outside;
+    margin: 0 0 @baseline;
+    padding: 0;
+    *padding-left: 20px; }
+
+LI UL, LI OL {
+    margin-bottom: 0;
+    padding-left: 20px; }
+
 NAV UL, NAV OL, FOOTER UL {
     list-style: none;
-    list-style-image: none; }
+    list-style-image: none;
+    margin: 0;
+    padding: 0; }
+
+/*
+|-------------------------------------------------------------------------------
+| Layout
+|-------------------------------------------------------------------------------
+*/
+
+.doc-body-t {
+    background: #efd684 url(/a/img/svet.png) 50% 0 no-repeat;
+    padding-top: 42px; }
+
+.feature, .p {
+    margin: 0 auto;
+    max-width: 960px; }
+
+.feature {
+    padding: 4 * @baseline 60px;
+
+    DL, H3, OL, P, UL { text-align: left;}
+
+    .socials-cta { text-align: center;}
+
+    H2 { padding-bottom: 19px;}
+
+    UL {
+        margin-left: -1em;
+
+        LI { margin-left: 1em; }
+    }
+}
+
+.bcol { .content-columns(2, 30px); }
+
+.three-col { .content-columns(3, 30px); }
+
+.bcol UL, .three-col UL {
+    margin-left: 0;
+
+}
 
 .clear {
     clear: both;
@@ -107,15 +172,19 @@ NAV UL, NAV OL, FOOTER UL {
 .m-socials {
     float: right;
     text-align: right;
-    width: 66px;
+    margin-top: 12px;
+    width: auto;
 
     LI { .inline-block; }
 
-    .fb, .twitter { float: right; }
+    .fb, .twitter {
+        float: right;
+        margin-left: 10px; }
+
+    .twitter { margin-left: 0; }
 
     .fb A, .twitter A {
         .ir;
-        margin-left: 10px;
         height: 28px;
         width: 28px;
 
@@ -134,10 +203,6 @@ NAV UL, NAV OL, FOOTER UL {
 | Billboard
 |-------------------------------------------------------------------------------
 */
-
-.doc-body {
-    background: #efd684 url(/a/img/svet.png) 50% 0 no-repeat;
-    padding-top: 42px; }
 
 .billboard {
     text-align: left;
@@ -226,8 +291,8 @@ NAV UL, NAV OL, FOOTER UL {
 .bubble {
     margin: 75px auto 0;
     background: url(/a/img/bubble.png) 0 0 no-repeat;
-    padding: 80px 40px 0 80px;
-    height: 132px;
+    padding: 64px 40px 0 80px;
+    height: 148px;
     width: 542px;
 
     .avatar {
@@ -277,12 +342,19 @@ NAV UL, NAV OL, FOOTER UL {
 
 /*
 |-------------------------------------------------------------------------------
-| Features
+| Body: features etc
 |-------------------------------------------------------------------------------
 */
 
+.feature P, .feature UL, .features P {
+        color: rgba(0, 0, 0, 0.60);
+        font-size: 14px;
+        line-height: 22px; }
+
+.features P { margin: 10px 0 0 0; }
+
 .features {
-    background: #FFF;
+    background: #fff;
     padding: 77px 0 100px;
     width: 100%;
 
@@ -297,12 +369,6 @@ NAV UL, NAV OL, FOOTER UL {
     .first { margin-left: 0;}
 
     H3 { font-size: 19px; }
-
-    P {
-        color: rgba(0, 0, 0, 0.60);
-        font-size: 14px;
-        line-height: 22px;
-        margin: 10px 0 0 0; }
 }
 
 .features-container {
@@ -332,42 +398,5 @@ NAV UL, NAV OL, FOOTER UL {
     top: -3px;
     height: 30px;
     width: 30px; }
-
-/*
-|-------------------------------------------------------------------------------
-| Footer
-|-------------------------------------------------------------------------------
-*/
-.doc-footer {
-    background: #cfe0e7;
-    padding-top: 43px;
-    height: 82px; }
-
-.footer-container {
-    color: #798387;
-    font-size: 12px;
-    text-align: left;
-    margin: 0 auto;
-    width: 980px; }
-
-.footer-logo {
-    float: left;
-    color: #798387;
-    font-size: 12px;
-
-    A {
-        background-position: 0 -30px;
-        .ir;
-        margin-bottom: 6px;
-        height: 15px;
-        width: 153px; }
-}
-
-IFRAME[name="google_conversion_frame"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 0;
-    width: 0; }
 
 @import '18-print.less';

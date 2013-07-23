@@ -4,17 +4,14 @@
 .doc-footer {
     border-top: #a4b5bc 1px solid;
     background: #cfe0e7;
-    height: 164px;
     width: 100%;
 
     NAV {
         .box-sizing(border-box);
-        clear: both;
         text-align: left;
         margin: 0 auto;
-        padding: 0 24px;
+        padding: 0 24px @baseline * 2;
         position: relative;
-        height: 164px;
         max-width: 1008px;
         *zoom: 1; }
 }
@@ -50,12 +47,17 @@
     }
 }
 
+.disclaimer {
+    float: left;
+    font-size: 12px;
+    margin: 60px 0 0 81px;
+    max-width: 480px;
+    *width: 480px; }
+
 .doc-footer .m-socials {
     margin-top: 57px;
 
     .fb, .twitter { margin-top: -3px; }
-
-    .twitter { margin-left: 10px; }
 }
 
 #paracvet {

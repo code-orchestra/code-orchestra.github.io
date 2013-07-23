@@ -26,6 +26,9 @@ BODY { background: #fff }
     color: #fff;
     text-shadow: none; }
 
+.v-offset-01 { padding-top: @baseline !important;}
+.v-offset-02 { padding-top: 2 * @baseline !important;}
+.v-shift-01 { margin-top: -10px;}
 
 /*
 |-------------------------------------------------------------------------------
@@ -34,7 +37,6 @@ BODY { background: #fff }
 */
 .billboard {
     text-align: left;
-    padding-top: 108px;
 
     FIGURE {
         .box-sizing(border-box);
@@ -59,10 +61,11 @@ BODY { background: #fff }
             width: 470px; }
         }
 
-    HEADER {
+    HEADER, .lead {
         float: right;
         padding-top: 9px;
-        width: 470/980 * 100%; }
+        max-width: 470/980 * 100%;
+        *width: 470/980 * 100%; }
 
     P, UL { margin-bottom: 0; }
 }
@@ -88,8 +91,6 @@ BODY { background: #fff }
     .tw A { background-position: 0 -150px;}
     .rss A { background-position: 0 -190px;}
 }
-
-.disclaimer { font-size: 12px;}
 
 /*
 |-------------------------------------------------------------------------------

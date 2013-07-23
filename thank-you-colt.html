@@ -59,22 +59,22 @@
 <!-- BODY COPY ============================================================= -->
 <div class="doc-body-wrapper doc-body-wrapper-t doc-body-wrapper-b">
     <article class="doc-body highlighted">
-
+        <h1 class="h-banner">Thank you. We will not let you down</h1>
         <section class="billboard cfx">
-            <header>
-                <h1>Thank you</h1>
-                <h2>We will not let you down</h2>
-                <p><a href="http://codeorchestra.com/">Download</a> a free demo of COLT.</p>
-                <ul>
-                    <li><b>Win:</b> Start the installer and follow instructions.</li>
-                    <li><b>Mac:</b> Start the .dmg file and move the COLT folder into the Applications folder.</li>
-                </ul>
-                <p>If you're using Firewall, add the 6126 and 8091 ports to the list of open ones.</p>
-                <p>Краткая инструкция по активации.</p>
+            <div class="lead v-offset-01">
+                <ol>
+                    <li><b>Установка.</b> <a href="javascript:void(0);" class="download-colt" onclick="_gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);">Download a free demo of COLT</a>.
+                    <ul>
+                    <li>Win: Start the installer and follow instructions.</li>
+                    <li>Mac: Start the .dmg file and move the COLT folder into the Applications folder.</li>
+                    </ul>
+                    If you're using Firewall, add the 6126 and 8091 ports to the list of open ones.
+                    </li>
+                    <li><b>Авторизация.</b> Код активации выслан на ваш email. Запустите программу и введите этот код в появившейся форме. Всё, COLT готов к работе.</li>
+                    </ol>
+            </div>
 
-            </header>
-
-            <figure>
+            <figure class="v-shift-01">
                 <iframe width="448" height="252" src="http://www.youtube.com/embed/GsK_syADzQ8?wmode=transparent&amp;feature=oembed&amp;autohide=1&amp;hd=1" allowfullscreen=""></iframe>
             </figure>
         </section>
@@ -82,10 +82,10 @@
         <section class="feature">
             <h2>What's next?</h2>
             <ul class="bcol">
-            <li><b>Please note:</b> your credit card or bank statement will show a charge by ClickBank or CLKBANK*COM, rather than a reference to COLT.</li>
-            <li>See another video tutorial above.</li>
+            <li>See another video above. It's about game development.</li>
             <li>Read <a href="https://github.com/code-orchestra/documentation">the documentation</a></li>
-            <li>If you ned help, please contact us at codeorchestra@codeorchestra.com or via <a href="https://codeorchestra.zendesk.com/anonymous_requests/new">support form</a>.</li>
+            <li>If you need help, please <a href="https://codeorchestra.zendesk.com/anonymous_requests/new">contact us</a>.</li>
+            <li><b>Please note:</b> your credit card or bank statement will show a charge by ClickBank or CLKBANK*COM, rather than a reference to COLT.</li>
             </ul>
 
             <ul class="socials-cta">
@@ -96,30 +96,19 @@
         </section>
 
     </article><!-- / doc-main -->
-</div>
+</div><!-- / doc-body-wrapper -->
 
-    <div class="doc-body-wrapper doc-body-wrapper-b">
-        <footer class="p disclaimer">
-            ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 917 S. Lusk Street, Suite 200, Boise Idaho, 83706, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.
-        </footer>
-    </div>
 
 <!-- FOOTER ================================================================ -->
     <footer class="doc-footer">
-        <div class="footer-container">
-        <nav class="section">
+        <nav class="cfx">
 
         <div class="footer-logo">
         <a href="/">Code Orchestra</a>
         <span>&copy; 2012-2013. All rights reserved</span>
         </div>
 
-        <ul class="m-core">
-        <li class="m-docs"><a href="https://github.com/code-orchestra/documentation/wiki">Docs</a></li>
-        <li class="m-support"><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Contact Us</a></li>
-        <li class="m-about"><a href="http://codeorchestra.com/about.html">About</a></li>
-        </ul>
-
+        <p class="disclaimer">ClickBank is the retailer of products on this site. CLICKBANK® is a registered trademark of Click Sales, Inc., a Delaware corporation located at 917 S. Lusk Street, Suite 200, Boise Idaho, 83706, USA and used by permission. ClickBank's role as retailer does not constitute an endorsement, approval or review of these products or any claim, statement or opinion used in promotion of these products.</p>
 
         <ul class="m-socials">
         <li class="fb"><a href="https://www.facebook.com/codeorchestra">Facebook</a></li>
@@ -129,10 +118,34 @@
         <div id="paracvet"><a href="http://paracvet.com" rel="nofollow">Made by Paracvet</a></div>
 
         </nav>
-        </div>
     </footer><!-- / footer -->
 
 <!-- SCRIPTS =============================================================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/a/js/jquery-1.10.2.min.js"><\/script>')</script>
+
+    <script>
+    function download_COLT(){
+        var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
+        var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
+        var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
+
+        if(isMac){
+            window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT.dmg");
+        }else if(isWindows){
+            window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT-install.exe");
+        }else if(isLinux){
+            //window.location.replace("http://codeorchestra.com/files/colt_linux.tg");
+            alert("Linux not support yet. Coming soon");
+        }
+    }
+
+    $(document).ready(function () {
+        $(".download-colt").click(function(){
+                download_COLT();
+        });
+    });
+    </script>
 
     <!-- Google Analytics -->
     <script>
@@ -146,7 +159,7 @@
     </script>
 
     <!-- Google Remarketing Tag -->
-    <script type="text/javascript">
+    <script>
         /* <![CDATA[ */
         var google_conversion_id = 986277088;
         var google_custom_params = window.google_tag_params;
