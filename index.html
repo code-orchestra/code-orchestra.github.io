@@ -49,10 +49,8 @@
             </ul>
 
             <ul class="m-socials">
-            <li class="fb"><a href="https://www.facebook.com/codeorchestra">Facebook</a></li>
-            <li class="gp"><a href="https://plus.google.com/102141116053850958473" rel="publisher">Google+</a></li>
             <li class="in"><a href="http://www.linkedin.com/company/code-orchestra">LinkedIn</a></li>
-            <li class="twitter"><a href="https://twitter.com/code_orchestra">Twitter</a></li>
+            <li class="tw"><a href="https://twitter.com/code_orchestra">Twitter</a></li>
             </ul>
         </nav>
     </header>
@@ -367,12 +365,16 @@
         <ul class="m-socials">
         <li class="fb"><a href="https://www.facebook.com/codeorchestra">Facebook</a></li>
         <li class="gp"><a href="https://plus.google.com/102141116053850958473" rel="publisher">Google+</a></li>
-        <li class="in"><a href="http://www.linkedin.com/company/code-orchestra">LinkedIn</a></li>
-        <li class="twitter"><a href="https://twitter.com/code_orchestra">Twitter</a></li>
-        <li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://codeorchestra.com">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <li class="fb-counter"><div class="fb-like" data-href="http://codeorchestra.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div></li>
+        <li class="gp-counter"><div class="g-plusone" data-size="medium"></div></li>
+        <li class="tw-counter">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         </li>
-        <li><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fcodeorchestra&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=21" style="border:none; overflow:hidden; width:120px; height:21px;"></iframe></li>
+        <li class="in-counter">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+            <script type="IN/Share"></script></script>
+        </li>
         </ul>
 
         <div id="paracvet"><a href="http://paracvet.com">Made by Paracvet</a></div>
@@ -395,10 +397,8 @@
         </ul>
 
         <ul class="m-socials">
-        <li class="fb"><a href="https://www.facebook.com/codeorchestra">Facebook</a></li>
-        <li class="gp"><a href="https://plus.google.com/102141116053850958473" rel="publisher">Google+</a></li>
         <li class="in"><a href="http://www.linkedin.com/company/code-orchestra">LinkedIn</a></li>
-        <li class="twitter"><a href="https://twitter.com/code_orchestra">Twitter</a></li>
+        <li class="tw"><a href="https://twitter.com/code_orchestra">Twitter</a></li>
         </ul>
 
         </nav>
@@ -423,6 +423,29 @@
     <script src="/a/js/scripts-anim.js"></script>
 
     <script src="/a/js/scripts.js"></script>
+
+    <!-- Fb -->
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- G+ -->
+    <script>
+        (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
 
     <!-- Google Analytics -->
     <script>

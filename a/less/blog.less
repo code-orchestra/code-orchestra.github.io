@@ -155,32 +155,33 @@ A.post-title:hover {
         margin-right: 0; }
 
     UL {
-    *zoom: 1;
+        *zoom: 1;
 
-    &:before, &:after {
-        content: '';
-        display: table;
-        line-height: 0; }
+        &:before, &:after {
+            content: '';
+            display: table;
+            line-height: 0; }
 
-    &:after { clear: both; }
-
-    LI {
-        float: left;
-        margin-right: .4em; }
+        &:after { clear: both; }
     }
 
-    .tw { margin-left: .4em;}
+        LI {
+            float: left;
+            margin-right: .4em; }
 
-    IFRAME {
-        margin-bottom: 0;
-        overflow: hidden; }
+        .tw, .fb, .gp, .in { padding-top: 1em / @b;}
 
-    .tw, .fb { padding-top: 1em / @b;}
+        .in { margin: 0 8px 0 4px; }
 
-    .fb {
-        width: 48px;
-        overflow: hidden;
-    }
+        .tw { margin: 0 8px 0 2px; }
+
+        .fb {
+            width: 48px;
+            overflow: hidden; }
+
+            IFRAME {
+                margin-bottom: 0;
+                overflow: hidden; }
 
     .tags UL {
         margin: 0 !important;
