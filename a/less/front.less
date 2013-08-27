@@ -149,62 +149,60 @@ DL, P, OL, UL { margin-bottom: 18px }
 |-------------------------------------------------------------------------------
 */
 
-#columns-wrapper { background: #fff; }
-
-.columns-container {
-    width: 960px;
-    padding: 10px 8px 70px;
-    margin: 0 auto; }
-
-.columns {
+.cols {
     margin: 0 auto;
+    padding: 10px 0 0 0;
     width: 920px;
-    height: 220px;
-    padding-left: 40px; }
 
-.columns .column {
-    float: left;
-    width: 306px; }
+    .col {
+        float: left;
+        margin-left: 30px;
+        padding-left: 40px;
+        width: 260px;
 
-.columns .column h2 {
-    font-size: 20px;
-    font-weight: 500;
-    color: #252e32;
-    margin: 32px 0 8px;
-    position: relative;
-    padding: 0; }
+        H2 {
+            color: #252e32;
+            font-size: 20px;
+            font-weight: 500;
+            margin: 32px 0 8px;
+            padding: 0;
+            position: relative;
+            *zoom: 1; }
 
-.columns .column p {
-    width: 250px;
-    margin: 0 0 32px 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: #5b616c;
-    line-height: 1.5em; }
+        P {
+            color: #5b616c;
+            font: 14px/1.5 Arial, Helvetica, sans-serif; }
 
-.columns .column h2:before {
+    }
+
+    .col-first, .col:first-of-type { margin-left: 0; }
+}
+
+.cols-features-high {
+    min-height: 340px;
+    *height: 340px; }
+
+.cols-features H2:before {
+    background: url(/a/img/column-icons.png) no-repeat;
     content: '';
     display: block;
     position: absolute;
-    width: 32px;
-    height: 32px;
-    background-image: url(/a/img/column-icons.png);
-    background-repeat: no-repeat;
     top: 0;
-    left: -41px; }
+    left: -40px;
+    height: 32px;
+    width: 32px; }
 
-.columns .column h2.f-to-ht:before { background-position: 0 0; }
+.cols .h-f-to-ht:before { background-position: 0 0; }
 
-.columns .column h2.one-lan:before { background-position: -32px 0; }
+.cols .h-one-lan:before { background-position: -32px 0; }
 
-.columns .column h2.train:before { background-position: -64px 0; }
+.cols .h-train:before { background-position: -64px 0; }
 
-.columns .column h2.live-cod:before { background-position: 0 -32px; }
+.cols .h-live-cod:before { background-position: 0 -32px; }
 
-.columns .column h2.rev:before { background-position: -32px -32px; }
+.cols .h-rev:before { background-position: -32px -32px; }
 
-.columns .column h2.lex:before { background-position: -64px -32px; }
+.cols .h-lex:before { background-position: -64px -32px; }
 
 /*
 |-------------------------------------------------------------------------------
