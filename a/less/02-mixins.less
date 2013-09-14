@@ -107,12 +107,13 @@
 | 6) Standard, IE10
 | 7) IE9 and down
 | 8) #gradient > .vertical-three-colors(#fff, #CCC, 44%, #000);
-| 9) Gradient-linear will set the background to a pleasing blend of these,
+| 9) #gradient > .vertical-four-colors(#fff, 0, #CCC, 25%, #333, 75%, #000, 100%);
+| 10) Gradient-linear will set the background to a pleasing blend of these,
 | to support IE<=9
-| 10) Darken IE7 buttons by default so they stand out more given they won't have
+| 11) Darken IE7 buttons by default so they stand out more given they won't have
 | borders
-| 11) In these cases the gradient won't cover the background, so we override
-| 12)  IE 7 + 8 can't handle box-shadow to show active, so we darken a bit
+| 12) In these cases the gradient won't cover the background, so we override
+| 13)  IE 7 + 8 can't handle box-shadow to show active, so we darken a bit
 | ourselves
 |
 */
@@ -129,15 +130,27 @@
         background-repeat: repeat-x;
         filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=@start-color, endColorstr=@end-color, GradientType=0); } // 7
 
-    .vertical-three-colors(@start-color: #00b3ee, @mid-color: #7a43b6, @color-stop: 50%, @end-color: #c3325f) {
+    .vertical-three-colors(@start-color: #00b3ee, @mid-color: #7a43b6, @color-stop: 50%, @end-color: #c3325f) { // 8
         background-color: mix(@mid-color, @end-color, 80%);
         background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start-color), color-stop(@color-stop, @mid-color), to(@end-color));
         background-image: -webkit-linear-gradient(@start-color, @mid-color @color-stop, @end-color);
         background-image: -moz-linear-gradient(top, @start-color, @mid-color @color-stop, @end-color);
+        background-image: -ms-linear-gradient(@start-color, @mid-color @color-stop, @end-color);
         background-image: -o-linear-gradient(@start-color, @mid-color @color-stop, @end-color);
         background-image: linear-gradient(@start-color, @mid-color @color-stop, @end-color);
         background-repeat: no-repeat;
         filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=@start-color, endColorstr=@end-color, GradientType=0); }
+
+    .vertical-four-colors(@first-color: #f2f2f2, @fc-stop: 0%, @second-color: #e5e5e5, @sc-stop: 25%, @third-color: #d9d9d9, @tc-stop: 75%, @end-color: #e5e5e5, @ec-stop: 100%) { // 9
+        background-color: mix(@first-color, @end-color, 50%);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@first-color), color-stop(@sc-stop, @second-color), color-stop(@tc-stop, @third-color), to(@end-color));
+        background-image: -webkit-linear-gradient(@first-color @fc-stop, @second-color @sc-stop, @third-color @tc-stop, @end-color @ec-stop);
+        background-image: -moz-linear-gradient(@first-color @fc-stop, @second-color @sc-stop, @third-color @tc-stop, @end-color @ec-stop);
+        background-image: -ms-linear-gradient(@first-color @fc-stop, @second-color @sc-stop, @third-color @tc-stop, @end-color @ec-stop);
+        background-image: -o-linear-gradient(@first-color @fc-stop, @second-color @sc-stop, @third-color @tc-stop, @end-color @ec-stop);
+        background-image: linear-gradient(@first-color @fc-stop, @second-color @sc-stop, @third-color @tc-stop, @end-color @ec-stop);
+        background-repeat: no-repeat;
+        filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr=@first-color, endColorstr=@end-color, GradientType=0); }
 
     .radial(@innerColor: #555, @outerColor: #333)  {
         background-color: @outerColor;
@@ -184,17 +197,17 @@
 
 /* Button backgrounds */
 .button-bg(@start-color, @end-color, @text-color: #fff, @text-shadow: 0 -1px 0 rgba(0,0,0,.25)) {
-    .gradient-linear(@start-color, @end-color, @text-color, @text-shadow); // 9
-    *background-color: @end-color; // 10
+    .gradient-linear(@start-color, @end-color, @text-color, @text-shadow); // 10
+    *background-color: @end-color; // 11
     .reset-filter;
 
-    &:hover, &:active, &.active, &.disabled, &[disabled] { // 11
+    &:hover, &:active, &.active, &.disabled, &[disabled] { // 12
     color: @text-color;
     background-color: @end-color;
     *background-color: darken(@end-color, 5%); }
 
 
-    &:active, &.active { background-color: darken(@end-color, 10%) e('\9'); } // 12
+    &:active, &.active { background-color: darken(@end-color, 10%) e('\9'); } // 13
 }
 
 /* Reset filters for IE */

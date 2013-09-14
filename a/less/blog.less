@@ -7,7 +7,7 @@
 @import '02-sprites.less';
 @import '03-common.less';
 @import '04-menu.less';
-@import '08-tables.less';
+@import '04-tables.less';
 @import '09-footer.less';
 
 /*
@@ -16,7 +16,7 @@
 |-------------------------------------------------------------------------------
 */
 
-.main-menu { border-bottom-color: #b7b8ba; }
+.doc-header { border-bottom-color: #b7b8ba; }
 
 .doc-footer .m-socials { width: auto;}
 
@@ -64,8 +64,6 @@ A {
 A:hover { text-decoration: underline; }
 
 H1, H2, .h1, .h2 {
-    font-family: @h-bold;
-    font-weight: @h-bold-weight;
     line-height: 1.25;
     margin-top: .5em;
     margin-bottom: .8em;
@@ -97,14 +95,16 @@ P, .p, UL, OL {
     padding-right: 24px;
     padding-left: 24px;
     overflow: hidden;
-    max-width: 1008px;
-    width: 100%; }
+    max-width: 988px;
+    width: 100%;
+    *width: 988px; }
 
 .wrap { padding-bottom: 4em; }
 
 .post {
     margin-top: 8em;
     max-width: 44em;
+    *width: 44em;
     &:first-of-type { margin-top: 4em; }
 }
 
@@ -120,7 +120,9 @@ A.post-title:hover {
     text-decoration: none;
     color: #099; }
 
-.photoset, .photoset_row { max-width: 100%; }
+.photoset, .photoset_row {
+    max-width: 100%;
+    *width: 99%; }
 
 .post IFRAME, .video OBJECT {
     width: 100%;
@@ -132,17 +134,19 @@ A.post-title:hover {
 
 .quote BLOCKQUOTE {
     padding: 0;
-    border: none;
-    font-style: italic; }
+    border: none; }
 
 .quote .source { text-align: right; }
 
 /* Article footer */
 .post FOOTER {
-    padding: 0;
-    margin-top: 1em;
-    color: #aaa;
+    color: #abaeb2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-size: 14 / 16rem;
     font-style: italic;
+    margin: 1em 0 0;
+    padding: 0;
 
     A {
         color: #aaa;

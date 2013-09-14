@@ -1,20 +1,21 @@
 @import '02-variables.less';
 @import '02-mixins.less';
 
-.main-menu {
+.doc-header {
     background: #fff;
-    border-bottom: 3px solid #a76d2c;
-    padding-top: 8px;
+    border-bottom: 3px solid #b27333;
+    padding-top: 11px;
     height: 55px; }
 
-.main-menu, .sticky-menu {
+.doc-header, .sticky-menu {
 
     NAV {
         .box-sizing(border-box);
         clear: both;
         margin: 0 auto;
         padding: 0 24px;
-        max-width: 1008px; }
+        max-width: 988px;
+        *width: 988px; }
 
     A {
         color: #434f61;
@@ -25,13 +26,14 @@
 .m-logo-a {
     .ir;
     float: left;
-    margin: 12px 40px 0 0;
+    //margin: 12px 99px 0 0;
+    margin: 12px 110px 0 0;
     height: 22px;
     width: 216px; }
 
 .p-front .m-logo-a, .p-front .footer-logo A { cursor: default; }
 
-.m-core, .m-utils {
+.m-core {
     float: left;
     padding-top: 13px;
 
@@ -86,15 +88,15 @@
 | Slidemenu
 |-------------------------------------------------------------------------------
 */
-.sticky-menu, #slidepanel {
+.sticky-menu {
     background: #fff;
-    .box-shadow(0 2px 5px #aaa);
-    padding-top: 8px;
+    .box-shadow(0 2px 4px rgba(0, 0, 0, .24));
+    padding-top: 11px;
     opacity: 0.9;
     position: fixed;
-    top: -69px;
+    top: -72px;
     left: 0;
-    height: 56px;
+    height: 55px;
     width: 100%;
     z-index: 1444;
 }

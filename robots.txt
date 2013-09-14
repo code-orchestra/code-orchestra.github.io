@@ -9,6 +9,7 @@ Disallow: /*?
 # Directories
 Disallow: /.git/
 Disallow: /_tmp/
+Disallow: /_labs/
 
 # Files
 Disallow: /thank-you-colt.html

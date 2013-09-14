@@ -1,0 +1,233 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/*
+|-------------------------------------------------------------------------------
+| Billboard
+|-------------------------------------------------------------------------------
+*/
+.sec-colt-billboard {
+    background: url(/a/img/svet.png) 0 -240px no-repeat, #f2d98c url(/a/img/bg-baikonur.png) 50% 100% repeat-x;
+    *background: #f2d98c url(/a/img/bg-baikonur.png) 50% 100% repeat-x;
+    color: #000;
+    padding-top: 41px;
+    position: relative;
+    *zoom: 1;
+
+    .sec-content { text-align: center; }
+
+    H1 {
+        color: #484a4d;
+        font-size: 20 / @b * 100%;
+        font-weight: 400;
+        line-height: @bl / 20 + 0em;
+        text-transform: uppercase;
+        padding: 290px 0 0;
+        position: relative;
+        *zoom: 1;
+
+        I.co {
+            background-image: url(/a/img/front/ico-colt.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 31px;
+            left: 50%;
+            margin-left: -102px;
+            height: 234px;
+            width: 205px; }
+    }
+
+    H1, H2, P { text-shadow: 0 1px 0 rgba(255, 255, 255, .4);}
+
+    UL {
+        list-style: none;
+        list-style-image: none;
+        margin: 0;
+        padding: 0; }
+
+    LI { .inline-block(); }
+
+    .toggle {
+        background: #f2d98c;
+        border: 2px solid #f2d98c;
+        .border-radius(3px);
+        .inline-block();
+        margin: (29em / @b) 0 (21em / @b);
+        line-height: 29px;
+        height: 29px;
+
+        SPAN, A {
+            display: block;
+            padding: 0 24px; }
+
+        A {
+            color: #aa702f;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .64);
+
+            &:hover {
+                color: #000;
+                text-decoration: none;
+                .transition(color 0.2s ease-in-out); }
+        }
+
+        .active {
+            background: #feedb7;
+            .border-radius(1px);
+            .box-shadow(inset 0 1px 0 #fef2cc);
+            color: #b27333;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 1); }
+
+    }
+
+    H2 {
+        line-height: 1.65;
+        padding: 0 0 .35em; }
+
+    P { margin-bottom: 45em / @b;}
+
+    .btn {
+        float: right;
+        margin-top: 0;
+        width: 225px;
+        *width: 225px; }
+
+    #btn-download-colt { float: left; }
+
+    IMG { margin-bottom: 0; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Infographic
+|-------------------------------------------------------------------------------
+*/
+.sec-colt-infographic {
+    padding-top: 147em / @b;
+
+    .rotator {
+        background: #141414;
+        margin-right: 10px;
+        width: 440 / 940 * 100%; }
+}
+
+.sec-js-libraries {
+    text-align: center;
+    padding-top: 11em / @b;
+
+    H2 { padding: 0 0 @baseline; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| Features
+|-------------------------------------------------------------------------------
+*/
+.sec-features-colt {
+
+    padding-top: 91em / @b;
+
+    .cfx { background: url(/a/img/separator.gif) (629 / 940 * 100%) 0 repeat-y; }
+}
+
+/* Features Icons */
+.h-on-the-fly:before, .h-on-the-fly .before { background-position: 0 -230px; }
+.h-faveditor:before, .h-faveditor .before { background-position: -60px -230px; }
+.h-favlibs:before, .h-favlibs .before { background-position: -120px -230px; }
+.h-much-more:before, .h-much-more .before { background-position: -180px -230px; }
+.h-timesaver:before, .h-timesaver .before { background-position: 0 -290px; }
+.h-teamwork:before, .h-teamwork .before { background-position: -110px -290px; }
+
+/*
+|-------------------------------------------------------------------------------
+| Banner
+|-------------------------------------------------------------------------------
+*/
+.bnr-ide {
+    background: #dde0e4;
+    border: 1px solid #c9ccd0;
+    .border-radius(3px);
+    .box-sizing(border-box);
+    margin: (116em / @b) auto 0;
+    padding: 25px 9px 0 239px;
+    position: relative;
+    height: 88px;
+    max-width: 938px;
+    *width: 938px;
+    *zoom: 1;
+
+    FIGURE {
+        position: absolute;
+        top: -26px;
+        left: 47px; }
+
+    .hgroup {
+        float: left;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+        margin-right: 10px;
+        width: 300 / 690 * 100%;
+
+        H2 {
+            letter-spacing: -.05em;
+            text-transform: uppercase; }
+    }
+
+    .btn-group {
+        float: left;
+        list-style: none;
+        list-style-image: none;
+        margin: 0;
+        padding: 0;
+        width: 360 / 690 * 100%;
+
+        LI { .inline-block(); }
+    }
+
+    .btn {
+        margin-right: 19px;
+        width: 220px;
+    }
+}
+
+/*
+|---------------------------------------
+| High resolution devices
+|---------------------------------------
+*/
+
+ @media print,
+        (-o-min-device-pixel-ratio: 5/4),
+        (-webkit-min-device-pixel-ratio: 1.25),
+        (min-resolution: 120dpi) {
+
+    .sec-colt-billboard H1 I.co {
+        background-image: url(/a/img/front/ico-colt-x2.png);
+        .background-size(205px 234px); }
+
+        .bnr-ide {
+            IMG { visibility: hidden; }
+            FIGURE {
+                background: transparent url(/a/img/front/ico-ide-x2.png) no-repeat;
+                .background-size(100% 100%); }
+        }
+
+        .sec-js-libraries {
+            IMG { visibility: hidden; }
+            FIGURE {
+                background: transparent url(/a/img/front/js-technologies-x2.png) no-repeat;
+                .background-size(100% 100%); }
+        }
+
+        .fact-3x {
+            IMG { visibility: hidden; }
+            FIGURE {
+                background: transparent url(/a/img/infographic/watch-3x-x2.png) no-repeat;
+                .background-size(100% 100%); }
+        }
+
+        .fact-40pc {
+            IMG { visibility: hidden; }
+            FIGURE {
+                background: transparent url(/a/img/infographic/rockets-40pc-x2.png) no-repeat;
+                .background-size(100% 100%); }
+        }
+}

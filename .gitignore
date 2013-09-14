@@ -1,4 +1,5 @@
 # Auxiliary Folders
+_backup/
 _labs/
 _tmp/
 _notes/
@@ -16,7 +17,6 @@ _tmp.html
 # Source Files
 a/video/*
 a/css/*
-!a/css/front.css
 !a/css/landing-page-jul2013.css
 !a/css/blog.css
 !a/css/inner.css

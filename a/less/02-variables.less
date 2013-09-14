@@ -9,7 +9,7 @@
 |
 */
 
-@font-sans:                 'Roboto', sans-serif;
+@font-sans:                 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @font-mono:                 Monaco, 'Courier New', monospace;
 @font-serif:                Georgia, 'Times New Roman', Times, serif;
 
@@ -30,15 +30,12 @@ To set margin and padding use formula
 /*
 1) Keep these functions here to avoid compiling errors
 */
-@h1:                        42;
+@h1:                        32;
 @h1-font-size:              @h1 / @b * 100%; // 1
-@h1-line-height:            2 * @bl / @h1 + 0em;
+@h1-line-height:            1.5 * @bl / @h1 + 0em;
 @h1-font:                   @font-sans;
-@h1-font-weight:            300;
+@h1-font-weight:            500;
 @h1-color:                  #000;
-
-@h-bold:                    'Roboto', 'Roboto Medium', 'Roboto Bold', Roboto, 'Arial Bold', Arial, sans-serif;
-@h-bold-weight:             500;
 
 /*
 1) 24 - 1 baseline
@@ -49,11 +46,11 @@ To set margin and padding use formula
 @h1-font-mob:               @h1-font;
 @h1-font-weight-mob:        @h1-font-weight;
 
-@h2:                        26;
+@h2:                        20;
 @h2-font-size:              @h2 / @b * 100%;
 @h2-line-height:            @bl / @h2 + 0em;
 @h2-font:                   @h1-font;
-@h2-font-weight:            @h1-font-weight;
+@h2-font-weight:            400;
 @h2-color:                  #000;
 
 @h2m:                       20;
@@ -88,7 +85,7 @@ To set margin and padding use formula
 |---------------------------------------
 */
 
-@c-txt:                     #515458; // Body text color
+@c-txt:                     #65686c; // Body text color
 
 @bg:                        #fff; // Background color
 @bg-body:                   @bg url(/a/img/bg.png) repeat-x;  /* Body and .page background set */
@@ -99,9 +96,9 @@ To set margin and padding use formula
 @c-tr:                      #f1f4f7; // even table rows, boxes etc
 @c-th:                      #eaedf1; // theads — darker then on @bg-dkr-1 3–4%
 @c-brd:                     #cccfd3; // lines, borders, hrs
-@c-nt:                      #898C90; // notes, time, .byline etc
+@c-nt:                      #9da0a4; // notes, time, .byline etc
 
-@c-link:                    #66c;
+@c-link:                    #3366b2;
 @c-link-hover:              darken(@c-link, 16%);
 @c-link-visited:            #606;
 

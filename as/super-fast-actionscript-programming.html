@@ -23,7 +23,7 @@
     <meta name="twitter:site" content="@code_orchestra">
     <meta name="twitter:creator" content="@potapenko">
 
-    <link rel="canonical" href="http://codeorchestra.com/flash-speed-programming.html">
+    <link rel="canonical" href="http://codeorchestra.com/as/">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500">
     <link rel="stylesheet" href="/a/css/landing-page-jul2013.css?130723a">
 
@@ -35,11 +35,11 @@
 
 <body>
 <!-- HEADER ================================================================ -->
-    <header class="main-menu">
+    <header class="doc-header">
         <nav>
             <ul class="nameplate">
-            <li class="m-logo"><a href="/" class="m-logo-a">Code Orchestra</a></li>
-            <li class="m-more"><a href="/">Learn More ></a></li>
+            <li class="m-logo"><a href="/as/" class="m-logo-a">Code Orchestra</a></li>
+            <li class="m-more"><a href="/as/">Learn More ></a></li>
             </ul>
 
             <ul class="m-socials">
@@ -65,10 +65,10 @@
         </figure>
     </section>
 
-    <nav class="buttons">
-        <a href="javascript:void(0);" class="btn-blue colt-download" onClick="_gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);">Download free demo</a>
+    <nav class="btn-group">
+        <a id="btn-download-colt" href="javascript:void(0);" class="btn btn-big" onClick="_gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);">Download Free Demo</a></li>
         <span class="or">OR</span>
-        <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" class="btn-green" onClick="_gaq.push(['_trackEvent', 'Buy', 'COLT']);">Subscribe for 20$/month</a>
+        <a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" class="btn btn-big btn-primary" onClick="_gaq.push(['_trackEvent', 'Buy', 'COLT']);">Subscribe for 20$/month</a></li>
     </nav><!-- / colt -->
 
 <!-- Comments ============================================================== -->
@@ -77,7 +77,7 @@
 
         <blockquote class="comment">
             <div class="avatar">
-            <img src="https://si0.twimg.com/profile_images/2320616331/clvckddtykkjpdvzqzsh_normal.jpeg" alt="">
+            <img src="/a/img/testimonials/chamberlain.jpg" alt="">
             </div>
             <p>This is an amazing giant step in the right direction for trimming down compilation time.</p>
             <footer>@ <a href="http://pierrechamberlain.ca/blog/2013/05/taking-colt-for-a-test-drive/" target="_blank">Pierre Chamberlain</a></footer>
@@ -85,7 +85,7 @@
 
         <blockquote class="comment">
             <div class="avatar">
-            <img src="https://si0.twimg.com/profile_images/2268652892/p84sv56umzf27xrmle4o_normal.jpeg" alt="">
+            <img src="/a/img/testimonials/slava-ra.jpg" alt="">
             </div>
             <p>#CodeOrchestra #AS3 #Livecoding<br>
                 yyyyyeeeeeaaaaaahhhhhhh</p>
@@ -95,7 +95,7 @@
 
         <blockquote class="comment">
             <div class="avatar">
-            <img src="https://si0.twimg.com/profile_images/1537018006/Photo_65_normal.jpg" alt="">
+            <img src="/a/img/testimonials/lamboley.jpg" alt="">
             </div>
             <p>They already achieve the impossible: live coding in AS3… It will become the most useful tool for AS3 developer! </p>
             <footer>@ <a href="http://www.aymericlamboley.fr/blog/live-coding-in-as3-using-colt/" target="_blank">Aymeric Lamboley</a></footer>
@@ -103,7 +103,7 @@
 
         <blockquote class="comment">
             <div class="avatar">
-            <img src="https://si0.twimg.com/profile_images/344513261565699687/b68ea91a2d3f44a12dce90eb15a85875_normal.jpeg" alt="">
+            <img src="/a/img/testimonials/ristic.jpeg" alt="">
             </div>
             <p>They already achieve the impossible: live coding in AS3… It will become the most useful tool for AS3 developer! </p>
             <footer>@ <a href="https://twitter.com/ReesticM/status/333227996074872832" target="_blank">Marko Ristic</a></footer>
@@ -118,21 +118,21 @@
         <div class="col first">
         <h3>Timesaver</h3>
         <p>Super fast incremental compilation - (~200 ms). No loss during application recovery after compilation — it works just like before. Apps that are already on devices don't need to be reinstalled after compilation.</p>
-        <span class="icon-timesaver"></span>
+        <span class="ico-timesaver"></span>
         </div>
 
         <div class="col">
         <h3>Mobile Development</h3>
         <p>COLT supports software development for iOS and Android.</p>
         <p>In order to put an application together you only need to set up assembly of a mobile app and click the &ldquo;Run&rdquo; button.</p>
-        <span class="icon-phones"></span>
+        <span class="ico-phones"></span>
         </div>
 
         <div class="col">
         <h3>No Restrictions</h3>
         <p>COLT is a separate tool.</p>
         <p>No particular IDE is required. You just save a code in your editor and then it's delivered into a working app.  Support of all win/mac/linux platforms.</p>
-        <span class="icon-restriction"></span>
+        <span class="ico-restriction"></span>
         </div>
     </div>
     </section>
@@ -157,8 +157,7 @@
 <!-- SCRIPTS =============================================================== -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/a/js/jquery-1.10.2.min.js"><\/script>')</script>
-    <script src="/a/js/landing-page/plugins.js"></script>
-    <script src="/a/js/landing-page/scripts.js"></script>
+    <script src="/a/js/scripts.js"></script>
 
     <!-- Google Analytics -->
     <script>

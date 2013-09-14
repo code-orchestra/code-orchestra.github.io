@@ -3,16 +3,18 @@
 
 .doc-footer {
     border-top: #a4b5bc 1px solid;
-    background: #cfe0e7;
+    background: #dde0e4;
+    margin-top: 130em / @b;
     width: 100%;
 
     NAV {
         .box-sizing(border-box);
         text-align: left;
         margin: 0 auto;
-        padding: 0 24px @baseline * 2;
+        padding: (38em / @b) 24px (39em / @b);
         position: relative;
-        max-width: 1008px;
+        max-width: 988px;
+        *width: 988px;
         *zoom: 1; }
 }
 
@@ -21,42 +23,29 @@
 .footer-logo {
     float: left;
     font-size: 12px;
-    margin-top: 61px;
+    font-size: 12rem / @b;
+    padding-top: 13em / 12;
 
     A {
         background-position: 0 -30px;
         .ir;
         margin-bottom: 6px;
+        margin-bottom: 6rem / @b;
         height: 15px;
         width: 153px; }
 }
 
-.doc-footer .m-core {
-    float: left;
-    margin: 42px 0 0 81px;
-
-    LI {
-        float: left;
-
-        A {
-            display: inline-block;
-            color: #798387;
-            margin-right: 27px;
-            text-decoration: none;
-            font-weight: 500; }
-    }
-}
-
+/* Affiliate pages */
 .disclaimer {
     float: left;
     font-size: 12px;
-    margin: 60px 0 0 81px;
+    margin: 0 0 0 83px;
+    padding-top: 1em;
     max-width: 480px;
     *width: 480px; }
 
+/* Socials */
 .doc-footer .m-socials {
-    margin-top: 61px;
-
     .fb, .in, .gp, .tw, .tw { margin-top: -4px; }
 }
 
@@ -76,16 +65,16 @@
     position: absolute;
     left: 24px;
     bottom: 0;
-    height: 29px;
+    height: 23px;
     width: 119px;
 
     A {
-        display: inline-block;
-        font-size: 12px;
-        line-height: 27px;
-        text-decoration: none;
         color: #555;
-        text-shadow: #fff 0 1px; }
+        display: block;
+        font-size: 12px;
+        text-decoration: none;
+        text-shadow: #fff 0 1px;
+        padding-top: 2px; }
 }
 
 IFRAME[name="google_conversion_frame"] {

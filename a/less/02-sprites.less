@@ -3,12 +3,15 @@
 
 /* Logo and icons */
 
+.bubble .avatar:after,
 .footer-logo A, .m-logo-a,
+.ico-timesaver, .ico-phones, .ico-restriction,
 .m-socials .fb A, .m-socials .gp A, .m-socials .in A, .m-socials .tw A,
 .our-team .col:after, .our-team .socials A,
+.sec-features .avatar:after, .sec-features H2:before, .sec-features H2 .before,
 .socials-cta A {
     background-color: transparent;
-    background-image: url(/a/img/logo-icons.png) !important; /* Prevent buttons styles assigning */
+    background-image: url(/a/img/base-graphics.png) !important; /* Prevent buttons styles assigning */
     background-repeat: no-repeat; }
 
 /*
@@ -22,10 +25,13 @@
         (-webkit-min-device-pixel-ratio: 1.25),
         (min-resolution: 120dpi) {
 
+    .bubble .avatar:after,
     .footer-logo A, .m-logo-a,
+    .ico-timesaver, .ico-phones, .ico-restriction,
     .m-socials .fb A, .m-socials .gp A, .m-socials .in A, .m-socials .tw A,
     .our-team .col:after, .our-team .socials A,
+    .sec-features .avatar:after, .sec-features H2:before, .sec-features H2 .before,
     .socials-cta A {
-        background-image: url(/a/img/logo-icons-x2.png) !important;
-        .background-size(280px 230px); /* Half of physical retina sprite image */ }
+        background-image: url(/a/img/base-graphics-x2.png) !important;
+        .background-size(290px 350px); /* Half of physical retina sprite image */ }
 }

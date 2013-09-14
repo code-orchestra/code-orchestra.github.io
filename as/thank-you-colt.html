@@ -24,8 +24,8 @@
     <meta name="twitter:creator" content="@potapenko">
 
     <link rel="canonical" href="http://codeorchestra.com/thank-you-colt.html">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,500italic,700,400italic,700italic">
-    <link rel="stylesheet" href="/a/css/inner.css?130723a">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500">
+    <link rel="stylesheet" href="/a/css/styles.css?130723a">
 
     <!--[if (lt IE 9) & (!IEMobile)]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -36,16 +36,15 @@
 <body>
 
 <!-- HEADER ================================================================ -->
-    <header class="main-menu">
-        <nav class="section">
+    <header class="doc-header" role="banner">
+        <nav>
             <a class="m-logo-a" href="/">Code Orchestra</a>
 
             <ul class="m-core">
             <li class="m-docs"><a href="https://github.com/code-orchestra/documentation/wiki">Docs</a></li>
             <li class="m-support"><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
+            <li class="m-about"><a href="/about.html">About</a></li>
             <li class="m-blog"><a href="http://blog.codeorchestra.com">Blog</a></li>
-            <li class="m-forums"><a href="https://codeorchestra.zendesk.com/forums">Forums</a></li>
-            <li class="m-about"><a href="http://codeorchestra.com/about.html">About</a></li>
             </ul>
 
             <ul class="m-socials">
@@ -57,7 +56,7 @@
     <!-- / header-->
 
 <!-- BODY COPY ============================================================= -->
-<div class="doc-body-wrapper doc-body-wrapper-t doc-body-wrapper-b">
+<div class="doc-body-wrapper-t">
     <article class="doc-body highlighted">
         <h1 class="h-banner">Thank you. We will not let you down</h1>
         <section class="billboard cfx">
@@ -115,37 +114,13 @@
         <li class="gp"><a href="https://plus.google.com/102141116053850958473" rel="publisher">Google+</a></li>
         </ul>
 
-        <div id="paracvet"><a href="http://paracvet.com" rel="nofollow">Made by Paracvet</a></div>
-
         </nav>
     </footer><!-- / footer -->
 
 <!-- SCRIPTS =============================================================== -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/a/js/jquery-1.10.2.min.js"><\/script>')</script>
-
-    <script>
-    function download_COLT(){
-        var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
-        var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
-        var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
-
-        if(isMac){
-            window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT.dmg");
-        }else if(isWindows){
-            window.location.replace("https://codeorchestra.s3.amazonaws.com/COLT-install.exe");
-        }else if(isLinux){
-            //window.location.replace("http://codeorchestra.com/files/colt_linux.tg");
-            alert("Linux not support yet. Coming soon");
-        }
-    }
-
-    $(document).ready(function () {
-        $(".download-colt").click(function(){
-                download_COLT();
-        });
-    });
-    </script>
+    <script src="/a/js/scripts.js"></script>
 
     <!-- Google Analytics -->
     <script>
