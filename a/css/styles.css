@@ -37,6 +37,7 @@ BLOCKQUOTE{background:#f1f4f7;margin:0 0 1.375em;padding:1.375em 20px;}
 BLOCKQUOTE.comment{background:transparent;padding:0;}
 .byline,FIGCAPTION,.help,.note,TIME{color:#9da0a4;}
 .byline{margin-bottom:0;}
+CODE,KBD,PRE,SAMP{color:#660066;font-family:Monaco,'Courier New',monospace;font-size:1em;}
 DFN{font-style:normal;}
 FIGURE{margin:0 0 1.375em;}
 HR{border:0;border-top:1px solid #cccfd3;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;*behavior:url(/a/js/boxsizing.htc);clear:both;display:block;margin:2.34375em 0 3.03125em;padding:0;height:1px;}
@@ -111,7 +112,7 @@ VIDEO{width:100% !important;height:auto !important;}
 .pl60{padding-left:60px;}
 .pr80{padding-right:80px;}
 .pl80{padding-left:80px;}
-.pre-base{background:#292c30;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;*behavior:url(/a/js/boxsizing.htc);color:#f1f4f8;padding:19px 30px 30px;white-space:pre;white-space:pre-wrap;word-wrap:break-word;}
+.pre-base{background:#292c30;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;*behavior:url(/a/js/boxsizing.htc);color:#f1f4f8;font-size:75%;line-height:1.5em;padding:19px 20px 30px;overflow-x:hidden;}
 .pre-scrollable{overflow-y:scroll;max-height:280px;*height:280px;}
 .sec-features .cfx{padding:0.625em 0;}
 .sec-features .row-first{padding-bottom:6.125em;}

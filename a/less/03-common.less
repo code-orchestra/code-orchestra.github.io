@@ -43,6 +43,11 @@ BLOCKQUOTE {
 
 .byline { margin-bottom: 0; }
 
+CODE, KBD, PRE, SAMP {
+    color: @c-link-visited;
+    font-family: @font-mono;
+    font-size: 1em; }
+
 DFN { font-style: normal; }
 
 FIGURE { margin: 0 0 @baseline; }
@@ -356,15 +361,19 @@ VIDEO {
 .pr80 { padding-right: 80px; }
 .pl80 { padding-left: 80px; }
 
-
+/*
+|---------------------------------------
+| Blocks
+|---------------------------------------
+*/
 .pre-base {
     background: #292c30;
     .box-sizing(border-box);
     color: #f1f4f8;
-    padding: 19px 30px 30px;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word; }
+    font-size: 75%;
+    line-height: 1.5em;
+    padding: 19px 20px 30px;
+    overflow-x: hidden; }
 
     /* Scrollable blocks of code */
     .pre-scrollable {

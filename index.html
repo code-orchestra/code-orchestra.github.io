@@ -96,30 +96,30 @@
         </div>
 
 <pre class="col-2of2 pre-base pre-scrollable"><span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).liveUpdate(<span style="color:#f9ee98">function</span> (e, files) {
-    <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#8f9d6a">"files "</span> <span style="color:#cda869">+</span> files.<span style="color:#dad085">join</span>(<span style="color:#8f9d6a">", "</span>) <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" were changed"</span>);
+  <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#8f9d6a">"files "</span> <span style="color:#cda869">+</span> files.<span style="color:#dad085">join</span>(<span style="color:#8f9d6a">", "</span>) <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" were changed"</span>);
 });
 
 <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).codeUpdate(<span style="color:#f9ee98">function</span>(e, fncs){
-    <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(fncs, <span style="color:#f9ee98">function</span>(){
-        <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#8f9d6a">"function was changed: "</span> <span style="color:#cda869">+</span> <span style="color:#7587a6">this</span>);
-    });
+  <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(fncs, <span style="color:#f9ee98">function</span>(){
+    <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#8f9d6a">"function was changed: "</span> <span style="color:#cda869">+</span> <span style="color:#7587a6">this</span>);
+  });
 });
 
 <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).imageUpdate(<span style="color:#f9ee98">function</span> (e, images) {
-    <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(images, <span style="color:#f9ee98">function</span>(){
-        <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#9b859d">$</span>(<span style="color:#7587a6">this</span>)<span style="color:#dad085">.attr</span>(<span style="color:#8f9d6a">"src"</span>) <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" file was changed"</span>);
-        <span style="color:#9b859d">$</span>(<span style="color:#7587a6">this</span>).imageUpdate();
-    });
-    <span style="color:#5f5a60;font-style:italic">// or  refresh all images</span>
-    <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).imageUpdate();
+  <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(images, <span style="color:#f9ee98">function</span>(){
+    <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#9b859d">$</span>(<span style="color:#7587a6">this</span>)<span style="color:#dad085">.attr</span>(<span style="color:#8f9d6a">"src"</span>) <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" file was changed"</span>);
+    <span style="color:#9b859d">$</span>(<span style="color:#7587a6">this</span>).imageUpdate();
+  });
+  <span style="color:#5f5a60;font-style:italic">// or  refresh all images</span>
+  <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).imageUpdate();
 });
 
 <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).cssUpdate(<span style="color:#f9ee98">function</span> (e, stylesFiles) {
-    <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(stylesFiles, <span style="color:#f9ee98">function</span>(){
-        <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#7587a6">this</span> <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" css file was changed"</span>);
-    })
-    <span style="color:#5f5a60;font-style:italic">// refresh styles</span>
-    <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).cssUpdate()
+  <span style="color:#cda869">$</span><span style="color:#dad085">.each</span>(stylesFiles, <span style="color:#f9ee98">function</span>(){
+    <span style="color:#9b703f">console</span><span style="color:#dad085">.log</span>(<span style="color:#7587a6">this</span> <span style="color:#cda869">+</span> <span style="color:#8f9d6a">" css file was changed"</span>);
+  })
+  <span style="color:#5f5a60;font-style:italic">// refresh styles</span>
+  <span style="color:#9b859d">$</span>(<span style="color:#9b859d">window</span>).cssUpdate()
 });
 </pre>
     </div>
