@@ -24,8 +24,9 @@
     <meta name="twitter:creator" content="@potapenko">
 
     <link rel="canonical" href="http://codeorchestra.com/as/">
+    <link rel="alternate" href="http://feeds.feedburner.com/codeorchestra" type="application/rss+xml" title="RSS">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500">
-    <link rel="stylesheet" href="/a/css/styles.css?130723a">
+    <link rel="stylesheet" href="/a/css/styles.css?130916a">
 
     <!--[if (lt IE 9) & (!IEMobile)]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -73,9 +74,8 @@
         </ul>
         </header>
 
-        <div class="col-2of2 rotator  animated">
-        <img src="/a/img/front/colt-as-01.png" alt="Code Orchestra Livecoding Tool for ActionScript Development" height="840" width="460">
-        <img src="/a/img/front/colt-as-02.png" alt="Code Orchestra Livecoding Tool for ActionScript Development" height="840" width="460">
+        <div class="col-2of2 animated">
+        <img src="/a/img/front/colt-as-01.png" class="img-swap" alt="Code Orchestra Livecoding Tool for ActionScript Development" height="840" width="460">
         </div>
 
     </div>
@@ -106,10 +106,43 @@
             <span class="deck">increase in productivity</span>
         </div>
 
-        <div class="col-2of2 rotator animated">
+        <!-- <div class="col-2of2 rotator animated">
         <img src="/a/img/front/actionscript-01-update-listener.png" height="280" width="460" alt="ActionScript Development with COLT">
         <img src="/a/img/front/actionscript-02-update-listener.png" height="280" width="460" alt="ActionScript Development with COLT">
-        </div>
+        </div> -->
+
+<pre class="col-2of2 pre-base pre-scrollable">[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initBar"</span>)]
+<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initBar</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
+    <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initBar"</span>);
+    _tabBar.<span style="color:#dad085">dataProvider</span> <span style="color:#cda869">=</span> <span style="color:#cda869">new</span> ListCollection([{<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"First"</span>}, {<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"Second"</span>}, {<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"Label"</span>}]);
+    _tabBar.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
+    _tabBar.<span style="color:#dad085">validate</span>();
+    _tabBar.y <span style="color:#cda869">=</span> stage.stageHeight <span style="color:#cda869">-</span> _tabBar.<span style="color:#dad085">height</span>;
+}
+
+[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initHeader"</span>)]
+<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initHeader</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
+    <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initHeader"</span>)
+    _header.<span style="color:#dad085">title</span> <span style="color:#cda869">=</span> <span style="color:#8f9d6a">"LiveCoding is Cool!!!"</span>;
+    _header.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
+}
+
+[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initList"</span>)]
+<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initList</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
+    <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initList"</span>)
+    _list.y <span style="color:#cda869">=</span> _header.<span style="color:#dad085">height</span>;
+    _list.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
+    _list.<span style="color:#dad085">height</span> <span style="color:#cda869">=</span> stage.stageHeight <span style="color:#cda869">-</span> _header.<span style="color:#dad085">height</span> <span style="color:#cda869">-</span> _tabBar.<span style="color:#dad085">height</span>;
+}
+
+[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"create"</span>, priority<span style="color:#cda869">=</span><span style="color:#8f9d6a">"1"</span>)]
+<span style="color:#cda869">public</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">clear</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
+    <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"clear"</span>)
+    <span style="color:#cda869">while</span> ( <span style="color:#dad085">numChildren</span> > <span style="color:#cf6a4c">0</span> ) {
+        removeChildAt(<span style="color:#cf6a4c">0</span>);
+    }
+}
+</pre>
     </div>
     </section>
     <!-- / Infographics -->

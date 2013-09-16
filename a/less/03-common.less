@@ -177,6 +177,8 @@ IMG { margin: 0 0 @baseline; }
 
     FORM IMG { margin: 0; }
 
+.img-swap { cursor: pointer; }
+
 I.co { .ir;}
 
 OBJECT, EMBED {
@@ -258,7 +260,7 @@ VIDEO {
     max-width: 960px;
     *width: 960px; }
 
-.highlighted { background: url(/a/img/svet.png) 50% -200px no-repeat; }
+.highlighted { background: url(/a/img/bg-light.png) 50% -200px no-repeat; }
 
 /*
 |-------------------------------------------------------------------------------
@@ -354,6 +356,21 @@ VIDEO {
 .pr80 { padding-right: 80px; }
 .pl80 { padding-left: 80px; }
 
+
+.pre-base {
+    background: #292c30;
+    .box-sizing(border-box);
+    color: #f1f4f8;
+    padding: 19px 30px 30px;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+
+    /* Scrollable blocks of code */
+    .pre-scrollable {
+        overflow-y: scroll;
+        max-height: 280px;
+        *height: 280px; }
 
 /*
 |---------------------------------------
@@ -474,6 +491,7 @@ BUTTON, .btn {
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 1px rgba(255, 255, 255, .44);
+    white-space: nowrap;
     margin: -5px 0 0 0;
     margin: (-5em / @b) 0 0 0;
     *margin-left: .3em;
@@ -554,6 +572,8 @@ BUTTON, .btn {
     &:active, &.active {
         padding-top: 20px; }
 }
+
+.btn-multiline { white-space: normal; }
 
 BUTTON { *padding: 11px 10px; /* Standart top and bottom padding -2px */ }
 

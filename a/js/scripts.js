@@ -72,52 +72,34 @@ $(function() {
 
 /*
 |-------------------------------------------------------------------------------
-| ROTATOR
+| SWAPPING IMAGES
 |-------------------------------------------------------------------------------
 */
-(function($) {
-    $.fn.extend({
-        //plugin name - rotaterator
-        rotaterator: function(settings) {
-
-            var defaults = {
-                fadeSpeed: 600,
-                pauseSpeed: 100,
-                child: null
-            };
-
-            var options = $.extend(defaults, settings);
-
-            return this.each(function() {
-                var o = options,
-                    obj = $(this),
-                    items = $(obj.children(), obj),
-                    next;
-                items.each(function() {
-                    $(this).hide();
-                });
-                if(!o.child) {
-                    next = $(obj).children(':first');
-                } else {
-                    next = o.child;
-                }
-                $(next).fadeIn(o.fadeSpeed, function() {
-                    $(next).delay(o.pauseSpeed).fadeOut(o.fadeSpeed, function() {
-                        var next = $(this).next();
-                        if(next.length === 0) {
-                            next = $(obj).children(':first');
-                        }
-                        $(obj).rotaterator({
-                            child: next,
-                            fadeSpeed: o.fadeSpeed,
-                            pauseSpeed: o.pauseSpeed
-                        });
-                    });
-                });
-            });
+$(function(){
+    $('.img-swap').click(function() {
+        if ($(this).attr('class') == 'img-swap') {
+            this.src = this.src.replace('-01','-02');
+        } else {
+            this.src = this.src.replace('-02','-01');
         }
+
+        $(this).toggleClass('on');
     });
-})(jQuery);
+
+    var imgSwap = [];
+
+    $('.img-swap').each(function(){
+        imgUrl = this.src.replace('-01','-02');
+        imgSwap.push(imgUrl);
+    });
+    $(imgSwap).preload();
+});
+
+$.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+};
 
 /*
 |-------------------------------------------------------------------------------
