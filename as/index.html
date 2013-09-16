@@ -111,37 +111,35 @@
         <img src="/a/img/front/actionscript-02-update-listener.png" height="280" width="460" alt="ActionScript Development with COLT">
         </div> -->
 
-<pre class="col-2of2 pre-base pre-scrollable">[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initBar"</span>)]
-<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initBar</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
-  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initBar"</span>);
-  _tabBar.<span style="color:#dad085">dataProvider</span> <span style="color:#cda869">=</span> <span style="color:#cda869">new</span> ListCollection([{<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"First"</span>}, {<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"Second"</span>}, {<span style="color:#dad085">label</span><span style="color:#cda869">:</span><span style="color:#8f9d6a">"Label"</span>}]);
-  _tabBar.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
-  _tabBar.<span style="color:#dad085">validate</span>();
-  _tabBar.y <span style="color:#cda869">=</span> stage.stageHeight <span style="color:#cda869">-</span> _tabBar.<span style="color:#dad085">height</span>;
+<pre class="col-2of2 pre-base pre-scrollable">[LiveCodeUpdateListener]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">liveCodeListener</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"class code  updated"</span>);
 }
 
-[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initHeader"</span>)]
-<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initHeader</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
-  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initHeader"</span>)
-  _header.<span style="color:#dad085">title</span> <span style="color:#cda869">=</span> <span style="color:#8f9d6a">"LiveCoding is Cool!!!"</span>;
-  _header.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
+[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initInterface"</span>)]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">liveCodeListener</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"method initInterface code updated"</span>);
+  clearInterface();
+  initInterface();
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"class code  updated"</span>);
 }
 
-[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initList"</span>)]
-<span style="color:#cda869">private</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">initList</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
-  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"initList"</span>)
-  _list.y <span style="color:#cda869">=</span> _header.<span style="color:#dad085">height</span>;
-  _list.<span style="color:#dad085">width</span> <span style="color:#cda869">=</span> stage.stageWidth;
-  _list.<span style="color:#dad085">height</span> <span style="color:#cda869">=</span> stage.stageHeight <span style="color:#cda869">-</span> _header.<span style="color:#dad085">height</span> <span style="color:#cda869">-</span> _tabBar.<span style="color:#dad085">height</span>;
+[Embed(<span style="color:#dad085">source</span> <span style="color:#cda869">=</span><span style="color:#8f9d6a">"icon.png"</span>)]
+<span style="color:#cda869">private</span> Class imageClass;
+
+[LiveAssetUpdateListener(field<span style="color:#cda869">=</span><span style="color:#8f9d6a">"imageClass"</span>)]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">iconChanged</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"image icon.png changed"</span>);
+  <span style="color:#dad085">setIcon</span>(<span style="color:#cda869">new</span> imageClass())
 }
 
-[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"create"</span>, priority<span style="color:#cda869">=</span><span style="color:#8f9d6a">"1"</span>)]
-<span style="color:#cda869">public</span> <span style="color:#f9ee98">function</span> <span style="color:#9b703f">clear</span> () <span style="color:#cda869">:</span> <span style="color:#dad085">void</span> {
-  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"clear"</span>)
-  <span style="color:#cda869">while</span> ( <span style="color:#dad085">numChildren</span> > <span style="color:#cf6a4c">0</span> ) {
-    removeChildAt(<span style="color:#cf6a4c">0</span>);
-  }
-}
+[Embed(<span style="color:#dad085">source</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"icon2.png"</span>)]
+<span style="color:#cda869">private</span> Class imageClass2;
+
+[LiveAssetUpdateListener]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">resourcesChanged</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"image.png or icon2.png changed"</span>)
+} 
 </pre>
     </div>
     </section>
