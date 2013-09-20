@@ -103,16 +103,70 @@ $.fn.preload = function() {
 
 /*
 |-------------------------------------------------------------------------------
-| CALLING FUNCTIONS
+| DROPDOWNS
+|-------------------------------------------------------------------------------
+*/
+$(function(){
+    var label = $('.mm-label-4dd, .body-label-4dd, .hdr-label-4dd'),
+        allDropDowns = $('.mm-dropdown, .body-dropdown, .hdr-dropdown, .body-dropup');
+
+    label.click(function(event) {
+        allDropDowns.hide();
+        $(this).parents('.mm-menu, .body-menu, .hdr-menu').children('.mm-dropdown, .body-dropdown, .hdr-dropdown, .body-dropup').toggle();
+        label.removeClass('down');
+        $(this).addClass('down');
+        return false;
+    });
+
+    $(document).click(function() {
+        allDropDowns.hide();
+        label.removeClass('down');
+    });
+
+    $(document).keydown(function(e) {
+        if(e.keyCode == 27) {
+            allDropDowns.hide();
+            label.removeClass('down');
+        }
+    });
+
+    // TODO: this did not work. Fix it
+    if ($('.mm-label-4dd').hasClass('down')) {
+        $('.sec-billboard a').click(function(e) {
+                e.preventDefault();
+            });
+    }
+
+    allDropDowns.click(function(event) {
+        event.stopPropagation();
+    });
+});
+
+/*
+|-------------------------------------------------------------------------------
+| Slider
+|-------------------------------------------------------------------------------
+| http://flexslider.woothemes.com/basic-carousel.html
+*/
+
+/*
+|-------------------------------------------------------------------------------
+| PLUGINS CALLS AND MISC
 |-------------------------------------------------------------------------------
 | After the DOM is loaded
 |
 */
 $(document).ready(function(){
-
     $('#btn-download-colt').click(function(e){ e.preventDefault(); downloadCOLT(); });
     $('#btn-download-ide').click(function(e){ e.preventDefault(); downloadIDE(); });
-    $('.rotator, .bubble').rotaterator({fadeSpeed:800, pauseSpeed:8000});
+    $('.slider').bxSlider({
+        slideWidth: 160,
+        minSlides: 2,
+        maxSlides: 5,
+        slideMargin: 10,
+        pager: false
+    });
+
 });
 
 /*

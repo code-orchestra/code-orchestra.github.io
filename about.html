@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
 
     <title>About Code Orchestra, a Software Development Company</title>
-    <meta name="description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro and focused on the creation of applications for programmers.">
+    <meta name="description" content="Code Orchestra is a software development company focused on the creation of applications for programmers.">
 
     <!-- OG Protocol -->
     <meta property="og:type" content="article">
     <meta property="og:url" content="http://codeorchestra.com/about.html">
     <meta property="og:title" content="About Code Orchestra, a Software Development Company">
-    <meta property="og:description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro and focused on the creation of applications for programmers.">
+    <meta property="og:description" content="Code Orchestra is a software development company focused on the creation of applications for programmers.">
     <meta property="og:site_name" content="Website of software development company Code Orchestra.">
     <meta property="og:image" content="http://codeorchestra.com/a/img/colticon.png">
 
@@ -18,7 +18,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:url" content="http://codeorchestra.com/about.html">
     <meta name="twitter:title" content="About Code Orchestra, a Software Development Company">
-    <meta name="twitter:description" content="Code Orchestra is a software development company headquartered in Petrovac, Montenegro and focused on the creation of applications for programmers.">
+    <meta name="twitter:description" content="Code Orchestra is a software development company focused on the creation of applications for programmers.">
     <meta name="twitter:image" content="http://codeorchestra.com/a/img/colticon.png">
     <meta name="twitter:site" content="@code_orchestra">
     <meta name="twitter:creator" content="@potapenko">
@@ -36,12 +36,17 @@
 
 <body class="p-about">
 <!-- HEADER ================================================================ -->
-    <header class="doc-header">
+    <header class="doc-header" role="banner">
         <nav>
             <a class="m-logo-a" href="/">Code Orchestra</a>
 
             <ul class="m-core">
-            <li class="m-docs"><a href="https://github.com/code-orchestra/documentation/wiki">Docs</a></li>
+            <li class="m-products mm-menu"><a href="https://github.com/code-orchestra/documentation/wiki" class="mm-label-4dd">Products<i class="caret">:</i></a>
+            <ul class="mm-dropdown">
+                <li><a href="https://github.com/code-orchestra/documentation/wiki">COLT — Docs on Github</a></li>
+                <li><a href="/ide/">Code Orchestra IDE</a></li>
+            </ul>
+            </li>
             <li class="m-support"><a href="https://codeorchestra.zendesk.com/anonymous_requests/new">Support</a></li>
             <li class="m-about"><a href="/about.html">About</a></li>
             <li class="m-blog"><a href="http://blog.codeorchestra.com">Blog</a></li>
@@ -192,6 +197,9 @@
     </footer><!-- / footer -->
 
 <!-- SCRIPTS =============================================================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/a/js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script src="/a/js/scripts.js"></script>
 
     <!-- Google Analytics -->
     <script>

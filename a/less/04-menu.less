@@ -26,8 +26,7 @@
 .m-logo-a {
     .ir;
     float: left;
-    //margin: 12px 99px 0 0;
-    margin: 12px 110px 0 0;
+    margin: 12px 171px 0 0;
     height: 22px;
     width: 216px; }
 
@@ -37,22 +36,26 @@
     float: left;
     padding-top: 13px;
 
-    LI  { float: left; }
+    LI  {
+        float: left;
+        margin-left: 8px; }
+
+    .m-products { margin-left: 0;}
+    .m-support { margin-left: 3px;}
+
     A {
         padding: 4px 12px 0;
-        margin-right: 8px;
         .border-radius(4px);
         font-weight: 500;
         text-shadow: #fff 0 1px 0;
 
-        &:hover {
-            color: #fff !important;
-            text-shadow: none;
-            background: #434f61; }
+        &:hover, &.down {
+            background: #434f61;
+            color: #fff;
+            text-shadow: none; }
     }
 }
 
-.m-utils { margin-left: 75px; }
 
 .m-socials {
     float: right;

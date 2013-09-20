@@ -1,0 +1,112 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+/*
+|---------------------------------------
+| Dropdowns
+|---------------------------------------
+*/
+/* Containers */
+.mm-menu, .body-menu {
+    position: relative;
+    *zoom: 1; }
+
+/* .mm-label, .body-label arrow/caret */
+.caret {
+    border-top:   4px solid @c-mm-caret;
+    border-right: 4px solid transparent;
+    border-left:  4px solid transparent;
+    display: inline-block;
+    text-indent: -4000em;
+    margin-top: 9em/@b;
+    *margin-top: 6em/@b;
+    margin-left: 4px;
+    vertical-align: top;
+    height: 0;
+    width: 0; }
+
+/* The dropdown menu (ul) */
+.mm-dropdown, .body-dropdown {
+    border: 1px solid @c-sm-brd;
+    border-bottom-width: 2px;
+    .border-radius(4px);
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    font-size: 14px;
+    font-size: 14 / 16rem;
+    /* none by default, but block on "open" of the menu */
+    display: none;
+    padding: 16px 9px;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    width: 220px;
+    z-index: @z-dd;
+
+    LI { margin-left: 0;}
+
+    /* Dropdown menu links*/
+    A {
+        .border-radius(3px);
+        display: block;
+        margin-bottom: 1px;
+        padding: 5px 10px;
+        width: 200px;
+
+    /* Hover state */
+    &:focus, &:hover {
+        background: @c-sm-link-hover-bg;
+        color: @c-mm-link;
+        text-shadow: #fff 0 1px 0; }
+
+    }
+
+    /* Active state */
+    .active > A { font-weight: bold; }
+}
+
+.mm-dropdown {
+    background: @c-sm-bg;
+
+    A { color: @c-mm-link; }
+}
+
+/* Dropdowns carets: main menu  */
+.mm-dropdown {
+    .pseudo-after;
+    .pseudo-before;
+
+      &:before, .before { /* Caret body */
+        border-left:   7px solid transparent;
+        border-right:  7px solid transparent;
+        border-bottom: 7px solid @c-sm-brd;
+        content: '';
+        .inline-block;
+        line-height: 0;
+        position: absolute;
+        top: -7px;
+        left: 19px; }
+
+      &:after, .after { /* Caret border */
+        border-left:   6px solid transparent;
+        border-right:  6px solid transparent;
+        border-bottom: 6px solid @c-sm-bg;
+        content: '';
+        .inline-block;
+        line-height: 0;
+        position: absolute;
+        top: -6px;
+        left: 20px; }
+}
+
+
+/*
+|-------------------------------------------------------------------------------
+| !! BL SHIFT !!
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+}

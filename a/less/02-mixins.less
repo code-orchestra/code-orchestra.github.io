@@ -64,6 +64,23 @@
         .background-clip(padding-box); }
 }
 
+.transparent(@value) {
+    // Good browsers
+    opacity: @value;
+    // IE 8
+    @ms-value: @value * 100;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=@ms-value); }
+
+.reset-btn() {
+    background-color: transparent;
+    .reset-filter();
+    border: 0 none;
+    .border-radius(0);
+    .box-shadow(none);
+    text-shadow: none;
+    margin: 0;
+    padding: 0; }
+
 /*
 |---------------------------------------
 | Internet explorer's cures

@@ -1,0 +1,119 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto @baseline;
+    padding: 0;
+    *zoom: 1;
+
+    .bx-viewport { left: -5px; }
+
+    // .bx-pager, .bx-controls-auto {
+    //     position: absolute;
+    //     bottom: -30px;
+    //     width: 100%; }
+
+    /* Direction controls — Next / Prev */
+
+    .bx-prev, .bx-next {
+        // 02-sprites.less
+        .reset-btn();
+        .ir();
+        .transparent(.56);
+        margin-top: -16px;
+        position: absolute;
+        top: 50%;
+        height: 32px;
+        width: 32px;
+        z-index: 444;
+
+        &:hover { .transparent(.64); }
+
+        &.disabled { display: none; }
+    }
+
+    .bx-prev {
+        background-position: ;
+        left: 10px; }
+
+    .bx-next {
+        background-position: ;
+        right: 10px; }
+
+        /* Captions */
+    .bx-caption {
+        SPAN {
+            color:;
+            font: ;
+            display: block;
+            padding:; }
+    }
+
+    /* Loader */
+    .bx-loading {
+        background: url(/a/img/loader.gif) center center no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-height: 50px;
+        height: 100%;
+        width: 100%;
+        z-index: 2400; }
+
+    /* Pager */
+    // .bx-pager {
+    //     color: @c-nt;
+    //     font-size: ;
+    //     text-align: center;
+    //     padding-top: ; }
+
+    // .bx-pager-item, .bx-controls-auto-item {
+    //     display: inline-block;
+    //     *zoom: 1;
+    //     *display: inline; }
+
+    // .bx-default-pager A {
+    //     background: ;
+    //     .border-radius(8px);
+    //     .ir;
+    //     height:;
+    //     margin:;
+    //     width:;
+
+    //     &:hover, &.active { background: #000; }
+    // }
+
+    /* Auto controls — Start / Stop */
+    // 02-sprites.less
+    // .bx-controls-auto { text-align: center; }
+
+    // .bx-controls-auto .bx-start, .bx-controls-auto .bx-stop {
+    //     .ir();
+    //     margin: ;
+    //     height: ;
+    //     width: ;
+
+    //     &:hover, &.active { .transparent(.64); }
+    // }
+
+    /* Pager with auto-controls hybrid layout */
+    // .bx-controls.bx-has-controls-auto.bx-has-pager .bx-pager {
+    //     text-align: left;
+    //     width: 80%; }
+
+    // .bx-controls.bx-has-controls-auto.bx-has-pager .bx-controls-auto {
+    //     right: 0;
+    //     width: 35px; }
+}
+
+/*
+|-------------------------------------------------------------------------------
+| !! BL SHIFT !!
+| PHONES & SMALL PORTRAIT TABLETS: up to 767px
+|-------------------------------------------------------------------------------
+*/
+
+@media only screen and (max-width: 767px) {
+
+}

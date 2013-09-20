@@ -1,5 +1,13 @@
 @import '../../02-variables.less';
 @import '../../02-mixins.less';
 
-BODY { #gradient > .vertical(#f2bf00, #ffe519); }
+.bx-prev, .bx-next {
+    .reset-btn();
+    .ir(0, inline-block);
+    .transparent(.56);
+    height: 32px;
+    width: 32px;
+
+    &:hover { .transparent(.64)}
+}
 
