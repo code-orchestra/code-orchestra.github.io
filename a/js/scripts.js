@@ -22,7 +22,6 @@
 |-------------------------------------------------------------------------------
 | DOWNLOADS
 |-------------------------------------------------------------------------------
-|
 */
 function downloadCOLT(){
     var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
@@ -118,6 +117,10 @@ $(function(){
         return false;
     });
 
+    // var ua = navigator.userAgent,
+        // event = ((ua.match(/iPad/i)) || (ua.match(/iPhone/i))) ? "touchstart" : "click";
+
+    // $(document).bind(event, function() {
     $(document).click(function() {
         allDropDowns.hide();
         label.removeClass('down');
@@ -159,14 +162,6 @@ $(function(){
 $(document).ready(function(){
     $('#btn-download-colt').click(function(e){ e.preventDefault(); downloadCOLT(); });
     $('#btn-download-ide').click(function(e){ e.preventDefault(); downloadIDE(); });
-    $('.slider').bxSlider({
-        slideWidth: 160,
-        minSlides: 2,
-        maxSlides: 5,
-        slideMargin: 10,
-        pager: false
-    });
-
 });
 
 /*

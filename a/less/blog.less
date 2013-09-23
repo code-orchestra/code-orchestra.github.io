@@ -34,13 +34,18 @@
 
 /* Portrait tablets: 768–979px */
 @media only screen and (min-width: 768px) and (max-width: 979px) {
+    .m-logo-a { margin-right: 40px; }
+    .m-core .m-support { margin-left: 3px; }
+    .m-docs, .m-about { display: none;}
+
 }
 
 /* Phones & small portrait tablets: up to 767px */
 @media only screen and (max-width: 767px) {
-    .m-logo-a { width: 60px;}
-    .m-docs, .m-about, .doc-footer .m-docs, .doc-footer .m-socials, #paracvet {
-        display: none;}
+    .m-logo-a {
+        margin-right: 40px;
+        width: 60px; }
+    .m-docs, .m-about, .m-socials { display: none;}
 }
 
 /* Portrait phones */
