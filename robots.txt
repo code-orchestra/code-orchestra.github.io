@@ -14,7 +14,6 @@ Disallow: /_labs/
 # Files
 Disallow: /thank-you-colt.html
 Disallow: /maintenance.html
-Disallow: blog.codeorchestra.com/tagged/montenegro
 
 Disallow: /_tmp.html
 Disallow: /.gitignore
@@ -27,3 +26,4 @@ Disallow: *.sublime-project
 Disallow: *.sublime-workspace
 Disallow: /yandex*.html
 Disallow: /nibbler-site-verification.txt
+Disallow: /uko9tDWtPsqzA7om9NLg1evn3Js.html
