@@ -582,6 +582,74 @@ BUTTON, .btn {
         padding-top: 20px; }
 }
 
+.btn-giant {
+    min-height: 82px;
+    *height: 82px; }
+
+    .btn-primary-giant {
+        #gradient > .vertical-four-colors(#78ab1f, 4%, #568601, 24%, #4c7601, 92%, #5e9105, 100%);
+        border: 2px solid #5a8d01;
+        .box-shadow(inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(255, 255, 255, 0.08));
+        color: #fff;
+        line-height: 1;
+        text-shadow: 0 -1px 1px rgba(0, 0, 0, .44);
+        padding-top: 17px;
+
+        &:visited, &:hover { color: #fff; }
+
+        &:hover {
+            #gradient > .vertical-four-colors(#84b72b, 4%, #62920d, 24%, #58820d, 92%, #6a9d11, 100%);
+            border-color: #6ea115;
+            .box-shadow(inset 1px 1px 0 rgba(255, 255, 255, 0.08), inset -1px -1px 0 rgba(255, 255, 255, 0.08), inset 0 -8px 16px rgba(255, 255, 255, 0.16),); }
+
+        &:active, &.active {
+            background-color: #588801;
+            background-image: none;
+            .box-shadow(inset 0 4px 8px rgba(0, 0, 0, 0.12));
+            padding-top: 18px; }
+
+        DEL {
+            color: #adc196;
+            display: block;
+            text-decoration: none;
+            margin-bottom: 0;
+            position: relative;
+            *zoom: 1;
+
+        &:after, &.after {
+                background: rgba(0, 0, 0, .8);
+                *background: #000;
+                content: '';
+                display: block;
+                position: absolute;
+                top: 60%;
+                left: 50%;
+                height: 1px; }
+        }
+
+        B {
+            font-weight: normal;
+            font-size: 125%;
+            letter-spacing: -.06em; }
+
+    }
+
+    // Button with 125% emphased character
+    .btn-em { line-height: 1.1 }
+
+    .btn-default-giant {
+            #gradient > .vertical-four-colors(#f7f8fa, 4%, #e3e6e9, 24%, #dde0e4, 92%, #f7f8fa, 100%);
+            padding-top: 30px;
+
+        &:hover {
+            #gradient > .vertical-four-colors(#fff, 4%, #eef1f5, 24%, #e9ecf0, 92%, #fff, 100%);  }
+
+        &:active, &.active {
+            background-color: #dde0e4;
+            background-image: none;
+            padding-top: 31px; }
+    }
+
 .btn-multiline { white-space: normal; }
 
 BUTTON { *padding: 11px 10px; /* Standart top and bottom padding -2px */ }
