@@ -43,6 +43,9 @@ function downloadIDE(){
     var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
     var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
 
+    /*@log*/isMac;//@log
+    return;
+
     if(isMac){
         window.location.replace("https://codeorchestra.s3.amazonaws.com/CO2-mac.zip");
     }else if(isWindows){
