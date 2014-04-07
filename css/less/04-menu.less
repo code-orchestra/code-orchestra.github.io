@@ -1,0 +1,106 @@
+@import '02-variables.less';
+@import '02-mixins.less';
+
+.doc-header {
+    background: #fff;
+    border-bottom: 3px solid #b27333;
+    padding-top: 11px;
+    height: 75px; }
+
+.doc-header, .sticky-menu {
+
+    NAV {
+        .box-sizing(border-box);
+        clear: both;
+        margin: 0 auto;
+        padding: 0 24px;
+        max-width: 988px;
+        *width: 988px; }
+
+    A {
+        color: #434f61;
+        display: inline-block;
+        text-decoration: none !important; }
+}
+
+.m-logo-a {
+    .ir;
+    float: left;
+    margin: 12px 50px 0 0;
+    height: 22px;
+    width: 216px; }
+
+.p-front .m-logo-a, .p-front .footer-logo A { cursor: default; }
+
+.m-core {
+    float: left;
+    padding-top: 13px;
+
+    LI  {
+        float: left;
+        margin-left: 8px; }
+
+    .m-products { margin-left: 0;}
+    .m-docs { margin-left: 3px;}
+
+    A {
+        padding: 4px 12px 0;
+        .border-radius(4px);
+        font-weight: 500;
+        text-shadow: #fff 0 1px 0;
+
+        &:hover, &.down {
+            background: #434f61;
+            color: #fff;
+            text-shadow: none; }
+    }
+}
+
+
+.m-socials {
+    float: right;
+    text-align: right;
+    width: auto;
+    padding-top: 12px;
+
+    LI {
+        .inline-block;
+        float: right;
+        margin-left: 6px; }
+
+    .tw, .gp { margin-left: 0; }
+
+    .fb A, .in A, .gp A, .tw A, .yt A {
+        .ir;
+        height: 28px;
+        width: 28px;
+
+        &:hover { opacity: 0.7; }
+    }
+
+    #count-desc { display: none !important; }
+}
+
+.m-socials .fb A { background-position: -220px 0; }
+.m-socials .tw A { background-position: -250px 0; }
+.m-socials .gp A { background-position: -100px -200px; }
+.m-socials .in A { background-position: -140px -200px; }
+.m-socials .yt A { background-position: -210px -200px; }
+
+/*
+|-------------------------------------------------------------------------------
+| Slidemenu
+|-------------------------------------------------------------------------------
+*/
+.sticky-menu {
+    background: #fff;
+    .box-shadow(0 2px 4px rgba(0, 0, 0, .24));
+    padding-top: 11px;
+    opacity: 0.9;
+    position: fixed;
+    top: -72px;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    z-index: 1444;
+}

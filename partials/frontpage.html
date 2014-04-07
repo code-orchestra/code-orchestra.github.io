@@ -1,0 +1,136 @@
+<style>
+    .sec-info-text{
+        text-decoration: none;
+        text-align: left;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 33px;
+
+        padding-top:2em;
+    }
+
+    .sec-info-text b{
+        font-weight: bold;
+        font-size: 20px;
+        color: #434243;
+    }
+
+</style>
+
+
+<!-- Billboard ============================================================= -->
+<section class="sec-colt-billboard">
+    <div class="sec-content">
+        <header class="col-1of2">
+            <h1 class="animated"><i class="co">C.O.L.T. — </i>Code Orchestra Livecoding Tool</h1>
+            <br>
+            <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
+            <p>Connect COLT to any editor, keep calm and code on!</p>
+                <ul class="btn-group cfx">
+                    <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{'Download for ' + osName}}</a>
+                    </li>
+                </ul>
+            </header>
+            <div class="col-2of2 animated">
+                <img src="/images/front/colt-js-01.png" class="img-swap" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
+            </div>
+        </div>
+    </section>
+
+    <section class="sec-info-text" >
+        <div class="sec-content"><p> COLT is a front-end development tool which allows writing code <b>live-style</b>. Just as you modify the code and
+            save, the alterations are delivered to the working application using a special protocol. What’s important, all
+            the variables, scroll position, form typed date, etc would be preserved. HTML/CSS would be modified seamlessly
+            without page reload. Out <b>livecoding</b> implementation is <b>preprocessing</b>-based which means that the live code would
+            work <b>anywhere</b> — on any device: desktop, mobile, <b>TV</b>s, etc; and on <b>any browser</b>. COLT can work with CoffeScript,
+            TypeScript, LESS/SASS. It can work anywhere the web-technologies are applied, e.g., JavaFX and PhoneGap. It
+            works with <b>any IDE.</b>
+        </p></div>
+    </section>
+
+    <!-- / billboard -->
+
+    <!--Infographics ==========================================================-->
+
+    <style type="text/css">
+
+    hr {
+      border-top: 4px dashed #ccc;
+      color: #fff;
+      background-color: #fff;
+      height: 1px;
+      width:100%;
+    }
+
+    .infographic-comment{
+        margin-left: 47px; 
+        margin-right: 47px; 
+    }
+
+    .infographic-comment b{
+        font-size: 20px;
+        color: black; 
+    }
+
+    .infographic-comment li{
+        padding-bottom: 10px; 
+    }
+
+    </style>
+
+<hr/>
+
+<section>
+        <div class="sec-content">
+            <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
+                <img src="/images/infographic/realtime-autocomplete.png" alt="
+                Sublime+/Webstorm+" width="940" height="600"></a>
+            <div class="infographic-comment">
+                <p>COLT can <b>revolutionize</b> JS-developers tooling. With application running all the time during its development COLT can provide runtime objects inspection features in sublime. For example, if you press ctrl+space you get list of actual JS object members. You can run the function around the caret. You can modfify function body and have it called again with same arguments as last time. In addition, <b>COLT knows</b> where functions are located, so you can quickly find what function are calling using "Go to function declaration" command. That's why we created the plugin for Sublime Text that ties Sublime and COLT together.</p>
+                <p><b>Sublime+COLT features:</b></p>
+                <ol>
+                    <li><b>Real</b> object fields and methods in code <b>autocompletion</b>. Works with any objects, even if code was loaded from other server (and not processed with COLT).</li> 
+                    <li>Function <b>call counters</b> in the gutter.</li>
+                    <li>Syntax and runtime <b>errors</b> highlighted (in the gutter)</li>
+                    <li>Variable and expression values to the <b>console</b>.</li>
+                    <li><b>Re-evaluating</b> random <b>function</b> (with last known arguments).</li>
+                    <li><b>Goto</b> function declaration - swtches to proper tab and scrolls to the line where the function is declared (opens the file if necessary).</li>
+                </ol>
+                <p>You can install it using "Package Control".</p>
+            </div>
+        </div>
+
+    </section>
+    
+<hr/>
+
+<section>
+    <div class="sec-content">
+        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">                
+        <div class="infographic-comment"><p>To run your application in Live mode you need nothing but COLT. You can run it on any device or <b>multiple devices</b> and optimize it for specific resolution and environment.</p><p>For example, you were told that your application looks bad on the phone. So you open "live" webpage on that phone (COLT creates <b>intranet webserver</b> that can be accessed from any device connected to your network) and tweak it until it looks right. You can do the same with TVs or any other devices that can connect to your local network and render HTML.</p></div>
+    </div>
+</section>
+
+<hr/>
+<section>
+    <div class="sec-content">
+        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
+            <img src="/images/infographic/sublime-plus.png" alt="Sublime+/Webstorm+" width="940" height="600"></a>
+        </div>
+    </section>
+
+    <hr/>
+    <section>
+        <div class="sec-content">
+                <img src="/images/infographic/teamwork.png" alt="
+                Teamwork" width="940" height="600">
+        <div class="infographic-comment">
+            <p>COLT runs the application in live mode from special <b>webserver</b> accessible from anywhere in your network. When developer changes the source, the application is updated on all connected devices of other application users. For example, designer finds the mistake in the layout, like wrongly placed button, then when developer fixes this mistake everyone gets the fix instantly without closing the application. </p>
+        </div>
+    </div>
+
+</section>
+
+
+
+

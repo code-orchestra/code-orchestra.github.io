@@ -1,0 +1,209 @@
+/*
+|---------------------------------------
+| Typography
+|---------------------------------------
+|
+| I should to abandon the use of different font sizes and different
+| baselines in different versions. Design is not worth the effort
+| of development and maintainance.
+|
+*/
+
+@font-sans:                 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@font-mono:                 Monaco, 'Courier New', monospace;
+@font-serif:                Georgia, 'Times New Roman', Times, serif;
+
+/*
+1) 16px - 1/16em.
+To set margin and padding use formula
+[multiplier] * @bl / @b + 0em;
+2) Baseline in pixels (13pb - 20px)
+*/
+@b:                         16; // 1
+@bm:                        16;
+@bl:                        22; // 2
+@blm:                       22;
+
+@baseline:                  @bl / @b + 0em;
+@baseline-mob:              @blm / @bm + 0em;
+
+/*
+1) Keep these functions here to avoid compiling errors
+*/
+@h1:                        32;
+@h1-font-size:              @h1 / @b * 100%; // 1
+@h1-line-height:            1.5 * @bl / @h1 + 0em;
+@h1-font:                   @font-sans;
+@h1-font-weight:            500;
+@h1-color:                  #000;
+
+/*
+1) 24 - 1 baseline
+*/
+@h1m:                       24;
+@h1-font-size-mob:          @h1m / @bm * 100%;
+@h1-line-height-mob:        @blm / @h1m + 0em; // 1
+@h1-font-mob:               @h1-font;
+@h1-font-weight-mob:        @h1-font-weight;
+
+@h2:                        20;
+@h2-font-size:              @h2 / @b * 100%;
+@h2-line-height:            @bl / @h2 + 0em;
+@h2-font:                   @h1-font;
+@h2-font-weight:            400;
+@h2-color:                  #000;
+
+@h2m:                       20;
+@h2-font-size-mob:          @h2m / @bm * 100%;
+@h2-line-height-mob:        @blm / @h2m + 0em;
+
+@h3sharp-font-size:         @b + @h2 / 2 / @b * 100%;
+@h2sharp-font-size:         @h2 + @h1 / 2 / @b * 100%;
+@small:                     12;
+@small-font-size:           @small / @b * 100%;
+@small-line-height:         @bl / @small + 0em;
+
+/*
+|---------------------------------------
+| Layout
+|---------------------------------------
+*/
+@col:                       60; // pixels
+@gutter:                    20;
+@doc-main:                  700; // 960gs 4 column layout
+
+@content-box:               940; // full width of doc-header, doc-body and doc-footer without page side padding
+@content-box-t:             692;
+
+@page-side-padding:         60; // desktop version
+@mw:                        @content-box + @page-side-padding*2;
+@footer-height:             240; // Using in two files, so we should set a global variable
+
+/*
+|---------------------------------------
+| Color scheme
+|---------------------------------------
+*/
+
+@c-txt:                     #65686c; // Body text color
+
+@bg:                        #fff; // Background color
+@bg-body:                   @bg url(/images/bg.png) repeat-x;  /* Body and .page background set */
+
+/* Background based colors ---------- */
+@c-input:                   @bg;
+@c-tbl:                     @bg;
+@c-tr:                      #f1f4f7; // even table rows, boxes etc
+@c-th:                      #eaedf1; // theads — darker then on @bg-dkr-1 3–4%
+@c-brd:                     #cccfd3; // lines, borders, hrs
+@c-nt:                      #9da0a4; // notes, time, .byline etc
+
+@c-link:                    #3366b2;
+@c-link-hover:              darken(@c-link, 16%);
+@c-link-visited:            #606;
+
+@c-selection:               @c-link;
+
+@green:                     #198019;
+@red:                       #c33;
+
+@c-clear-close:             #abaeb2;
+
+@brd:                       1px solid @c-brd; // Main border
+
+/*
+|---------------------------------------
+| Buttons
+|---------------------------------------
+|
+| There are other buttons colors
+| variables in the 13-buttons.less.
+| But the style of secondary buttons
+| are needed here, as used in
+| multiple files.
+|
+*/
+
+@c-btn-secondary-light:     #f4f7fb;
+@c-btn-secondary-dark:      #edf0f4;
+@c-btn-secondary-brd:       #eaedf1;
+@c-btn-secondary-brd-b:     #dde0e4; // Bottom border
+
+/*
+|---------------------------------------
+| Main menu (mm),
+| drop-downs/submenus (sm)
+| and slide-out (so)
+|---------------------------------------
+*/
+
+@c-mm-link:                 #9d8582;
+@c-sm-link:                 #9d8582;
+@c-sm-link-hover:           @c-txt;
+@c-so-link:                 #fff;
+@c-so-link-hover:           #fff;
+@c-mm-caret:                @c-nt;
+
+@c-sm-bg:                   @c-tr;
+@c-sm-brd:                  @c-brd;
+@c-sm-link-hover-bg:        darken(@c-sm-bg, 4%);
+@c-sm-link-hover-light:     @c-th;
+@c-sm-link-hover-dark:      darken(@c-sm-link-hover-light, 16%);
+
+@c-so-bg:                   #4E5053;
+@c-so-brd-t:                0 1px 0 rgba(255,255,255,.2);
+@c-so-brd-b:                1px solid #33363a;
+@c-so-link-hover-light:     #5B5E62;
+@c-so-link-hover-dark:      #33363a;
+@c-so-link-hover-darkest:   #15181c;
+@so-width:                  240px;
+
+
+/*
+|---------------------------------------
+| Sprite paths
+|---------------------------------------
+*/
+
+@base-graphics:             '/images/base-graphics.png';
+@base-graphics-x2:          '/images/base-graphics-x2.png';
+
+/*
+|---------------------------------------
+| Z-index master list
+|---------------------------------------
+*/
+
+@z-dd:                      400;
+@z-popover:                 440;
+@z-tooltip:                 480;
+@z-fixed-navbar:            520;
+@z-overlay:                 560;
+@z-modal:                   600;
+
+/*
+|---------------------------------------
+| Forms
+|---------------------------------------
+*/
+
+@i-bg:                      #fff;
+@i-placeholder:             @c-nt;
+@brd-radius:                3px;
+@i-width:                   140px;
+
+/* Form states and alerts ----------- */
+
+@warning-txt:               @red;
+@warning-brd:               lighten(@red, 50%);
+@warning-bg:                #ffffe1;
+
+@error-txt:                 #fff;
+@error-brd:                 @red;
+@error-bg:                  lighten(@red, 80%);
+
+@success-txt:               @green;
+@success-brd:               lighten(@green, 60%);
+@success-bg:                lighten(@green, 80%);
+
+/*@info */
