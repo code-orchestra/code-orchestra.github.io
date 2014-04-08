@@ -4,7 +4,9 @@ var app = angular.module("SiteApp", [
 	'ui.router', 
 	]);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+	// $locationProvider.html5Mode(true);
+	// $locationProvider.hashPrefix('!')
 	$urlRouterProvider.otherwise("/");
 	$stateProvider
 	.state('frontpage', {
@@ -12,8 +14,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: "partials/frontpage.html",
 		controller: "HomeController"
 	})
-	.state('help', {
-		url: "/help",
+	.state('documentation', {
+		url: "/documentation",
 		templateUrl: "partials/help.html",
 		controller: "HelpController"
 	})
@@ -28,6 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		controller: "FlashController"
 	})
 });
+
 
 app.controller("HomeController", function($scope) {
 	var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
@@ -46,14 +49,40 @@ app.controller("HomeController", function($scope) {
     }
 
 	$scope.downloadColt = function() {
-		window._gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);
+		// window._gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);
 		window.location.replace($scope.coltUrl);
 	}
 });
 
 app.controller("BuyController", function($scope) {
 });
+
+
 app.controller("FlashController", function($scope) {
+	var isMac = navigator.platform.toUpperCase().indexOf('MAC')!==-1;
+    var isWindows = navigator.platform.toUpperCase().indexOf('WIN')!==-1;
+    var isLinux = navigator.platform.toUpperCase().indexOf('LINUX')!==-1;
+
+    if(isMac){
+        $scope.coltUrl = "https://codeorchestra.s3.amazonaws.com/old/COLT.dmg";
+        $scope.osName = "OS X";
+    }else if(isWindows){
+        $scope.coltUrl = "https://codeorchestra.s3.amazonaws.com/old/COLT-install.exe";
+        $scope.osName = "Windows";
+    }else if(isLinux){
+        $scope.coltUrl = "http://codeorchestra.s3.amazonaws.com/old/colt-linux.tar.gz";
+        $scope.osName = "Linux";
+    }
+
+	$scope.downloadColt = function() {
+		// window._gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);
+		window.location.replace($scope.coltUrl);
+	}
 });
-app.controller("HelpController", function($scope) {
+app
+.controller("HelpController", function($scope, $location, $anchorScroll) {
+	$scope.scrollTo = function(id) {
+	      $location.hash(id);
+	      $anchorScroll();
+	   }
 });

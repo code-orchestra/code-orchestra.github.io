@@ -1,0 +1,143 @@
+<article role="main">
+<!-- Billboard ============================================================= -->
+    <section class="sec-colt-billboard">
+    <div class="sec-content">
+        <header class="col-1of2">
+        <h1 class="animated"><i class="co">C.O.L.T. — </i>Code Orchestra Livecoding Tool</h1>
+        <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
+        <p>Developers call this “livecoding” or “live development”.<br>
+        Connect COLT to any editor, keep calm and code on!</p>
+        <ul class="btn-group cfx">
+            <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{'Download for ' + osName}}</a>
+            </li>
+            
+        </ul>
+        </header>
+
+        <div class="col-2of2 animated">
+        <img src="/images/front/colt-as-01.png" class="img-swap" alt="Code Orchestra Livecoding Tool for ActionScript Development" height="840" width="460">
+        </div>
+
+    </div>
+    </section>
+    <!-- / billboard -->
+
+<!-- Infographics ========================================================== -->
+    <section class="sec-colt-infographic">
+    <div class="sec-content">
+        <div class="col-3of12 col-first fact fact-3x">
+            <figure>
+            <img src="/images/infographic/watch-3x.png" alt="">
+            </figure>
+            <span class="kicker">Up to</span>
+            <span class="number">3×</span>
+            <span class="deck">compilation speed</span>
+        </div>
+
+        <div class="col-3of12 fact fact-40pc">
+            <figure>
+            <img src="/images/infographic/rockets-40pc.png" alt="">
+            </figure>
+            <span class="kicker">Up to</span>
+            <span class="number">40%</span>
+            <span class="deck">increase in productivity</span>
+        </div>
+
+        <!-- <div class="col-2of2 rotator animated">
+        <img src="/images/front/actionscript-01-update-listener.png" height="280" width="460" alt="ActionScript Development with COLT">
+        <img src="/images/front/actionscript-02-update-listener.png" height="280" width="460" alt="ActionScript Development with COLT">
+        </div> -->
+
+<pre class="col-2of2 pre-base pre-scrollable">[LiveCodeUpdateListener]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">liveCodeListener</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"class code  updated"</span>);
+}
+
+[LiveCodeUpdateListener(<span style="color:#dad085">method</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"initInterface"</span>)]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">liveCodeListener</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"method initInterface code updated"</span>);
+  clearInterface();
+  initInterface();
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"class code  updated"</span>);
+}
+
+[Embed(<span style="color:#dad085">source</span> <span style="color:#cda869">=</span><span style="color:#8f9d6a">"icon.png"</span>)]
+<span style="color:#cda869">private</span> Class imageClass;
+
+[LiveAssetUpdateListener(field<span style="color:#cda869">=</span><span style="color:#8f9d6a">"imageClass"</span>)]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">iconChanged</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"image icon.png changed"</span>);
+  <span style="color:#dad085">setIcon</span>(<span style="color:#cda869">new</span> imageClass())
+}
+
+[Embed(<span style="color:#dad085">source</span><span style="color:#cda869">=</span><span style="color:#8f9d6a">"icon2.png"</span>)]
+<span style="color:#cda869">private</span> Class imageClass2;
+
+[LiveAssetUpdateListener]
+<span style="color:#f9ee98">function</span> <span style="color:#9b703f">resourcesChanged</span>(){
+  <span style="color:#dad085">trace</span>(<span style="color:#8f9d6a">"image.png or icon2.png changed"</span>)
+} 
+</pre>
+    </div>
+    </section>
+    <!-- / Infographics -->
+
+<!-- Features ============================================================== -->
+    <section class="sec-features sec-features-colt">
+    <div class="sec-content">
+
+        <!-- 1st line -->
+        <div class="cfx row-first">
+
+        <div class="col-4of12 col-first">
+        <h2 class="h-timesaver">Timesaver</h2>
+        <p>Super fast incremental compilation - (~200 ms). No loss during application recovery after compilation — it works just like before. Apps that are already on devices don't need to be reinstalled after compilation.</p>
+        </div>
+
+        <div class="col-4of12">
+        <h2 class="h-faveditor">Use the Editor of Your Choice</h2>
+        <p>COLT is a separate tool. No particular IDE is required. Just save a code in your editor — and all changes are delivered into the working application.</p>
+        </div>
+
+        <blockquote class="col-4of12 comment">
+            <div class="avatar">
+            <img src="/images/testimonials/lamboley.jpg" alt="">
+            </div>
+            <p>They already achieve the impossible: live coding in AS3… It will become the most useful tool for AS3 developer! </p>
+            <footer>@ <a href="http://www.aymericlamboley.fr/blog/live-coding-in-as3-using-colt/" target="_blank">Aymeric Lamboley</a></footer>
+        </blockquote>
+
+        </div>
+
+        <!-- 2nd line -->
+        <div class="cfx">
+
+        <div class="col-4of12 col-first">
+        <h2 class="h-teamwork">Teamwork</h2>
+        <p>An app in a live session mode is network-available. COLT starts a web server able to deliver updates even if the app has been launched on another computer somewhere in the office.</p>
+        </div>
+
+        <div class="col-4of12 pr10">
+        <h2 class="h-much-more">And much more...</h2>
+        <ul>
+        <li>COLT  can be used to develop for iOS and Android.</li>
+        <li>COLT supports unsafe code like infinite loops and recursions.</li>
+        </ul>
+        <footer><a href="//github.com/code-orchestra/documentation/wiki">Learn More</a></footer>
+        </div>
+
+        <blockquote class="col-4of12 comment">
+            <div class="avatar">
+            <img src="/images/testimonials/slava-ra.jpg" alt="">
+            </div>
+            <p>#CodeOrchestra #AS3 #Livecoding<br>
+                yyyyyeeeeeaaaaaahhhhhhh</p>
+            <footer>@ <a href="https://twitter.com/Slava_Ra/status/330317032551751680" target="_blank">Slava_Ra</a></footer>
+        </blockquote>
+
+        </div>
+
+    </div>
+    </section>
+    <!-- / features -->
+</article>

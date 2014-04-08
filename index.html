@@ -68,13 +68,13 @@
        </div>
        <div class="navbar-collapse collapse" id="navbar-main">
          <ul class="nav navbar-nav">
-           <li><a ui-sref="help">Help</a></li>
-           <li><a href="">Support</a></li>
+           <li><a ui-sref="documentation" ng-class="{active:$state.current.url=='help'}">Docs</a></li>
+           <li><a href="https://github.com/code-orchestra/colt-ui/issues" target="_blank">Support</a></li>
            <li class="dropdown">
              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Buy<span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="#">Subscribe COLT $6.95/month</a></li>
-               <li><a href="#">Subscribe COLT $50/year</a></li>
+               <li><a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3190926" target="_blank">Subscribe COLT $6.95/month</a></li>
+               <li><a href="https://www.plimus.com/jsp/buynow.jsp?contractId=3193830" target="_blank">Subscribe COLT $50/year</a></li>
                <!-- <li class="divider"></li> -->
                
             </ul>
@@ -82,9 +82,9 @@
            <li class="dropdown">
              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products<span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="./default/">COLT (JavaScript)</a></li>
-               <li><a href="./default/">COLT (ActionScript)</a></li>
-               <li><a href="./default/">CO2 IDE (Beta)</a></li>
+               <li><a ui-sref="frontpage">COLT (JavaScript)</a></li>
+               <li><a ui-sref="flash">COLT (ActionScript)</a></li>
+               <!-- <li><a ui-sref="ide">CO2 IDE (Beta)</a></li> -->
                <!-- <li class="divider"></li> -->
                
             </ul>
@@ -92,19 +92,19 @@
            <li class="dropdown">
              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Github<span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="./default/">Sublime Package</a></li>
-               <li><a href="./default/">Webstorm Plugin</a></li>
-               <li><a href="./default/">COLT UI (angular/node-webkit)</a></li>
-               <li><a href="./default/">Mtasc fork</a></li>
+               <li><a href="https://github.com/code-orchestra/colt-sublime-plugin" target="_blank">Sublime Package</a></li>
+               <li><a href="https://github.com/code-orchestra/colt-idea-plugin-js" target="_blank">Webstorm Plugin</a></li>
+               <li><a href="https://github.com/code-orchestra/colt-ui" target="_blank">COLT UI (angular/node-webkit)</a></li>
+               <li><a href="https://github.com/code-orchestra/metaas-fork" target="_blank">Mtasc fork</a></li>
             </ul>
            </li>
            <li><a href="http://blog.codeorchestra.com">Blog</a></li>
        </ul>
 
          <ul class="nav navbar-nav navbar-right m-socials">
-           <li class="tw"><a href="http:" target="_blank">Twitter</a></li>
-           <li class="yt"><a href="http:" target="_blank">Youtube</a></li>
-           <li class="fb"><a href="http:" target="_blank">Facebook</a></li>
+           <li class="tw"><a href="https://twitter.com/intent/user?screen_name=code_orchestra" target="_blank">Twitter</a></li>
+           <li class="yt"><a href="http://www.youtube.com/subscription_center?add_user=livecoding" target="_blank">Youtube</a></li>
+           <li class="fb"><a href="https://www.facebook.com/codeorchestra" target="_blank">Facebook</a></li>
          </ul>
 
        </div>
@@ -124,7 +124,7 @@
         <nav class="cfx">
             <div class="footer-logo">
                 <a href="/">Code Orchestra</a>
-                <span>&copy; 2012-2013. All rights reserved</span>
+                <span>&copy; 2012-2014. All rights reserved</span>
             </div>
 
             <ul class="m-socials">
@@ -141,8 +141,6 @@
                     <script type="IN/Share"></script>
                 </li>
             </ul>
-
-            <div id="paracvet"><a href="http://paracvet.com">Made with Paracvet</a></div>
 
         </nav>
     </footer>

@@ -3146,9 +3146,9 @@ To set margin and padding use formula
   position: absolute;
   top: 31px;
   left: 50%;
-  margin-left: -102px;
+  margin-left: -112px;
   height: 234px;
-  width: 205px;
+  width: 221px;
 }
 .sec-colt-billboard H1,
 .sec-colt-billboard H2,

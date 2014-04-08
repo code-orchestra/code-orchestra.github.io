@@ -1,0 +1,29 @@
+User-agent: *
+Sitemap: http://codeorchestra.com//sitemap.xml
+
+Crawl-delay: 10
+
+# URLs with parameters
+Disallow: /*?
+
+# Directories
+Disallow: /.git/
+Disallow: /_tmp/
+Disallow: /_labs/
+
+# Files
+Disallow: /thank-you-colt.html
+Disallow: /maintenance.html
+
+Disallow: /_tmp.html
+Disallow: /.gitignore
+Disallow: /BingSiteAuth.xml
+Disallow: /.nojekyll
+Disallow: /CNAME
+Disallow: *.DS_Store
+Disallow: /google*.html
+Disallow: *.sublime-project
+Disallow: *.sublime-workspace
+Disallow: /yandex*.html
+Disallow: /nibbler-site-verification.txt
+Disallow: /uko9tDWtPsqzA7om9NLg1evn3Js.html
