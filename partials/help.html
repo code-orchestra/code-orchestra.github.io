@@ -18,7 +18,7 @@ hr {
 }
 
 .help  h2{
-	font-size: 16px;
+	font-size: 28px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
@@ -65,9 +65,10 @@ hr {
 	<section class="col-md-9">
 		<div class="sec-content">
 			<a name="overview"></a>
-			<h1>What is COLT</h1><p>COLT is JavaScript application development software. COLT makes it easier to immediately debug the code. It does so delivering live JS, HTML and assets updates to running application without restarting it. COLT also has run-time code analysis features, helps to write code (code completion and jsdocs), and to inspect JS objects.</p>
+			<h1>What is COLT</h1>
+			<p>COLT is JavaScript application development software. COLT makes it easier to immediately debug the code. It does so delivering live JS, HTML and assets updates to running application without restarting it. COLT also has run-time code analysis features, helps to write code (code completion and jsdocs), and to inspect JS objects.</p>
 			<a name="js-runtime"></a>
-			<h1>What runtime environments does COLT work with</h1><p>COLT supports popular <strong>web-browsers</strong>, <strong>mobile browsers, **node.js</strong> and <strong>node-webkit</strong>. </p>
+			<h1>What runtime environments does COLT work with</h1><p>COLT supports popular <strong>web-browsers</strong>, <strong>mobile browsers, node.js</strong> and <strong>node-webkit</strong>. </p>
 			<a name="getting-started"></a>
 			<h1>Getting started with COLT</h1><ol>
 			<li><span>Download the package for your OS from <strong>COLT.IO</strong> and install the application (Make sure your computer has Java JRE. You can get it from <a href="https://www.java.com/en/download/https">https://www.java.com/en/download/</a>). </span></li>
@@ -81,18 +82,18 @@ hr {
 			<li><span><code>Select Tools -> "Run With COLT"</code></span> </li>
 			<p>You will need to enter the path to COLT in the following dialog:</p>
 			<p>Mac - <code>Applications/COLT/COLT.app</code></p>
-			<p>Win - <code>с:/Programm Files/COLT/colt.exe</code></p>
+			<p>Win - <code>c:/Programm Files/COLT/colt.exe</code></p>
 			<p>Linx - <code>path to COLT distribution in your system</code></p>
 			<li><span>COLT window will appear briefly and minimize itself. </span></li>
 			<li><span>The browser will load html file.</span></li>
 			<li><span>Make some changes to your html file and save it - your changes will be reflected in the browser. </span></li></ol>
-			<p>Check out this video.</p>
+			<!-- <p>Check out this video.</p> -->
 			<a name="possible-problems"></a>
-			<h1>Possible problems and solutions. </h1><ol><li><span>The browser tab is open, but the page is "offline" - you can see it grayed out. Try to reload the page. Session icon in COLT's bottom right corner should turn green. Sublime and Webstorm should also indicate that live session has started with ([~]). If it's not helping, try <strong>Run with COLT</strong> command again.</span></li></ol>
-			<ol><li><span>COLT did never start. Double-check the path to COLT in the editor settings. </span></li>
+			<h1>Possible problems and solutions </h1><ol><li><span>The browser tab is open, but the page is "offline" - you can see it grayed out. Try to reload the page. Session icon in COLT's bottom right corner should turn green. Sublime and Webstorm should also indicate that live session has started with ([~]). If it's not helping, try <strong>Run with COLT</strong> command again.</span></li>
+			<li><span>COLT did never start. Double-check the path to COLT in the editor settings. </span></li>
 			<li><span>COLT did start, but the page did not open. There could be problem with your Java runtime. Check COLT logs tab in COLT UI. </span></li></ol>
 			<a name="ide-not-have-plugin"></a>
-			<h1>Using COLT with code editors that do not have COLT plugins. </h1><p>COLT does not require you to use particular code editor. </p>
+			<h1>Using COLT with code editors that do not have COLT plugins </h1><p>COLT does not require you to use particular code editor. </p>
 			<ol>
 				<li><span>Open COLT app.</span></li>
 				<li><span>Go to <code>File -> New Project</code></span></li>
@@ -114,11 +115,10 @@ hr {
 			<h3>node-webkit</h3><p>Launch node-webkit application. Please specify the path to node-webkit (node-webkit.app, node-webkit.exe etc) for best experience.</p>
 			<h3>Console</h3><p>If you are not happy with COLT launchers, you can run your custom command with any parameters. This can be used with phonegap apps.</p>
 			<h3>Manual</h3><p>You will start the application manually. COLT will wait for client connection when you start the session. For example, you could build phonegap app with  <em>xcode</em> or <em>Android Studio</em> and upload to the device. Read more about "launching phonegap apps in live mode on the device". </p>
-			<p>Live Settings</p>
-			<h3>Use Custom Output</h3><p>COLT keeps live session files in special folder by default (ссылка на  доку). You can override this with the folder of your choice (warning, do not create "out" folder inside your project folder to avoid infinite recursion) </p>
+			<h3>Use Custom Output</h3><p>COLT keeps live session files in special folder by default. You can override this with the folder of your choice (warning, do not create "out" folder inside your project folder to avoid infinite recursion) </p>
 			<h3>Exclude from Livecoding Pattern</h3><p>By default COLT will process all JS/HTML files, except minified scripts. You might want to exclude some files or folders from processing. For example, to improve session start time. You can specify comma-separated list of file and folder names. Paths that start with slash are interpreted as relative to project folder (e.g. <strong>/staticLibs</strong>) </p>
-			<h3>Max Loop Iterations</h3><p>To avoid accidental endless loops, COLT injects max iterations count checking code in your loops. Default value is 10000, longer loops will throw exception. Adjust this value if your code needs longer loops (ссылка на доку "защита кода").  </p>
-			<h3>Don't Catch Runtime Exceptions</h3><p>You can accidentally add bad code to running app during live session, that can throw runtime exceptions. To prevent this, COLT wraps every function into try/catch. If you rely on exception handling in your code, or you want error stack trace - turn this option off (ссылка на раздел "защищеный код"). </p>
+			<h3>Max Loop Iterations</h3><p>To avoid accidental endless loops, COLT injects max iterations count checking code in your loops. Default value is 10000, longer loops will throw exception. Adjust this value if your code needs longer loops.  </p>
+			<h3>Don't Catch Runtime Exceptions</h3><p>You can accidentally add bad code to running app during live session, that can throw runtime exceptions. To prevent this, COLT wraps every function into try/catch. If you rely on exception handling in your code, or you want error stack trace - turn this option off. </p>
 			<h3>Simple Reload Mode</h3><p>In some cases, e.g. if you work within framework that dynamically transforms DOM you will need to reload the page after every update. Use this option in those cases. </p>
 			<h3>Clear Messages Log on Session Start</h3><p>By default "Logs" tab in COLT UI retains messages from previous session (e.g., after the page was reloaded). You can turn this behavior off here.</p>
 			<h3>Redirection Snippet</h3><p>To launch phonegap app on the device, place this code in phonegap main HTML document, so that it will load processed code from COLT local web server.  </p>
@@ -139,10 +139,10 @@ hr {
 			<h3>Sublime commands</h3><p>You can find all the COLT commands in Tools menu:</p>
 			<h3>Start COLT</h3>
 			<p>Start COLT application. You need this command in case you want to tweak project settings, otherwise "Run with COLT" command will start COLT and initiate live session for you. </p>
-			<h3><span>Run with COLT (Browser/Node.js/node-webkit)</span></h3>
-			<p>This command starts COLT if it's not open yet, creates autogenerated.colt project file in currently open Sublime folder and sets the document in currently opened Sublime tab as "Main Document". </p>
+			<h3>Run with COLT (Browser/Node.js/node-webkit)</h3>
+			<p>This command starts COLT if it's not open yet, creates <code>autogenerated.colt</code> project file in currently open Sublime folder and sets the document in currently opened Sublime tab as "Main Document". </p>
 			<h3>Reload in COLT</h3>
-			<p>Reloads the page/app. The command only works if live сессия is active. Use this when you need to reload the page, or node.js script.</p>
+			<p>Reloads the page/app. The command only works if live session is active. Use this when you need to reload the page, or node.js script.</p>
 			<h3>Disable/Enable Autosave</h3>
 			<p>When autosave is on, the text will be saved automatically after every keystroke. </p>
 			<p>This mode can be useful when editing CSS and HTML.</p>
@@ -169,7 +169,7 @@ hr {
 			<h3>Show Value</h3><p>Select variable or expression and invoke this command to see selection last known value in Webstorm console. </p>
 			<p>This command makes you forget about console.log() when you only want to check variable value. The runtime environment does console.log() for you and you can see the value in browser or node-webkit Developers Tools where you can inspect the value in detail.</p>
 			<p>This command allows to check the values in functions that were already executed. </p>
-			<h3>Reload with COLT</h3><p>Reloads the page/app. The command only works if live сессия is active. Use this when you need to reload the page, or node.js script.</p>
+			<h3>Reload with COLT</h3><p>Reloads the page/app. The command only works if live session is active. Use this when you need to reload the page, or node.js script.</p>
 			<h3>Execute Function</h3><p>You can run particular function on demand with this command. For example, you can modify function logic and call it again to see the changes. Important - the function will receive the same arguments that it had the last time it was called by your application. The arguments will be undefined if the function was never called before.</p>
 
 			<a name="live-session"></a>
@@ -183,17 +183,18 @@ hr {
 				<li><span>Once main document is requested, COLT http server starts serving scripts and assets, copying and transforming them before they are loaded into main document.</span> </li>
 				<li><span>Main document creates socket/ajax connection to COLT.</span></li></ol>
 			<p>Once connection is made, the "lightning bolt" in COLT UI turns green and code editors with COLT plugins will also indicate that live session has started.  </p>
-			<h2>Session termination</h2><p>The session might be closed due to various reasons:</p>
+			<h2>Session termination</h2>
+			<p>The session might be closed due to various reasons:</p>
 			<ol><li><span>The newer session with same parameters was started (project file or main document)</span></li><li><span>There was browser or other runtime error that caused the connection with COLT to close.</span></li><li><span>COLT UI has triggered "Close Session" command (green "lightning bolt" was clicked second time)</span></li></ol>			
 			<a name="html-update"></a>
 			<h1>HTML updates algorithm</h1><p>Modern application development assumes using multiple html files. One Page Application. Every tag in your project gets globally unique identifier, that allows to locate it in your application no matter how did it get there. So when you change the tag in any file in the project, its new state will be reflected at run-time. To help you see the changes, this tag will be temporary highlighted with grey border. Keep in mind that these HTML and JS updates work across any connected browsers and devices, mobiles, TVs, etc. </p>
 
 			<a name="angular"></a>
-			<h1>Angular Support</h1><ol><li><span>Directives are recompiled after HTML live-update. In other words, if you changed your directive, such as {{myData}}, you will see your data from $scope instead of curly brackets after update. Our HTML recompilation algorithm is smart enough to handle things like ng-repeater. To better see the effect of your changes we highlight affected element with red border.</span> </li>
-			<li><span>HTML updates and directives recompilation can work with dynamically added HTML. You can edit the template already loaded into main page through ng-router  and see the end result immediately.</span></li></ol>
+			<h1>Angular Support</h1>
+			<p>Directives are recompiled after HTML live-update. In other words, if you changed your directive, such as {{myData}}, you will see your data from $scope instead of curly brackets after update. Our HTML recompilation algorithm is smart enough to handle things like ng-repeater. To better see the effect of your changes we highlight affected element with red border.</p><p>HTML updates and directives recompilation can work with dynamically added HTML. You can edit the template already loaded into main page through ng-router  and see the end result immediately.</p>
 			
 			<a name="live-proxy"></a>
-			<h1>Live-Proxy </h1><p>You can specify web URL as main document in the project settings. In this case COLT will load web pages and resources from web server, and transform them to make it work in live mode on the fly. As soon as the resource is modified on the server, COLT will react and deliver updates to all connected clients. Now it does not matter what technology or languages are you using on serverside. Sublime будет will still get updates, compile, and trace to the console. You only need to make sure your files are synced to server using your favorite existing solution. We expect this to help you use COLT and livecoding in large projects with complex serverside. </p>
+			<h1>Live-Proxy </h1><p>You can specify web URL as main document in the project settings. In this case COLT will load web pages and resources from web server, and transform them to make it work in live mode on the fly. As soon as the resource is modified on the server, COLT will react and deliver updates to all connected clients. Now it does not matter what technology or languages are you using on serverside. Sublime will still get updates, compile, and trace to the console. You only need to make sure your files are synced to server using your favorite existing solution. We expect this to help you use COLT and livecoding in large projects with complex serverside. </p>
 			
 			<a name="console"></a>
 			<h1>Run COLT from Console</h1><p>You can launch the jar using shell, using the path to project xml as the argument.</p>
@@ -211,25 +212,21 @@ hr {
 			<li>
 				<a ng-click="scrollTo('overview')">Overview</a>
 			</li>
-			<li>
-				<a ng-click="scrollTo('js-runtime')">What runtime environments does COLT work with</a>
-			</li>
-			<li>
-				<a ng-click="scrollTo('getting-started')">Getting started with COLT</a>
-			</li>
+			<li><a ng-click="scrollTo('js-runtime')">What runtime environments does COLT work with</a></li>
+			<li><a ng-click="scrollTo('getting-started')">Getting started with COLT</a></li>
 			<li>
 				<a ng-click="scrollTo('possible-problems')">Possible problems and solutions</a>
 			</li>
 			<li><a ng-click="scrollTo('ide-not-have-plugin')">Using COLT with code editors that do not have COLT plugins</a></li>
 			<li><a ng-click="scrollTo('project-settings')">Project Settings</a></li>
-			<!-- <li>
+			<li>
 				<a ng-click="scrollTo('modals">Modal</a>
 				<ul class="nav">
 					<li><a ng-click="scrollTo('modals-examples">Examples</a></li>
 					<li><a ng-click="scrollTo('modals-sizes">Sizes</a></li>
 					<li><a ng-click="scrollTo('modals-usage">Usage</a></li>
 				</ul>
-			</li> -->
+			</li>
 			<li><a ng-click="scrollTo('sublime-text')">Sublime Text</a></li>
 			<li><a ng-click="scrollTo('webstorm')">Webstorm</a></li>
 			<li><a ng-click="scrollTo('live-session')">Live session</a></li>

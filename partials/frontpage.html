@@ -11,7 +11,7 @@
 
     .sec-info-text b{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 17px;
         color: #434243;
     }
 
@@ -28,12 +28,12 @@
             <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
             <p>Connect COLT to any editor, keep calm and code on!</p>
                 <ul class="btn-group cfx">
-                    <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{'Download for ' + osName}}</a>
+                    <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{downloadButtonText}}</a>
                     </li>
                 </ul>
             </header>
             <div class="col-2of2 animated">
-                <img src="/images/front/colt-js-01.png" class="img-swap" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
+                <img src="/images/front/colt-js-01.png" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
             </div>
         </div>
     </section>
@@ -43,8 +43,8 @@
             save, the alterations are delivered to the working application using a special protocol. What’s important, all
             the variables, scroll position, form typed date, etc would be preserved. HTML/CSS would be modified seamlessly
             without page reload. Out <b>livecoding</b> implementation is <b>preprocessing</b>-based which means that the live code would
-            work <b>anywhere</b> — on any device: desktop, mobile, <b>TV</b>s, etc; and on <b>any browser</b>. COLT can work with CoffeScript,
-            TypeScript, LESS/SASS. It can work anywhere the web-technologies are applied, e.g., JavaFX and PhoneGap. It
+            work <b>anywhere</b> — on any device: desktop, mobile, <b>TV</b>s, etc; and on <b>any browser</b>. <!-- COLT can work with CoffeScript,
+            TypeScript, LESS/SASS. --> It can work anywhere the web-technologies are applied, e.g., Angular.js, node-webkit and PhoneGap. It
             works with <b>any IDE.</b>
         </p></div>
     </section>
