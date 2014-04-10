@@ -2129,8 +2129,7 @@ To set margin and padding use formula
   text-align: left;
   text-indent: -4000em;
   overflow: hidden;
-  float: left;
-  margin: 12px 50px 0 0;
+  margin: 12px 20px 0 0;
   height: 22px;
   width: 216px;
 }

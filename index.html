@@ -49,8 +49,8 @@
 	<script src="lib/bootstrap.js"></script>
 	<script src="lib/bindonce.js"></script>	
 	<script src="lib/angular-ui-router.js"></script>
+  <script src="app/app.js"></script>
 	<script src="app/directives.js"></script>	
-	<script src="app/app.js"></script>
 
 </head>
 <body>
@@ -93,6 +93,7 @@
                <li><a href="https://github.com/code-orchestra/metaas-fork" target="_blank">Mtasc fork</a></li>
             </ul>
            </li>
+           <li><a href="http://forum.codeorchestra.com:4567">Forum</a></li>
            <li><a href="http://blog.codeorchestra.com">Blog</a></li>
        </ul>
          <ul class="nav navbar-nav navbar-right m-socials visible-md visible-lg">
@@ -114,7 +115,7 @@
   </article>
 
 <!-- FOOTER ================================================================ -->
-     <footer class="doc-footer" role="contentinfo">
+     <footer ng-cloak class="doc-footer" role="contentinfo">
         <nav class="cfx">
             <div class="footer-logo">
                 <a href="/">Code Orchestra</a>
@@ -147,11 +148,11 @@
     <script src="app/scripts.js"></script>
     <!-- G+ -->
     <script>
-    (function() {
-        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        po.src = 'https://apis.google.com/js/plusone.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-    })();
+    // (function() {
+    //     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    //     po.src = 'https://apis.google.com/js/plusone.js';
+    //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    // })();
     </script>
 
     <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
@@ -179,13 +180,15 @@
     <noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/986277088/?value=0&amp;guid=ON&amp;script=0"/></div></noscript>
     
     <script>
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    // try{
+    // (function(d, s, id) {
+    //     var js, fjs = d.getElementsByTagName(s)[0];
+    //     if (d.getElementById(id)) return;
+    //     js = d.createElement(s); js.id = id;
+    //     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    //     fjs.parentNode.insertBefore(js, fjs);
+    // }(document, 'script', 'facebook-jssdk'));
+    // }catch(){}
     </script>
 </body>
 </html>

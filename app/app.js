@@ -5,28 +5,27 @@ var app = angular.module("SiteApp", [
 	]);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $anchorScrollProvider) {
-	$anchorScrollProvider.disableAutoScrolling();
 	$urlRouterProvider.otherwise("/");
 	$stateProvider
 	.state('frontpage', {
 		url: "/",
 		templateUrl: "partials/frontpage.html",
-		controller: "HomeController", 
+		controller: "HomeController"
 	})
 	.state('documentation', {
 		url: "/documentation",
 		templateUrl: "partials/help.html",
-		controller: "HelpController",
+		controller: "HelpController"
 	})
 	.state('buy', {
 		url: "/buy",
 		templateUrl: "partials/buy.html",
-		controller: "BuyController",
+		controller: "BuyController"
 	})
 	.state('flash', {
 		url: "/flash",
 		templateUrl: "partials/flash.html",
-		controller: "FlashController",
+		controller: "FlashController"
 	})
 });
 
@@ -47,7 +46,6 @@ app.controller("HomeController", function($scope) {
 	}
 
 	$scope.downloadColt = function() {
-		// window._gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);
 		window.location.replace($scope.coltUrl);
 	}
 
@@ -75,7 +73,6 @@ app.controller("FlashController", function($scope) {
 	}
 
 	$scope.downloadColt = function() {
-		// window._gaq.push(['_trackEvent', 'Download Free Demo', 'COLT']);
 		window.location.replace($scope.coltUrl);
 	}
 });
