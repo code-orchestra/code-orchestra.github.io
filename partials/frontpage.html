@@ -1,178 +1,147 @@
 <style>
-    .sec-info-text{
-        text-decoration: none;
-        text-align: left;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 33px;
-
-        padding-top:2em;
-    }
-
-    .sec-info-text b{
-        font-weight: bold;
-        font-size: 17px;
-        color: #434243;
-    }
-
-    .col-2of2 div div img { cursor : pointer }
-
+.sec-info-text{
+text-decoration: none;
+text-align: left;
+font-weight: normal;
+font-size: 16px;
+line-height: 33px;
+padding-top:2em;
+}
+.sec-info-text b{
+font-weight: bold;
+font-size: 17px;
+color: #434243;
+}
+.col-2of2 div div img { cursor : pointer }
 </style>
-
-
 <!-- Billboard ============================================================= -->
-
-<section class="sec-colt-billboard">
-    <div class="sec-content">
-        <header class="col-1of2">
+    <section class="sec-colt-billboard">
+        <div class="sec-content">
+            <header class="col-1of2">
             <h1 class="animated"><i class="co">C.O.L.T. — </i>Code Orchestra Livecoding Tool</h1>
             <br><br>
             <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
             <p>Connect COLT to any editor, keep calm and code on!</p>
                 <ul class="btn-group cfx">
                     <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{downloadButtonText}}</a>
-                    </li>
-                </ul>
-            </header>
+                </li>
+            </ul>
+        </header>
             <div class="col-2of2">
-                    <div style="z-index:999;position:absolute;;background-color:blue">
-                            <help popover="#help-main-document" x="184" y="78"></help>
-                        <help popover="#help-browser" x="149" y="238"></help>
-                        <help popover="#help-node-js" x="141" y="308"></help>
-                        <help popover="#help-node-webkit" x="173" y="378"></help>
-                        <help popover="#help-console" x="147" y="448"></help>
-                        <help popover="#help-manual" x="142" y="518"></help>
-                        <help popover="#help-custom-output" x="224" y="648"></help>
-
-                    </div>
-                    <img id="colt-screen" src="/images/front/colt-js-01.png" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
-                
-            
+                <div style="z-index:999;position:absolute;;background-color:blue">
+                <help popover="#help-main-document" x="184" y="78"></help>
+                <help popover="#help-browser" x="149" y="238"></help>
+                <help popover="#help-node-js" x="141" y="308"></help>
+                <help popover="#help-node-webkit" x="173" y="378"></help>
+                <help popover="#help-console" x="147" y="448"></help>
+                <help popover="#help-manual" x="142" y="518"></help>
+                <help popover="#help-custom-output" x="224" y="648"></help>
             </div>
+            <img id="colt-screen" src="/images/front/colt-js-01.png" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
+            
+            
         </div>
-    </section>
-
+    </div>
+</section>
     <section class="sec-info-text" >
         <div class="sec-content"><p> COLT is a front-end development tool which allows writing code <b>live-style</b>. Just as you modify the code and
-            save, the alterations are delivered to the working application using a special protocol. What’s important, all
-            the variables, scroll position, form typed date, etc would be preserved. HTML/CSS would be modified seamlessly
-            without page reload. Out <b>livecoding</b> implementation is <b>preprocessing</b>-based which means that the live code would
-            work <b>anywhere</b> — on any device: desktop, mobile, <b>TV</b>s, etc; and on <b>any browser</b>. <!-- COLT can work with CoffeScript,
-            TypeScript, LESS/SASS. --> It can work anywhere the web-technologies are applied, e.g., Angular.js, node-webkit and PhoneGap. It
-            works with <b>any IDE.</b>
-        </p></div>
-    </section>
-
-    <!-- / billboard -->
-
-    <!--Infographics ==========================================================-->
-
-    <style type="text/css">
-
-    hr {
-      border-top: 4px dashed #ccc;
-      color: #fff;
-      background-color: #fff;
-      height: 1px;
-      width:100%;
-    }
-
-    .infographic-comment{
-        margin-left: 47px; 
-        margin-right: 47px; 
-    }
-
-    .infographic-comment b{
-        font-size: 20px;
-        color: black; 
-    }
-
-    .infographic-comment li{
-        padding-bottom: 10px; 
-    }
-
-    </style>
-
+        save, the alterations are delivered to the working application using a special protocol. What’s important, all
+        the variables, scroll position, form typed date, etc would be preserved. HTML/CSS would be modified seamlessly
+        without page reload. Out <b>livecoding</b> implementation is <b>preprocessing</b>-based which means that the live code would
+        work <b>anywhere</b> — on any device: desktop, mobile, <b>TV</b>s, etc; and on <b>any browser</b>. <!-- COLT can work with CoffeScript,
+        TypeScript, LESS/SASS. --> It can work anywhere the web-technologies are applied, e.g., Angular.js, node-webkit and PhoneGap. It
+        works with <b>any IDE.</b>
+    </p></div>
+</section>
+<!-- / billboard -->
+<!--Infographics ==========================================================-->
+<style type="text/css">
+hr {
+border-top: 4px dashed #ccc;
+color: #fff;
+background-color: #fff;
+height: 1px;
+width:100%;
+}
+.infographic-comment{
+margin-left: 47px;
+margin-right: 47px;
+}
+.infographic-comment b{
+font-size: 20px;
+color: black;
+}
+.infographic-comment li{
+padding-bottom: 10px;
+}
+</style>
 <hr/>
-
-<section>
+    <section>
         <div class="sec-content">
-            <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
-                <img src="/images/infographic/realtime-autocomplete.png" alt="
-                Sublime+/Webstorm+" width="940" height="600"></a>
+        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
+        <img src="/images/infographic/realtime-autocomplete.png" alt="
+        Sublime+/Webstorm+" width="940" height="600"></a>
             <div class="infographic-comment">
-                <p>COLT can <b>revolutionize</b> JS-developers tooling. With application running all the time during its development COLT can provide runtime objects inspection features in sublime. For example, if you press ctrl+space you get list of actual JS object members. You can run the function around the caret. You can modfify function body and have it called again with same arguments as last time. In addition, <b>COLT knows</b> where functions are located, so you can quickly find what function are calling using "Go to function declaration" command. That's why we created the plugin for Sublime Text that ties Sublime and COLT together.</p>
-                <p><b>Sublime+COLT features:</b></p>
+            <p>COLT can <b>revolutionize</b> JS-developers tooling. With application running all the time during its development COLT can provide runtime objects inspection features in sublime. For example, if you press ctrl+space you get list of actual JS object members. You can run the function around the caret. You can modfify function body and have it called again with same arguments as last time. In addition, <b>COLT knows</b> where functions are located, so you can quickly find what function are calling using "Go to function declaration" command. That's why we created the plugin for Sublime Text that ties Sublime and COLT together.</p>
+            <p><b>Sublime+COLT features:</b></p>
                 <ol>
-                    <li><b>Real</b> object fields and methods in code <b>autocompletion</b>. Works with any objects, even if code was loaded from other server (and not processed with COLT).</li> 
-                    <li>Function <b>call counters</b> in the gutter.</li>
-                    <li>Syntax and runtime <b>errors</b> highlighted (in the gutter)</li>
-                    <li>Variable and expression values to the <b>console</b>.</li>
-                    <li><b>Re-evaluating</b> random <b>function</b> (with last known arguments).</li>
-                    <li><b>Goto</b> function declaration - swtches to proper tab and scrolls to the line where the function is declared (opens the file if necessary).</li>
-                </ol>
-                <p>You can install it using "Package Control".</p>
-            </div>
+                <li><b>Real</b> object fields and methods in code <b>autocompletion</b>. Works with any objects, even if code was loaded from other server (and not processed with COLT).</li>
+                <li>Function <b>call counters</b> in the gutter.</li>
+                <li>Syntax and runtime <b>errors</b> highlighted (in the gutter)</li>
+                <li>Variable and expression values to the <b>console</b>.</li>
+                <li><b>Re-evaluating</b> random <b>function</b> (with last known arguments).</li>
+                <li><b>Goto</b> function declaration - swtches to proper tab and scrolls to the line where the function is declared (opens the file if necessary).</li>
+            </ol>
+            <p>You can install it using "Package Control".</p>
         </div>
+    </div>
+</section>
 
-    </section>
-    
 <hr/>
-
-<section>
-    <div class="sec-content">
-        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">                
+    <section>
+        <div class="sec-content">
+        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">
         <div class="infographic-comment"><p>To run your application in Live mode you need nothing but COLT. You can run it on any device or <b>multiple devices</b> and optimize it for specific resolution and environment.</p><p>For example, you were told that your application looks bad on the phone. So you open "live" webpage on that phone (COLT creates <b>intranet webserver</b> that can be accessed from any device connected to your network) and tweak it until it looks right. You can do the same with TVs or any other devices that can connect to your local network and render HTML.</p></div>
     </div>
 </section>
-
 <hr/>
-<section>
-    <div class="sec-content">
-        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
-            <img src="/images/infographic/sublime-plus.png" alt="Sublime+/Webstorm+" width="940" height="600"></a>
-        </div>
-    </section>
-
-    <hr/>
     <section>
         <div class="sec-content">
-                <img src="/images/infographic/teamwork.png" alt="
-                Teamwork" width="940" height="600">
-        <div class="infographic-comment">
+        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
+        <img src="/images/infographic/sublime-plus.png" alt="Sublime+/Webstorm+" width="940" height="600"></a>
+    </div>
+</section>
+<hr/>
+    <section>
+        <div class="sec-content">
+        <img src="/images/infographic/teamwork.png" alt="
+        Teamwork" width="940" height="600">
+            <div class="infographic-comment">
             <p>COLT runs the application in live mode from special <b>webserver</b> accessible from anywhere in your network. When developer changes the source, the application is updated on all connected devices of other application users. For example, designer finds the mistake in the layout, like wrongly placed button, then when developer fixes this mistake everyone gets the fix instantly without closing the application. </p>
         </div>
     </div>
-
 </section>
-
 <!-- <ng-include src="partials/colt-inline-help.html"></ng-include> -->
 <!-- inline help -->
-
 <style>
-
-    .popover-container {
-        display: none;
-    }
-
-    .helpLink{
-        color: #bcbcbc;
-        cursor: help;
-    }
-
-    .help-containers{
-        display: none;
-    }
-
+.popover-container {
+display: none;
+}
+.helpLink{
+color: #bcbcbc;
+cursor: help;
+}
+.help-containers{
+display: none;
+}
 </style>
-
-<div class="help-containers">
-    <div id="help-main-document" class="popover-container">
+    <div class="help-containers">
+        <div id="help-main-document" class="popover-container">
         <h3>Main Document</h3>
-        <div>
+            <div>
             <p>Path to main document in the project. This is your app entry point. </p>
             <p>Can be one of the following:</p>
-            <ol>
+                <ol>
                 <p>1. Path to local HTML document. E.g. <strong>/projects/myProject/index.html</strong></p>
                 <p>2. Web server URL (pve-proxy mode) E.g. <strong>http://myserver.com/index.html</strong> </p>
                 <p>3. Path to JS file (node.js)</p>
@@ -180,81 +149,81 @@
             </ol>
         </div>
     </div>
-    <div id="help-browser" class="popover-container">
+        <div id="help-browser" class="popover-container">
         <h3>Browser</h3>
-        <div>
+            <div>
             <p>This is web application. You can specify which browser to open it with. System default browser is used, if you leave it blank.</p>
         </div>
     </div>
-    <div id="help-node-js" class="popover-container">
+        <div id="help-node-js" class="popover-container">
         <h3>node.js</h3>
-        <div>
+            <div>
             <p>Launch node.js server or any application using node.js. You need node.js to be installed in your system. (Note. Mac-OS users will need to specify the path to node.js) </p>
         </div>
     </div>
-    <div id="help-node-webkit" class="popover-container">   
+        <div id="help-node-webkit" class="popover-container">
         <h3>node-webkit</h3>
-        <div>
+            <div>
             <p>Launch node-webkit application. Please specify the path to node-webkit (node-webkit.app, node-webkit.exe etc) for best experience.</p>
         </div>
     </div>
-    <div id="help-console" class="popover-container">
+        <div id="help-console" class="popover-container">
         <h3>Console</h3>
-        <div>
+            <div>
             <p>If you are not happy with COLT launchers, you can run your custom command with any parameters. This can be used with phonegap apps.</p>
         </div>
     </div>
-    <div id="help-manual" class="popover-container">
+        <div id="help-manual" class="popover-container">
         <h3>Manual</h3>
-        <div>
+            <div>
             <p>You will start the application manually. COLT will wait for client connection when you start the session. For example, you could build phonegap app with  <em>xcode</em> or <em>Android Studio</em> and upload to the device. </p>
         </div>
     </div>
-    <div id="help-custom-output" class="popover-container">
+        <div id="help-custom-output" class="popover-container">
         <h3>Use Custom Output</h3>
-        <div>
+            <div>
             <p>COLT keeps live session files in special folder by default. You can override this with the folder of your choice (warning, do not create "out" folder inside your project folder to avoid infinite recursion) </p>
         </div>
     </div>
-    <div id="help-exclude-pattern" class="popover-container">
+        <div id="help-exclude-pattern" class="popover-container">
         <h3>Exclude from Livecoding Pattern</h3>
-        <div>
+            <div>
             <p>By default COLT will process all JS/HTML files, except minified scripts. You might want to exclude some files or folders from processing. For example, to improve session start time. You can specify comma-separated list of file and folder names. Paths that start with slash are interpreted as relative to project folder (e.g. <strong>/staticLibs</strong>) </p>
         </div>
     </div>
-    <div id="help-max-loops" class="popover-container">
+        <div id="help-max-loops" class="popover-container">
         <h3>Max Loop Iterations</h3>
-        <div>
+            <div>
             <p>To avoid accidental endless loops, COLT injects max iterations count checking code in your loops. Default value is 10000, longer loops will throw exception. Adjust this value if your code needs longer loops.  </p>
         </div>
     </div>
-    <div id="help-catch-exceptions" class="popover-container">
+        <div id="help-catch-exceptions" class="popover-container">
         <h3>Don't Catch Runtime Exceptions</h3>
-        <div>
+            <div>
             <p>You can accidentally add bad code to running app during live session, that can throw runtime exceptions. To prevent this, COLT wraps every function into try/catch. If you rely on exception handling in your code, or you want error stack trace - turn this option off. </p>
         </div>
     </div>
-    <div id="help-simple-reload" class="popover-container">
+        <div id="help-simple-reload" class="popover-container">
         <h3>Simple Reload Mode</h3>
-        <div>
+            <div>
             <p>In some cases, e.g. if you work within framework that dynamically transforms DOM you will need to reload the page after every update. Use this option in those cases. </p>
         </div>
     </div>
-    <div id="help-clear-messages" class="popover-container">
+        <div id="help-clear-messages" class="popover-container">
         <h3>Clear Messages Log on Session Start</h3>
-        <div>
+            <div>
             <p>By default "Logs" tab in COLT UI retains messages from previous session (e.g., after the page was reloaded). You can turn this behavior off here.</p>
         </div>
     </div>
-    <div id="help-redirection-snippet" class="popover-container">
+        <div id="help-redirection-snippet" class="popover-container">
         <h3>Redirection Snippet</h3>
-        <div>
+            <div>
             <p>To launch phonegap app on the device, place this code in phonegap main HTML document, so that it will load processed code from COLT local web server.  </p>
         </div>
     </div>
-    <div id="help-main-document-url" class="popover-container">
+        <div id="help-main-document-url" class="popover-container">
         <h3>Main Document URL</h3>
-        <div>
+            <div>
             <p>If you need the link to your app that you can send to someone, you could copy it from browser window, or, if you launch the app manually, you could get it here.</p>
         </div>
     </div>
