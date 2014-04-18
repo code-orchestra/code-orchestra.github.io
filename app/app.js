@@ -1,7 +1,7 @@
 'use strict';
 
 var app = angular.module("SiteApp", [
-	'ui.router', 
+	'ui.router',
 	]);
 
 app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $anchorScrollProvider) {
