@@ -1,57 +1,65 @@
 <meta name="colt-main-document" content="index.html#/">
 <style>
 .sec-info-text{
-text-decoration: none;
-text-align: left;
-font-weight: normal;
-font-size: 16px;
-line-height: 33px;
-padding-top:2em;
+    text-decoration: none;
+    text-align: left;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 33px;
+    padding-top:2em;
 }
 .sec-info-text b{
-font-weight: bold;
-font-size: 17px;
-color: #434243;
+    font-weight: bold;
+    font-size: 17px;
+    color: #434243;
 }
 .banner-20-out{
-padding-top: 15px;
-padding-bottom: 15px;
-margin-left: auto;
-margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .col-2of2 div div img { cursor : pointer }
+.col-1of2 h2{
+    font-size: 23px;
+}
+#btn-download-colt{
+    margin-top: -17px;
+    font-size: 18px;
+    font-weight: bold;
+}
 </style>
 <!-- Billboard ============================================================= -->
 <section class="sec-colt-billboard">
+
     <div class="sec-content">
         <header class="col-1of2">
             <h1 class="animated"><i class="co">C.O.L.T. — </i>Code Orchestra Livecoding Tool</h1>
             <a href="http://forum.codeorchestra.com/topic/2/colt-2-0-is-out"><img src="/images/banners/colt-2.0-banner.png" class="banner-20-out" alt="colt 2.0 is out!" width="228" height="49"></a>
             <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
             <p>Connect COLT to any editor, keep calm and code on!</p>
+            h
             <ul class="btn-group cfx">
-                <li><a id="btn-download-colt" href="javascript:void(0);" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{downloadButtonText}}</a>
+                <li><a id="btn-download-colt" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{downloadButtonText}}</a>
                 </li>
             </ul>
         </header>
         <div class="col-2of2">
             <div style="z-index:999;position:absolute;;background-color:blue">
-                <help popover="#help-main-document" x="184" y="78"></help>
-                <help popover="#help-browser" x="149" y="238"></help>
-                <help popover="#help-node-js" x="141" y="308"></help>
-                <help popover="#help-node-webkit" x="173" y="378"></help>
-                <help popover="#help-console" x="147" y="448"></help>
-                <help popover="#help-manual" x="142" y="518"></help>
-                <help popover="#help-custom-output" x="224" y="648"></help>
+                <help html-doc="#help-main-document" x="184" y="78"></help>
+                <help html-doc="#help-browser" x="149" y="238"></help>
+                <help html-doc="#help-node-js" x="141" y="308"></help>
+                <help html-doc="#help-node-webkit" x="173" y="378"></help>
+                <help html-doc="#help-console" x="147" y="448"></help>
+                <help html-doc="#help-manual" x="142" y="518"></help>
+                <help html-doc="#help-custom-output" x="224" y="648"></help>
             </div>
-            <img id="colt-screen" src="/images/front/colt-js-01.png" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">
-            
-            
+            <img id="colt-screen" src="/images/front/colt-js-01.png" alt="Code Orchestra Livecoding Tool for JavaScript Development" height="840" width="460">         
         </div>
     </div>
 </section>
 <section class="sec-info-text" >
-    <div class="sec-content"><p> COLT is a front-end development tool which allows writing code <b>live-style</b>. Just as you modify the code and
+    <div class="sec-content container"><p> COLT is a front-end development tool which allows writing code <b>live-style</b>. Just as you modify the code and
         save, the alterations are delivered to the working application using a special protocol. What’s important, all
         the variables, scroll position, form typed date, etc would be preserved. HTML/CSS would be modified seamlessly
         without page reload. Out <b>livecoding</b> implementation is <b>preprocessing</b>-based which means that the live code would
@@ -64,75 +72,190 @@ margin-right: auto;
 <!--Infographics ==========================================================-->
 <style type="text/css">
 hr {
-border-top: 4px dashed #ccc;
-color: #fff;
-background-color: #fff;
-height: 1px;
-width:100%;
+    border-top: 4px dashed #ccc;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width:100%;
 }
 .infographic-comment{
-margin-left: 47px;
-margin-right: 47px;
+    margin-left: 47px;
+    margin-right: 47px;
 }
 .infographic-comment b{
-font-size: 20px;
-color: black;
+    font-size: 20px;
+    color: black;
 }
 .infographic-comment li{
-padding-bottom: 10px;
+    padding-bottom: 10px;
+}
+.center{
+    text-align: center;
+}
+.feature-col{
+    /*background-color: red;*/
+    /*border: 1px solid red;*/
+    /*margin: -1px;*/
+}
+.feature-col > h3{
+    font-size: 21px;
+    font-weight: 700;
+    color: #7c7c7c;
+    line-height: 36px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+
+}
+.feature-col > p{
+    font-size: 15px;
+    line-height: 27px;
+    margin-top: 0px;
+    margin-bottom: 12px;
+    /*padding-left: 28px;*/
+}
+.getting-started{
+    padding-top: 50px;
+}
+.getting-started .btn{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 6px;
+    padding-bottom: 11px;
+    text-align: left;
+    /*padding-left: 8px;*/
+}
+.getting-started .btn b{
+    font-size: 16px;
+    padding-left: 4px;
+}
+.screenshot-modal{
+    margin:auto auto auto auto;*/
+    overflow:hidden;
+}
+.screenshot-modal > .modal-dialog{
+    width:1098px;
+    height:auto;
 }
 </style>
 <hr/>
 <section>
-    <div class="sec-content">
-        <a href="http://forum.codeorchestra.com/topic/2/colt-2-0-is-out">
-        <img src="/images/infographic/angular.png" alt="Angular.js support" width="940" height="600"></a>
+    <div class="container">
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-retweet"></i> Partial JavaScript Reload</h3><p>When you change JavaScript sources, modified code will be loaded into running application. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-code"></i> Partial HTML Reload</h3><p>When you change the tag in any file in the project, its new state will be reflected at run-time. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-exclamation-circle"></i> Easy Inspect JS</h3><p>"Show Value" command makes you forget about console.log() when you only want to check variable value. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-eye"></i> Automplete from Browser</h3><p>COLT also improves variables and object properties autocompletion. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-crosshairs"></i> Call Conters</h3><p>You can see if, or how many times, each function was called so far. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-umbrella"></i> Runtime Error Display</h3><p>If your code has runtime error, <br>there will be red error icon in the IDE gutter next to it. </p></div>
+        <!-- <div class="col-md-4 feature-col"><h3><i class="fa fa-bolt"></i> Execute Any Function</h3><p>You can modify function logic and call it again to see the changes. </p></div> -->
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-rocket"></i> AngularJS Support</h3><p>Directives are recompiled after HTML live-update. </p></div>
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-cloud-upload"></i> Live-Proxy</h3><p>COLT will load web pages and resources from web server, and transform them to make it work in live mode on the fly. </p></div>
+        <!-- <div class="col-md-4 feature-col"><h3><i class="fa fa-tablet"></i> Any Browser/Device</h3><p>Keep in mind that these HTML and JS updates work across any popular web-browsers, mobile browsers, node.js and node-webkit.</p></div> -->
+        <div class="col-md-4 feature-col"><h3><i class="fa fa-beer"></i> Infinity Free Trial</h3><p>You can use COLT without entering serial number. </p></div>
     </div>
-</section>
-<hr/>
-<section>
-    <div class="sec-content">
-        <a href="http://forum.codeorchestra.com/topic/2/colt-2-0-is-out">
-        <img src="/images/infographic/node-webkit.png" alt="Angular.js support" width="940" height="600"></a>
-    </div>
-</section>
-<hr/>
-<section>
-    <div class="sec-content">
-        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
-        <img src="/images/infographic/realtime-autocomplete.png" alt="
-        Sublime+/Webstorm+" width="940" height="600"></a>
-        <div class="infographic-comment">
-            <p>COLT can <b>revolutionize</b> JS-developers tooling. With application running all the time during its development COLT can provide runtime objects inspection features in sublime. For example, if you press ctrl+space you get list of actual JS object members. You can run the function around the caret. You can modfify function body and have it called again with same arguments as last time. In addition, <b>COLT knows</b> where functions are located, so you can quickly find what function are calling using "Go to function declaration" command. That's why we created the plugin for Sublime Text that ties Sublime and COLT together.</p>
-            <p><b>Sublime+COLT features:</b></p>
-            <ol>
-                <li><b>Real</b> object fields and methods in code <b>autocompletion</b>. Works with any objects, even if code was loaded from other server (and not processed with COLT).</li>
-                <li>Function <b>call counters</b> in the gutter.</li>
-                <li>Syntax and <b>runtime errors</b> highlighted (in the gutter)</li>
-                <li>Variable and expression values to the <b>console</b>.</li>
-                <li><b>Re-evaluating</b> random <b>function</b> (with last known arguments).</li>
-                <li><b>Goto</b> function declaration - swtches to proper tab and scrolls to the line where the function is declared (opens the file if necessary).</li>
-            </ol>
-            <p>You can install it using "Package Control".</p>
+    <div class="getting-started container">
+        <div class="col-md-3 col-xs-6 btn-group" dropdown>
+            <div class="btn btn-lg dropdown-toggle">
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-1x fa-inverse">1</i>
+                </span>
+                <b>Download COLT <i class="fa fa-angle-down fa-lg"></i></b></div>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a ng-click="downloadColt('windows')">Windows</a></li>
+                    <li><a ng-click="downloadColt('osx')">MacOS</a></li>
+                    <li><a ng-click="downloadColt('linux')">Linux</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-xs-6 btn-group" dropdown>
+                <div class="btn btn-lg dropdown-toggle">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-stack-1x fa-inverse">2</i>
+                    </span>
+                    <b>Install IDE Plugin <i class="fa fa-angle-down fa-lg"></i></b></div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a ng-click="installPlugin('idea')">Webstorm (IDEA, PyCharm, PHPStorm)</a></li>
+                        <li><a ng-click="installPlugin('sublime')">Sublime Text</a></li>
+                        <!-- <li><a ng-click="installPlugin('brackets')">Brackets</a></li> -->
+                        <!-- <li><a ng-click="installPlugin('atom.io')">Atom.io</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-3 col-xs-6 btn-group" dropdown>
+                    <div class="btn btn-lg dropdown-toggle">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">3</i>
+                        </span>
+                        <b>Open Your Project <i class="fa fa-angle-down fa-lg"></i></b></div>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a ng-click="downloadDemoProject('html')">Download Sample <b>HTML/JS</b> Project</a></li>
+                            <li><a ng-click="downloadDemoProject('node-js')">Download Sample <b>node.js</b> Project</a></li>
+                            <!-- <li><a ng-click="downloadDemoProject('node-webkit')">Download Sample <b>node-webkit</b> Project</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-xs-6"><div class="btn btn-lg" data-toggle="modal" data-target="#runWithColtModal">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-stack-1x fa-inverse">4</i>
+                        </span>
+                        <b>Call "Run With COLT" <i class="fa fa-picture-o"></i></b></div></div>
+                    </div>
+                    <div class="modal fade screenshot-modal" id="runWithColtModal" tabindex="-1" role="dialog" aria-labelledby="runWithColtModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title">Partial HTML Edit</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="gifs/bootstrap-ui-dropdown-edit.gif" alt="" width="1098" height="247">
+                                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
         </div>
     </div>
 </section>
 <hr/>
 <section>
     <div class="sec-content">
-        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">
-        <div class="infographic-comment"><p>To run your application in Live mode you need nothing but COLT. You can run it on any device or <b>multiple devices</b> and optimize it for specific resolution and environment.</p><p>For example, you were told that your application looks bad on the phone. So you open "live" webpage on that phone (COLT creates <b>intranet webserver</b> that can be accessed from any device connected to your network) and tweak it until it looks right. You can do the same with TVs or any other devices that can connect to your local network and render HTML.</p></div>
+        <img src="/images/infographic/angular.png" alt="Angular.js support" width="940" height="600">
     </div>
 </section>
 <hr/>
 <section>
     <div class="sec-content">
         <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
+            <img src="/images/infographic/realtime-autocomplete.png" alt="
+            Sublime+/Webstorm+" width="940" height="600"></a>
+            <div class="infographic-comment">
+                <p>COLT can <b>revolutionize</b> JS-developers tooling. With application running all the time during its development COLT can provide runtime objects inspection features in sublime and webstorm. For example, if you press ctrl+space you get list of actual JS object members. You can run the function around the caret. You can modfify function body and have it called again with same arguments as last time. In addition, <b>COLT knows</b> where functions are located, so you can quickly find what function are calling using "Go to function declaration" command. That's why we created the plugin for Sublime/Webstorm that ties IDE and COLT together.</p>
+            </div>
+        </div>
+    </section>
+    <hr/>
+    <section>
+        <div class="sec-content">
+            <a href="http://forum.codeorchestra.com/topic/2/colt-2-0-is-out">
+                <img src="/images/infographic/node-webkit.png" alt="Angular.js support" width="940" height="600"></a>
+            </div>
+        </section>
+<!-- <section>
+    <div class="sec-content">
+        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">
+        <div class="infographic-comment"><p>To run your application in Live mode you need nothing but COLT. You can run it on any device or <b>multiple devices</b> and optimize it for specific resolution and environment.</p><p>For example, you were told that your application looks bad on the phone. So you open "live" webpage on that phone (COLT creates <b>intranet webserver</b> that can be accessed from any device connected to your network) and tweak it until it looks right. You can do the same with TVs or any other devices that can connect to your local network and render HTML.</p></div>
+    </div>
+</section> -->
+<!-- <hr/> -->
+<!-- <section>
+    <div class="sec-content">
+        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
         <img src="/images/infographic/sublime-plus.png" alt="Sublime+/Webstorm+" width="940" height="600"></a>
     </div>
-</section>
-<hr/>
-<section>
+</section>-->
+<!-- <hr/>  -->
+<!-- <section>
     <div class="sec-content">
         <img src="/images/infographic/teamwork.png" alt="
         Teamwork" width="940" height="600">
@@ -140,19 +263,19 @@ padding-bottom: 10px;
             <p>COLT runs the application in live mode from special <b>webserver</b> accessible from anywhere in your network. When developer changes the source, the application is updated on all connected devices of other application users. For example, designer finds the mistake in the layout, like wrongly placed button, then when developer fixes this mistake everyone gets the fix instantly without closing the application. </p>
         </div>
     </div>
-</section>
+</section> -->
 <!-- <ng-include src="partials/colt-inline-help.html"></ng-include> -->
 <!-- inline help -->
 <style>
 .popover-container {
-display: none;
+    display: none;
 }
 .helpLink{
-color: #bcbcbc;
-cursor: help;
+    color: #bcbcbc;
+    cursor: help;
 }
 .help-containers{
-display: none;
+    display: none;
 }
 </style>
 <div class="help-containers">

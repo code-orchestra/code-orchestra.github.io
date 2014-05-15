@@ -8,8 +8,12 @@
 }
 
 .bs-docs-sidenav {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px
+}
+
+.bs-docs-sidebar .nav>li {
+    padding: 11px 0 0 0;
 }
 
 .bs-docs-sidebar .nav>li>a {
@@ -17,11 +21,11 @@
     font-size: 13px;
     font-weight: 500;
     color: #999;
-    padding: 0px 10px
+    padding: 0px 5px 0px 0px;
 }
 
 .bs-docs-sidebar .nav>li>a:hover, .bs-docs-sidebar .nav>li>a:focus {
-    padding-left: 19px;
+    padding-left: 15px;
     color: #563d7c;
     text-decoration: none;
     background-color: transparent;
@@ -30,7 +34,7 @@
 
 .bs-docs-sidebar .nav>.active>a, .bs-docs-sidebar .nav>.active:hover>a,
 .bs-docs-sidebar .nav>.active:focus>a {
-    padding-left: 18px;
+    padding-left: 13px;
     font-weight: 700;
     color: #563d7c;
     background-color: transparent;
@@ -43,8 +47,8 @@
 }
 
 .bs-docs-sidebar .nav .nav>li>a {
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 30px;
     font-size: 12px;
     font-weight: 400
@@ -106,4 +110,8 @@
 @media (min-width:1200px){.bs-docs-sidebar.affix-bottom, .bs-docs-sidebar.affix {
         width: 263px
     }
+}
+
+.red{
+    background-color: red;
 }

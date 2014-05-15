@@ -1,1 +1,27 @@
-<xml isPlugin="true" projectName="" projectType="JS"><paths><excludes-set>out/**, .git/**, .*/**, **/*bak___</excludes-set></paths><build><main-document>/Volumes/Archive/Projects/code-orchestra.github.io/index.html#/</main-document><use-custom-output-path>false</use-custom-output-path><out-path /><use-real-time-transformation>false</use-real-time-transformation><offline-cms><integrate-mercury>false</integrate-mercury><run-mercury>false</run-mercury></offline-cms><security><use-inspectable>false</use-inspectable></security><precompile><coffee-script>false</coffee-script><type-script>false</type-script><use-less>false</use-less><use-sass>false</use-sass></precompile></build><live><settings><clear-log>false</clear-log><disconnect>true</disconnect></settings><launch><launcher>BROWSER</launcher></launch><live><paused>false</paused><max-loop>10000</max-loop><simple-reload>false</simple-reload><disable-in-minified>true</disable-in-minified><enable-debuger>false</enable-debuger></live></live></xml>
+<xml projectName="" projectType="JS">
+<paths>
+<excludes-set>out/**, .git/**, .*/**, **/*bak___</excludes-set>
+</paths>
+<build>
+<main-document>/Volumes/Archive/Projects/code-orchestra.github.io/index.html#/</main-document>
+<use-custom-output-path>false</use-custom-output-path>
+<out-path />
+</build>
+<live>
+<settings>
+<clear-log>false</clear-log>
+<disconnect>false</disconnect>
+</settings>
+<launch>
+<launcher>BROWSER</launcher>
+<browser-path />
+<nodejs-path />
+<node-webkit-path />
+</launch>
+<live>
+<paused>false</paused>
+<max-loop>10000</max-loop>
+<disable-in-minified>true</disable-in-minified>
+</live>
+</live>
+</xml>

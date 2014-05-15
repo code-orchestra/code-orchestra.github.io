@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="SiteApp">
+<html lang="en" ng-app="colt.io.app">
     <head>
         <meta charset="UTF-8">
         <title>COLT.IO: Development tool for angular.js, node-webkit, node.js, phonegap</title>
@@ -29,20 +29,13 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-custom.css">
-        <!-- <link rel="stylesheet" href="css/font-awesome.css"> -->
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/less/styles.css">
+        <link rel="stylesheet" href="css/custom-styles.css">
         <!--[if (lt IE 9) & (!IEMobile)]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <script src="/lib/respond.min.js"></script>
         <![endif]-->
-        <script src="lib/underscore.js"></script>
-        <script src="lib/jquery.js"></script>
-        <script src="lib/angular.js"></script>
-        <script src="lib/bootstrap.js"></script>
-        <script src="lib/bindonce.js"></script>
-        <script src="lib/angular-ui-router.js"></script>
-        <script src="app/app.js"></script>
-        <script src="app/directives.js"></script>
     </head>
     <body>
         <header class="doc-header" role="banner">
@@ -115,28 +108,22 @@
                         <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </li>
-                    <li class="in-counter">
-                        <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-                        <script type="IN/Share"></script>
-                    </li>
                 </ul>
             </nav>
         </footer>
         <!-- / footer -->
-        <!-- Bottom SCRIPTS =============================================================== -->
-        <!-- Fb -->
-        <div id="fb-root"></div>
-        <script src="app/scripts.js"></script>
-        <!-- G+ -->
-        <script>
-        // (function() {
-        //     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-        //     po.src = 'https://apis.google.com/js/plusone.js';
-        //     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        // })();
-        </script>
-        <script src="//platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-        <!-- Google Analytics -->
+        <script src="lib/jquery.js"></script>
+        <script src="lib/retina.js"></script>
+        <script src="lib/underscore.js"></script>
+        <script src="lib/bootstrap.js"></script>
+        
+        <script src="lib/angular.js"></script>
+        <script src="app/ui.bootstrap.js"></script>
+        <script src="app/ui.router.js"></script>
+        <script src="app/colt.io.directives.js"></script>
+        <script src="app/colt.io.app.js"></script>
+        <!-- <script src="app/angularjs-loader.js" app="colt.io.app" root="app"></script> -->
+
         <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
         function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -156,17 +143,6 @@
         </script>
         <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
         <noscript><div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/986277088/?value=0&amp;guid=ON&amp;script=0"/></div></noscript>
-        <script>
-        // try{
-        // (function(d, s, id) {
-        //     var js, fjs = d.getElementsByTagName(s)[0];
-        //     if (d.getElementById(id)) return;
-        //     js = d.createElement(s); js.id = id;
-        //     js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-        //     fjs.parentNode.insertBefore(js, fjs);
-        // }(document, 'script', 'facebook-jssdk'));
-        // }catch(){}
         </script>
-        <script src="lib/retina.js"></script>
     </body>
 </html>
