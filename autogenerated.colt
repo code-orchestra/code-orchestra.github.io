@@ -1,9 +1,9 @@
-<xml projectName="" projectType="JS">
+<xml projectName="index" projectType="JS">
 <paths>
 <excludes-set>out/**, .git/**, .*/**, **/*bak___</excludes-set>
 </paths>
 <build>
-<main-document>/Volumes/Archive/Projects/code-orchestra.github.io/index.html#/</main-document>
+<main-document>/Volumes/Archive/Projects/code-orchestra.github.io/index.html</main-document>
 <use-custom-output-path>false</use-custom-output-path>
 <out-path />
 </build>

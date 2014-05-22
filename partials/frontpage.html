@@ -38,7 +38,6 @@
             <a href="http://forum.codeorchestra.com/topic/2/colt-2-0-is-out"><img src="/images/banners/colt-2.0-banner.png" class="banner-20-out" alt="colt 2.0 is out!" width="228" height="49"></a>
             <h2>COLT is a small program to test and build mobile, web and desktop-based applications in real time.</h2>
             <p>Connect COLT to any editor, keep calm and code on!</p>
-            h
             <ul class="btn-group cfx">
                 <li><a id="btn-download-colt" class="btn btn-giant btn-primary-giant" ng-click="downloadColt()">{{downloadButtonText}}</a>
                 </li>
@@ -69,6 +68,11 @@
     </p></div>
 </section>
 <!-- / billboard -->
+
+<!-- <div class="jumbotron">
+  <h1 class="text-center">COLT</h1>
+</div> -->
+
 <!--Infographics ==========================================================-->
 <style type="text/css">
 hr {
@@ -220,6 +224,18 @@ hr {
 <hr/>
 <section>
     <div class="sec-content">
+        <ul rn-carousel rn-carousel-buffered rn-carousel-indicator rn-carousel-control class="image container" style="width:940px;height:600px">
+          <li ng-repeat="slide in slides" ng-style="{'background-image': 'url(' + slide.img + ')'}">
+                <div class="debug">
+                    {{ slides.length }}
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<hr/>
+<section>
+    <div class="sec-content">
         <img src="/images/infographic/angular.png" alt="Angular.js support" width="940" height="600">
     </div>
 </section>
@@ -241,30 +257,6 @@ hr {
                 <img src="/images/infographic/node-webkit.png" alt="Angular.js support" width="940" height="600"></a>
             </div>
         </section>
-<!-- <section>
-    <div class="sec-content">
-        <img src="/images/infographic/responsibility.png" alt="Responsibility Driven Development" width="940" height="600">
-        <div class="infographic-comment"><p>To run your application in Live mode you need nothing but COLT. You can run it on any device or <b>multiple devices</b> and optimize it for specific resolution and environment.</p><p>For example, you were told that your application looks bad on the phone. So you open "live" webpage on that phone (COLT creates <b>intranet webserver</b> that can be accessed from any device connected to your network) and tweak it until it looks right. You can do the same with TVs or any other devices that can connect to your local network and render HTML.</p></div>
-    </div>
-</section> -->
-<!-- <hr/> -->
-<!-- <section>
-    <div class="sec-content">
-        <a href="http://blog.codeorchestra.com/post/68973544159/sublime-colt-add-100-intellect-to-your-favourite-ide">
-        <img src="/images/infographic/sublime-plus.png" alt="Sublime+/Webstorm+" width="940" height="600"></a>
-    </div>
-</section>-->
-<!-- <hr/>  -->
-<!-- <section>
-    <div class="sec-content">
-        <img src="/images/infographic/teamwork.png" alt="
-        Teamwork" width="940" height="600">
-        <div class="infographic-comment">
-            <p>COLT runs the application in live mode from special <b>webserver</b> accessible from anywhere in your network. When developer changes the source, the application is updated on all connected devices of other application users. For example, designer finds the mistake in the layout, like wrongly placed button, then when developer fixes this mistake everyone gets the fix instantly without closing the application. </p>
-        </div>
-    </div>
-</section> -->
-<!-- <ng-include src="partials/colt-inline-help.html"></ng-include> -->
 <!-- inline help -->
 <style>
 .popover-container {

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module("colt.io.app", [
-	'ui.router','ui.bootstrap', 'colt.io.directives'
+	'ui.router', 'ngTouch', 'angular-carousel', 'ui.bootstrap', 'colt.io.directives'
 	])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -85,25 +85,11 @@ angular.module("colt.io.app", [
 		window.location.replace(projectUrl);
 	}
 
-	$scope.dropdown = [
-	  {
-	    "text": "<i class=\"fa fa-download\"></i>&nbsp;Another action",
-	    "href": "#anotherAction"
-	  },
-	  {
-	    "text": "<i class=\"fa fa-globe\"></i>&nbsp;Display an alert",
-	    "click": "$alert(\"Holy guacamole!\")"
-	  },
-	  {
-	    "divider": true
-	  },
-	  {
-	    "text": "Separated link",
-	    "href": "#separatedLink"
-	  }
-	];
-
 	$scope.downloadButtonText = ($scope.osName) ? "Download for " + $scope.osName : "Download";
+
+	$scope.slides = [
+	{img:'/images/infographic/wow-colt-angular-autocomplete-scope.png'}
+	];
 })
 
 .controller("BuyController", function($scope) {
