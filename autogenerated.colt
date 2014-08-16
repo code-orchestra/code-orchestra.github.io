@@ -1,6 +1,6 @@
 <xml projectName="index" projectType="JS">
 <paths>
-<excludes-set>out/**, .git/**, .*/**, **/*bak___</excludes-set>
+<excludes-set>out, node_modules, bower_components</excludes-set>
 </paths>
 <build>
 <main-document>/Volumes/Archive/Projects/code-orchestra.github.io/index.html</main-document>

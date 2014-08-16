@@ -18,7 +18,7 @@ angular.module("colt.io.app", [
 		templateUrl: "partials/help.html",
 		controller: "HelpController"
 	})
-	.state('buy', {
+	.stateProvider('buy', {
 		url: "/buy",
 		templateUrl: "partials/buy.html",
 		controller: "BuyController"
